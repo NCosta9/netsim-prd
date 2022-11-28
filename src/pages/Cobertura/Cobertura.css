@@ -1,0 +1,51 @@
+
+.fundo{
+    height: 700px;
+    background-image: url('fundoTerra.jpg');
+    background-size: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+}
+input{
+    color: #fff;
+    font-style: italic; 
+    font-size: 12pt; 
+    background:#E4641C; 
+    border-radius:20px ;
+    margin-top:20px; 
+    padding-top: 14px; 
+    padding-right: 28px;
+    padding-bottom: 14px;
+    padding-left: 28px; 
+    border-color:#E4641C; 
+    font-weight:800;
+}
+#selecao_interesse{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background:#E9E9E9 no-repeat center right #FFF;
+    border:2px solid #333;
+    border-color:#E4641C;
+    font-size: 15px;
+    padding:10px;
+}
+
+#nav-link {
+    display: block;
+    padding:5;
+    font-size: 20px;
+    font-weight:700;
+    color: #bebebe;
+    text-decoration:none;
+    transition: color .15s ease-in-out; 
+    background-color: .15s ease-in-out; 
+    border-color: .15s ease-in-out;
+}
+
+#nav-link:hover{
+    color:#fff;
+    cursor: pointer;
+    text-decoration:5px underline;
+    
+}

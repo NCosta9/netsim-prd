@@ -1,0 +1,15 @@
+.img-icon{
+	display:inline-block;
+    height: 60px;
+	margin: 20px 5px 20px auto;
+	transition: .3s;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+    border-radius: 15px;
+}
+
+.img-icon:hover {
+	-webkit-filter: none;	
+	filter: none;	
+}
