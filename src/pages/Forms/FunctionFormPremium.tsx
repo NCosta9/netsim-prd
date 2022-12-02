@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
-interface IDisabled {
-  ritualFit: boolean;
-  doutorPass: boolean;
-  sexyHot: boolean;
-  hbomax: boolean;
-}
-
 export default function FunctionFormPremium() {
   const [selectedAppsPremium, setSelectedApps] = useState<string[]>([]);
   
