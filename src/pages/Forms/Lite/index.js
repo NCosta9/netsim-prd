@@ -23,19 +23,17 @@ import standard13 from '../../../img/iconApps/standard13.png';
 import standard14 from '../../../img/iconApps/standard14.png';
 import standard15 from '../../../img/iconApps/standard15.png';
 import standard16 from '../../../img/iconApps/standard16.png';
+import { json } from "react-router-dom";
+
 
 
 export default function Lite() {
-
-   
-
-    let dados = "Nome:" + getValues("NOME")  + <br/> + "CPF:" + getValues("CPF") + <br/> + "RG:" + getValues("RG") + <br/>;
 
     function sendEmail(e){
         e.preventDefault();
 
         const templateParams = {
-            from_name: "nome",
+            from_name: "NATANAEL TESTE",
             message: {dados}
         
         }
@@ -48,11 +46,13 @@ export default function Lite() {
          });
 
     }
+    
     const { register, handleSubmit,getValues, errors } = useForm();
-   
+    const dados = data => {JSON.stringify(data)};
+
     let url="https://api.whatsapp.com/send?phone=556120993434&text=Eu %0A" + getValues("NOME") + "%0A de CPF %0A" + getValues("CPF") + "%0A já enviei os dados para assinatura do %0A" + getValues("PLANO") + ". %0A Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09. %0A";
 
-    const NewContrate = () => {
+    const sendWhatsapp = () => {
     window.open(url);
 
     };
@@ -62,7 +62,7 @@ export default function Lite() {
 
         <div className='container'>
             <h1>Preencha com os dados necessarios para finalização da sua assinatura de internet</h1>
-            <form className='row g-3 mt-5' id="formDados" onSubmit= {sendEmail} onSubmitCapture={handleSubmit(NewContrate)} >
+            <form className='row g-3 mt-5' id="formDados" onSubmit= {sendEmail} onSubmitCapture={handleSubmit(sendWhatsapp)} >
 
 
                 {/* ################### Etapa 01 ################################### */}
