@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import emailjs from '@emailjs/browser'
 
-
+// import "./FunctionFormPremium";                    
 import premium1 from '../../../img/iconApps/premium1.png';
 import premium2 from '../../../img/iconApps/premium2.png';
 import premium3 from '../../../img/iconApps/premium3.png';
@@ -27,34 +27,42 @@ import standard16 from '../../../img/iconApps/standard16.png';
 
 export default function Lite() {
 
+   
+
+    let dados = "Nome:" + getValues("NOME")  + <br/> + "CPF:" + getValues("CPF") + <br/> + "RG:" + getValues("RG") + <br/>;
+
     function sendEmail(e){
         e.preventDefault();
+
+        const templateParams = {
+            from_name: "nome",
+            message: {dados}
+        
+        }
+
+        emailjs.send("service_au350rb", "template_oh38moq", templateParams, "lTUpdEC1irtwxkpEq")
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+         }, function(error) {
+            console.log('FAILED...', error);
+         });
+
     }
-    
-const allDate = (date)=>{ JSON.stringify(date)}
-
-const templateParams = {
-    from_name: "nome",
-    message: "Aqui dentro tem uma mensagem "
-
-};
-
-emailjs.send("service_au350rb", "template_oh38moq", templateParams, "lTUpdEC1irtwxkpEq")
-
     const { register, handleSubmit,getValues, errors } = useForm();
-
+   
     let url="https://api.whatsapp.com/send?phone=556120993434&text=Eu %0A" + getValues("NOME") + "%0A de CPF %0A" + getValues("CPF") + "%0A já enviei os dados para assinatura do %0A" + getValues("PLANO") + ". %0A Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09. %0A";
 
     const NewContrate = () => {
     window.open(url);
-    console.log()
+
     };
+
 
     return (
 
         <div className='container'>
             <h1>Preencha com os dados necessarios para finalização da sua assinatura de internet</h1>
-            <form className='row g-3 mt-5' onSubmit= { handleSubmit (NewContrate, sendEmail) }>
+            <form className='row g-3 mt-5' id="formDados" onSubmit= {sendEmail} onSubmitCapture={handleSubmit(NewContrate)} >
 
 
                 {/* ################### Etapa 01 ################################### */}
@@ -184,26 +192,26 @@ emailjs.send("service_au350rb", "template_oh38moq", templateParams, "lTUpdEC1irt
                         <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4">
                             <div className='col my-1'>
                                 <div className='form-check form-switch'>
-                                    <input className="form-check-input " type="checkbox" value="Ritual fit" role="switch" id="CheckRitualfit" {...register("AppPremium")} />
+                                    {/* <input className="form-check-input " type="checkbox" value="Ritual fit" role="switch" id="CheckRitualfit"  {...register("ritualFit")}  onChange={handleSelectApps} disabled={ritualFitDisabled} /> */}
                                     <label className="form-check-label" htmlFor="CheckRitualfit"><img src={premium1} height={36} width={36} className="ms-2" /> Ritual Fit</label>
                                 </div>
                             </div>
                             <div className='col my-1'>
 
                                 <div className='form-check form-switch'>
-                                    <input className="form-check-input" type="checkbox" value="Doutor pass" role="switch" id="CheckDoutorPass" {...register("AppPremium")} />
+                                    {/* <input className="form-check-input" type="checkbox" value="Doutor pass" role="switch" id="CheckDoutorPass"   {...register("doutorPass")}  onChange={handleSelectApps}   disabled={doutorPassDisabled}/> */}
                                     <label className="form-check-label" htmlFor="CheckDoutorPass"><img src={premium2} height={36} width={36} className="ms-2" /> Doutor pass</label>
                                 </div>
                             </div>
                             <div className='col my-1'>
                                 <div className=' form-check form-switch'>
-                                    <input className="form-check-input" type="checkbox" value="Sex Hot" role="switch" id="CheckSexHot" {...register("AppPremium")} />
+                                    {/* <input className="form-check-input" type="checkbox" value="Sex Hot" role="switch" id="CheckSexHot"  {...register("sexyHot")}  onChange={handleSelectApps} disabled={sexyHotDisabled}/> */}
                                     <label className="form-check-label" htmlFor="CheckSexHot"><img src={premium3} height={36} width={36} className="ms-2" /> Sex Hot</label>
                                 </div>
                             </div>
                             <div className='col my-1'>
                                 <div className='form-check form-switch'>
-                                    <input className="form-check-input" type="checkbox" value="HBO Max" role="switch" id="CheckHboMax" {...register("AppPremium")} />
+                                    {/* <input className="form-check-input" type="checkbox" value="HBO Max" role="switch" id="CheckHboMax"  {...register("hbomax")} onChange={handleSelectApps} disabled={hbomaxDisabled} /> */}
                                     <label className="form-check-label" htmlFor="CheckHboMax"><img src={premium4} height={36} width={36} className="ms-2" /> HBO Max</label>
                                 </div>
 

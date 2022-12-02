@@ -8,7 +8,7 @@ interface IDisabled {
   hbomax: boolean;
 }
 
-function App() {
+export default function FunctionFormPremium() {
   const [selectedAppsPremium, setSelectedApps] = useState<string[]>([]);
   
   const [ritualFitDisabled, setRitualFitDisabled] = useState(false);
@@ -63,40 +63,5 @@ function App() {
     }
   }, [selectedAppsPremium]);
 
-  return (
-    <>
-      <h1>Monte seu pacote</h1>
-      <p>Apps selecionados: {selectedAppsPremium.length}</p>
-      <input
-        {...register("ritualFit")}
-        type="checkbox"
-        onChange={handleSelectApps}
-        disabled={ritualFitDisabled}
-      />{" "}
-      ritualFit
-      <input
-        {...register("doutorPass")}
-        type="checkbox"
-        onChange={handleSelectApps}
-        disabled={doutorPassDisabled}
-      />{" "}
-      doutorPass
-      <input
-        {...register("sexyHot")}
-        type="checkbox"
-        onChange={handleSelectApps}
-        disabled={sexyHotDisabled}
-      />{" "}
-      sexyHot
-      <input
-        {...register("hbomax")}
-        type="checkbox"
-        onChange={handleSelectApps}
-        disabled={hbomaxDisabled}
-      />{" "}
-      hbomax
-    </>
-  );
-}
-
-export default App;
+};
+ 
