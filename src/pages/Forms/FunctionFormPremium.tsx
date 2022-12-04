@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
+const premiumApps = ["ritualFit", "doutorPass", "sexyHot", "hbomax"];
+
 export default function FunctionFormPremium() {
   const [selectedAppsPremium, setSelectedApps] = useState<string[]>([]);
   
@@ -9,7 +11,6 @@ export default function FunctionFormPremium() {
   const [sexyHotDisabled, setSexyHotDisabled] = useState(false);
   const [hbomaxDisabled, setHboMaxDisabled] = useState(false);
 
-  const premiumApps = ["ritualFit", "doutorPass", "sexyHot", "hbomax"];
   
   const { register} = useForm();
 
