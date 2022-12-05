@@ -2,37 +2,46 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
-// import "./FunctionFormPremium";
-import premium1 from "../../../Img/iconApps/premium1.png";
-import premium2 from "../../../Img/iconApps/premium2.png";
-import premium3 from "../../../Img/iconApps/premium3.png";
-import premium4 from "../../../Img/iconApps/premium4.png";
-import standard1 from "../../../Img/iconApps/standard1.png";
-import standard2 from "../../../Img/iconApps/standard2.png";
-import standard3 from "../../../Img/iconApps/standard3.jpg";
-import standard4 from "../../../Img/iconApps/standard4.png";
-import standard5 from "../../../Img/iconApps/standard5.png";
-import standard6 from "../../../Img/iconApps/standard6.jpg";
-import standard7 from "../../../Img/iconApps/standard7.png";
-import standard8 from "../../../Img/iconApps/standard8.png";
-import standard9 from "../../../Img/iconApps/standard9.png";
-import standard10 from "../../../Img/iconApps/standard10.png";
-import standard11 from "../../../Img/iconApps/standard11.png";
-import standard12 from "../../../Img/iconApps/standard12.png";
-import standard13 from "../../../Img/iconApps/standard13.png";
-import standard14 from "../../../Img/iconApps/standard14.png";
-import standard15 from "../../../Img/iconApps/standard15.png";
-import standard16 from "../../../Img/iconApps/standard16.png";
+// import "../../../Forms/FunctionFormPremium"; 
+import premium1 from "../../../../img/iconApps/premium1.png";
+import premium2 from "../../../../img/iconApps/premium2.png";
+import premium3 from "../../../../img/iconApps/premium3.png";
+import premium4 from "../../../../img/iconApps/premium4.png";
+import standard1 from "../../../../img/iconApps/standard1.png";
+import standard2 from "../../../../img/iconApps/standard2.png";
+import standard3 from "../../../../img/iconApps/standard3.jpg";
+import standard4 from "../../../../img/iconApps/standard4.png";
+import standard5 from "../../../../img/iconApps/standard5.png";
+import standard6 from "../../../../img/iconApps/standard6.jpg";
+import standard7 from "../../../../img/iconApps/standard7.png";
+import standard8 from "../../../../img/iconApps/standard8.png";
+import standard9 from "../../../../img/iconApps/standard9.png";
+import standard10 from "../../../../img/iconApps/standard10.png";
+import standard11 from "../../../../img/iconApps/standard11.png";
+import standard12 from "../../../../img/iconApps/standard12.png";
+import standard13 from "../../../../img/iconApps/standard13.png";
+import standard14 from "../../../../img/iconApps/standard14.png";
+import standard15 from "../../../../img/iconApps/standard15.png";
+import standard16 from "../../../../img/iconApps/standard16.png";
 
 export default function Lite() {
-  const { register, handleSubmit, getValues } = useForm();
+const { register, handleSubmit,getValues} = useForm();
+
+let url = "https://api.whatsapp.com/send?phone=556120993434&text=Eu %0A" + getValues("NOME") + "%0A de CPF %0A" + getValues("CPF") + "%0A já enviei os dados para assinatura do %0A" + getValues("PLANO") + ". %0A Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09. %0A";
+
+const sendWhatsapp = () => {
+  window.open(url);
+};
 
   function sendEmail(e) {
     e.preventDefault();
 
     const formValues = getValues();
     const userData = `
+        Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},contrato o ${formValues.PLANO} e CONFIRMO esta etapa de contratação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do contrato de fidelidade de 12 meses deixando a taxa de adesão de R$ 500,00 isenta que não será cobrada mediante a fidelidade, e estou ciente que a empresa tem um prazo para instalação de até 48H. Meu CPF poderá passar por uma análise antes da aprovação do contrato. Todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom.
+        
         Dados para o cadastro:
+
         Nome Completo: ${formValues.NOME},
         CPF: ${formValues.CPF},
         RG: ${formValues.RG},
@@ -53,7 +62,6 @@ export default function Lite() {
     `;
 
     const templateParams = {
-      from_name: "NATANAEL TESTE",
       message: userData,
     };
 
@@ -73,19 +81,6 @@ export default function Lite() {
         }
       );
   }
-
-  let url =
-    "https://api.whatsapp.com/send?phone=556120993434&text=Eu %0A" +
-    getValues("NOME") +
-    "%0A de CPF %0A" +
-    getValues("CPF") +
-    "%0A já enviei os dados para assinatura do %0A" +
-    getValues("PLANO") +
-    ". %0A Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09. %0A";
-
-  const sendWhatsapp = () => {
-    window.open(url);
-  };
 
   return (
     <div className="container">

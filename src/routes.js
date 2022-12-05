@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Cobertura from './pages/Cobertura';
 import Fibra from './pages/Fibra';
 import AreaCliente from './pages/AreaCliente';
-import Lite from './pages/Forms/Lite';
+import Lite from './pages/Forms/FormsFibra/Lite';
 
 function RoutesApp(){
     return(

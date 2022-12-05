@@ -1,6 +1,6 @@
 import React from 'react';
 import CarouselNoticias from '../../components/CarouselNoticias';
-import Iconlogo from '../../Img/icon-logo.png';
+import Iconlogo from '../../img/icon-logo.png';
 import {Link} from 'react-router-dom';
 export default function AreaCliente() {
     return (
