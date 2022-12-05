@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+// @ts-ignore
 import emailjs from "@emailjs/browser";
 
 // import "../../../Forms/FunctionFormPremium"; 
@@ -24,14 +25,146 @@ import standard14 from "../../../../img/iconApps/standard14.png";
 import standard15 from "../../../../img/iconApps/standard15.png";
 import standard16 from "../../../../img/iconApps/standard16.png";
 
+const premiumApps = ["ritualFit", "doutorPass", "sexyHot", "hbomax"];
+const standardApps = ['Estadio TNT','Hube','Fluid','Deezer','Super Comics','Maia','Ubook','Looke','Playkids','Clube de Ciências','Fuze Forge','Galinha Pintadinha','Pocoyo','Tap Lingo','Tô aqui','Reforça']
+
 export default function Lite() {
-const { register, handleSubmit,getValues} = useForm();
+  // Apps Premium
+  const [selectedAppsPremium, setSelectedAppsPremium] = useState([]);
+  const [ritualFitDisabled, setRitualFitDisabled] = useState(false);
+  const [doutorPassDisabled, setDoutorPassDisabled] = useState(false);
+  const [sexyHotDisabled, setSexyHotDisabled] = useState(false);
+  const [hbomaxDisabled, setHboMaxDisabled] = useState(false);
 
-let url = "https://api.whatsapp.com/send?phone=556120993434&text=Eu %0A" + getValues("NOME") + "%0A de CPF %0A" + getValues("CPF") + "%0A já enviei os dados para assinatura do %0A" + getValues("PLANO") + ". %0A Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09. %0A";
+  // Apps Standars
+  const [selectedAppsStandard, setSelectedAppsStandard] = useState([]);
+  const [estadioTNT, setEstadioTnt] = useState(false);
+  const [hube, setHube] = useState(false);
+  const [fluid, setFluid] = useState(false);
+  const [deezer, setDeezer] = useState(false);
+  const [superComics, setSuperComics] = useState(false);
+  const [maia, setMaia] = useState(false);
+  const [ubook, setUbook] = useState(false);
+  const [looke, setLooke] = useState(false);
+  const [playkids, setPlaykids] = useState(false);
+  const [clubeDeCiencias, setClubeDeCiencias] = useState(false);
+  const [fuzeForge, setFuzeForge] = useState(false);
+  const [galinhaPintadinha, setGalinhaPintadinha] = useState(false);
+  const [pocoyo, setPocoyo] = useState(false);
+  const [tapLingo, setTapLingo] = useState(false);
+  const [toAqui, setToAqui] = useState(false);
+  const [reforca, setReforca] = useState(false);
 
-const sendWhatsapp = () => {
-  window.open(url);
-};
+  const { register, handleSubmit, getValues } = useForm();
+
+  const handleSelectApps = (e) => {
+    if (e.target.checked === true) {
+      // @ts-ignore
+      setSelectedAppsPremium([...selectedAppsPremium, e.target.name]);
+    } else {
+      const removeApp = selectedAppsPremium.filter(
+        // @ts-ignore
+        (app) => app !== e.target.name
+      );
+      // @ts-ignore
+      setSelectedAppsPremium(removeApp);
+    }
+  };
+
+  const handleSelectAppsStandard = (e) => {
+    if (e.target.checked === true) {
+      // @ts-ignore
+      setSelectedAppsStandard([...selectedAppsStandard, e.target.name]);
+    } else {
+      const removeApp = selectedAppsStandard.filter(
+        // @ts-ignore
+        (app) => app !== e.target.name
+      );
+      // @ts-ignore
+      setSelectedAppsStandard(removeApp);
+    }
+  };
+
+  const handlePremiumAppsDisabled = (app) => {
+    switch (app) {
+      case "ritualFit":
+        setRitualFitDisabled(true);
+        break;
+      case "doutorPass":
+        setDoutorPassDisabled(true);
+        break;
+      case "sexyHot":
+        setSexyHotDisabled(true);
+        break;
+      case "hbomax":
+        setHboMaxDisabled(true);
+        break;
+      default:
+        return "";
+    }
+  };
+
+   const handleStandardAppsDisabled = (apps) => {
+     switch (apps) {
+       case "estadioTNT":
+         setEstadioTnt(true);
+         break;
+       case "Hube":
+         setHube(true);
+         break;
+       case "Fluid":
+         setFluid(true);
+         break;
+       case apps.includes("Deezer"):
+         setDeezer(true);
+         break;
+       case "Super Comics":
+         setSuperComics(true);
+         break;
+       case "Maia":
+         setMaia(true);
+         break;
+       case "Ubook":
+         setUbook(true);
+         break;
+       case "Looke":
+         setLooke(true);
+         break;
+       case "Playkids":
+         setPlaykids(true);
+         break;
+       case "Clube de Ciências":
+         setClubeDeCiencias(true);
+         break;
+       case "Fuze Forge":
+         setFuzeForge(true);
+         break;
+       case "Galinha Pintadinha":
+         setGalinhaPintadinha(true);
+         break;
+       case "Pocoyo":
+         setPocoyo(true);
+         break;
+       case "Lingo":
+         setTapLingo(true);
+         break;
+       case "Tô aqui":
+         setToAqui(true);
+         break;
+       case "Reforça":
+         setReforca(true);
+         break;
+       default:
+         return "";
+     }
+   };
+
+  const clearDisabled = () => {
+    setRitualFitDisabled(false);
+    setDoutorPassDisabled(false);
+    setSexyHotDisabled(false);
+    setHboMaxDisabled(false);
+  };
 
   function sendEmail(e) {
     e.preventDefault();
@@ -59,29 +192,73 @@ const sendWhatsapp = () => {
         Nome Completo da Indicação: ${formValues.Indicacao},
         AppStandards: ${formValues.AppStandards},
         Confirmação: ${formValues.Confirmação},
+        Apps Premium: ${selectedAppsPremium},
+        Apps Standard: ${selectedAppsStandard},
     `;
+
+    console.log(userData);
 
     const templateParams = {
       message: userData,
     };
 
-    emailjs
-      .send(
-        "service_au350rb",
-        "template_oh38moq",
-        templateParams,
-        "lTUpdEC1irtwxkpEq"
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
+    console.log(templateParams);
+
+    // emailjs
+    //   .send(
+    //     "service_au350rb",
+    //     "template_oh38moq",
+    //     templateParams,
+    //     "lTUpdEC1irtwxkpEq"
+    //   )
+    //   .then(
+    //     (response) => {
+    //       console.log("SUCCESS!", response.status, response.text);
+    //     },
+    //     function (error) {
+    //       console.log("FAILED...", error);
+    //     }
+    //   );
   }
 
+  let url =
+    "https://api.whatsapp.com/send?phone=556120993434&text=Eu %0A" +
+    getValues("NOME") +
+    "%0A de CPF %0A" +
+    getValues("CPF") +
+    "%0A já enviei os dados para assinatura do %0A" +
+    getValues("PLANO") +
+    ". %0A Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09. %0A";
+
+  const sendWhatsapp = () => {
+    window.open(url);
+  };
+
+  useEffect(() => {
+    if (selectedAppsPremium.length === 3) {
+      let [notSelectPlan] = premiumApps.filter(
+        // @ts-ignore
+        (app) => !selectedAppsPremium.includes(app)
+      );
+      handlePremiumAppsDisabled(notSelectPlan);
+    } else {
+      clearDisabled();
+    }
+  }, [selectedAppsPremium]);
+
+  useEffect(() => {
+    if (selectedAppsStandard.length === 3) {
+      let notSelectPlan = standardApps.filter(
+        // @ts-ignore
+        (app) => !selectedAppsStandard.includes(app)
+      );
+
+      console.log('notSelectPlan', notSelectPlan);
+      handleStandardAppsDisabled(notSelectPlan);
+    } else {
+      clearDisabled();
+    }
+  }, [selectedAppsStandard]);
   return (
     <div className="container">
       <h1>
@@ -330,7 +507,16 @@ const sendWhatsapp = () => {
             <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4">
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  {/* <input className="form-check-input " type="checkbox" value="Ritual fit" role="switch" id="CheckRitualfit"  {...register("ritualFit")}  onChange={handleSelectApps} disabled={ritualFitDisabled} /> */}
+                  <input
+                    className="form-check-input "
+                    type="checkbox"
+                    value="Ritual fit"
+                    role="switch"
+                    id="CheckRitualfit"
+                    {...register("ritualFit")}
+                    onChange={handleSelectApps}
+                    disabled={ritualFitDisabled}
+                  />
                   <label className="form-check-label" htmlFor="CheckRitualfit">
                     <img
                       src={premium1}
@@ -345,7 +531,16 @@ const sendWhatsapp = () => {
               </div>
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  {/* <input className="form-check-input" type="checkbox" value="Doutor pass" role="switch" id="CheckDoutorPass"   {...register("doutorPass")}  onChange={handleSelectApps}   disabled={doutorPassDisabled}/> */}
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value="Doutor pass"
+                    role="switch"
+                    id="CheckDoutorPass"
+                    {...register("doutorPass")}
+                    onChange={handleSelectApps}
+                    disabled={doutorPassDisabled}
+                  />
                   <label className="form-check-label" htmlFor="CheckDoutorPass">
                     <img
                       src={premium2}
@@ -360,7 +555,16 @@ const sendWhatsapp = () => {
               </div>
               <div className="col my-1">
                 <div className=" form-check form-switch">
-                  {/* <input className="form-check-input" type="checkbox" value="Sex Hot" role="switch" id="CheckSexHot"  {...register("sexyHot")}  onChange={handleSelectApps} disabled={sexyHotDisabled}/> */}
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value="Sex Hot"
+                    role="switch"
+                    id="CheckSexHot"
+                    {...register("sexyHot")}
+                    onChange={handleSelectApps}
+                    disabled={sexyHotDisabled}
+                  />
                   <label className="form-check-label" htmlFor="CheckSexHot">
                     <img
                       src={premium3}
@@ -375,7 +579,16 @@ const sendWhatsapp = () => {
               </div>
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  {/* <input className="form-check-input" type="checkbox" value="HBO Max" role="switch" id="CheckHboMax"  {...register("hbomax")} onChange={handleSelectApps} disabled={hbomaxDisabled} /> */}
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value="HBO Max"
+                    role="switch"
+                    id="CheckHboMax"
+                    {...register("hbomax")}
+                    onChange={handleSelectApps}
+                    disabled={hbomaxDisabled}
+                  />
                   <label className="form-check-label" htmlFor="CheckHboMax">
                     <img
                       src={premium4}
@@ -408,10 +621,11 @@ const sendWhatsapp = () => {
                   <input
                     className="form-check-input"
                     type="checkbox"
-                    value="Estádio TNT"
                     role="switch"
                     id="CheckEstadioTnt"
-                    {...register("AppStandards")}
+                    {...register("Estadio TNT")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={estadioTNT}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -438,7 +652,9 @@ const sendWhatsapp = () => {
                     value="Hube"
                     role="switch"
                     id="CheckHube"
-                    {...register("AppStandards")}
+                    {...register("Hube")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={hube}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -465,7 +681,9 @@ const sendWhatsapp = () => {
                     value="fluid"
                     role="switch"
                     id="CheckFluid"
-                    {...register("AppStandards")}
+                    {...register("Fluid")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={fluid}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -492,7 +710,9 @@ const sendWhatsapp = () => {
                     value="Deezer"
                     role="switch"
                     id="CheckDeezer"
-                    {...register("AppStandards")}
+                    {...register("Deezer")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={deezer}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -519,7 +739,9 @@ const sendWhatsapp = () => {
                     value="Super Comics"
                     role="switch"
                     id="CheckSuperComics"
-                    {...register("AppStandards")}
+                    {...register("Super Comics")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={superComics}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -546,7 +768,9 @@ const sendWhatsapp = () => {
                     value="Maia"
                     role="switch"
                     id="CheckMaia"
-                    {...register("AppStandards")}
+                    {...register("Maia")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={maia}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -573,7 +797,9 @@ const sendWhatsapp = () => {
                     value="Ubook"
                     role="switch"
                     id="CheckUbook"
-                    {...register("AppStandards")}
+                    {...register("Ubook")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={ubook}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -600,7 +826,9 @@ const sendWhatsapp = () => {
                     value="Looke"
                     role="switch"
                     id="CheckLooke"
-                    {...register("AppStandards")}
+                    {...register("Looke")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={looke}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -627,7 +855,9 @@ const sendWhatsapp = () => {
                     value="Playkids"
                     role="switch"
                     id="CheckPlaykids"
-                    {...register("AppStandards")}
+                    {...register("Playkids")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={playkids}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -647,7 +877,9 @@ const sendWhatsapp = () => {
                     value="Clube de Ciências"
                     role="switch"
                     id="CheckCluberDeCiencias"
-                    {...register("AppStandards")}
+                    {...register("Clube de Ciências")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={clubeDeCiencias}
                   />
                   <img
                     src={standard10}
@@ -680,7 +912,9 @@ const sendWhatsapp = () => {
                     value="Fuze Forge"
                     role="switch"
                     id="CheckFuzeForge"
-                    {...register("AppStandards")}
+                    {...register("Fuze Forge")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={fuzeForge}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -707,7 +941,9 @@ const sendWhatsapp = () => {
                     value="Galinha Pintadinha"
                     role="switch"
                     id="CheckGalinhaPintadinha"
-                    {...register("AppStandards")}
+                    {...register("Galinha Pintadinha")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={galinhaPintadinha}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -734,7 +970,9 @@ const sendWhatsapp = () => {
                     value="Pocoyo"
                     role="switch"
                     id="CheckPocoyo"
-                    {...register("AppStandards")}
+                    {...register("Pocoyo")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={pocoyo}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -761,7 +999,9 @@ const sendWhatsapp = () => {
                     value="Tap Lingo"
                     role="switch"
                     id="CheckTapLingo"
-                    {...register("AppStandards")}
+                    {...register("Tap Lingo")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={tapLingo}
                   />
                   <label className="form-check-label" htmlFor="CheckTapLingo">
                     Tap Lingo
@@ -784,7 +1024,9 @@ const sendWhatsapp = () => {
                     value="Tô aqui"
                     role="switch"
                     id="CheckToAqui"
-                    {...register("AppStandards")}
+                    {...register("Tô aqui")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={toAqui}
                   />
                   <label
                     className="form-check-label text-wrap"
@@ -811,7 +1053,9 @@ const sendWhatsapp = () => {
                     value="Reforça"
                     role="switch"
                     id="CheckRefoca"
-                    {...register("AppStandards")}
+                    {...register("Reforça")}
+                    onChange={handleSelectAppsStandard}
+                    disabled={reforca}
                   />
                   <label
                     className="form-check-label text-wrap"
