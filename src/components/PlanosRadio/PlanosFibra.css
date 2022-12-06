@@ -1,0 +1,15 @@
+.card-footer{
+    background-color: #808080;
+}
+.header-title{
+    background-color: #808080;
+}
+.offer_title {
+    padding-top: 11px;
+    color: #303030;
+    font-size:1.9rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height:20px;
+    letter-spacing: -0.06em;
+    font-weight: 700;
+}
