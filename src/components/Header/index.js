@@ -6,7 +6,7 @@ function OffcanvasExample() {
   return (
     <>
       <div class="divider-orange">
-        <nav class="navbar fixed-top bg-light shadow p-3 mb-5">
+        <nav class="navbar bg-light shadow p-3">
           <span class="align-items-center ms-2">
            <Link to="/"> <img src={Iconlogo} height="32" whidt="32" /></Link>
           </span>

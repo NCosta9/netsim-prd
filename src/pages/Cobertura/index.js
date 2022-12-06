@@ -24,7 +24,7 @@ export default function Cobertura() {
             <select className="form-select form-select-lg mb-3 " aria-label=".form-select-lg example" {...register("cidade")} autofocus>
             <option selected>-- Escolha aqui o bairro --</option>
               <option value="0" >Nova Betânia</option>
-              <option value="1" >Buritis 01</option>
+              <option value="0" >Buritis 01</option>
               <option value="1" >Buritis 02</option>
               <option value="1" >Chácara Final Feliz</option>
               <option value="1" >Chácara Rossio </option>

@@ -26,7 +26,7 @@ import standard15 from "../../../../img/iconApps/standard15.png";
 import standard16 from "../../../../img/iconApps/standard16.png";
 
 const premiumApps = ["ritualFit", "doutorPass", "sexyHot", "hbomax"];
-const standardApps = ['Estadio TNT','Hube','Fluid','Deezer','Super Comics','Maia','Ubook','Looke','Playkids','Clube de Ciências','Fuze Forge','Galinha Pintadinha','Pocoyo','Tap Lingo','Tô aqui','Reforça']
+const standardApps = ['Estadio TNT', 'Hube', 'Fluid', 'Deezer', 'Super Comics', 'Maia', 'Ubook', 'Looke', 'Playkids', 'Clube de Ciências', 'Fuze Forge', 'Galinha Pintadinha', 'Pocoyo', 'Tap Lingo', 'Tô aqui', 'Reforça']
 
 export default function Lite() {
   // Apps Premium
@@ -104,60 +104,60 @@ export default function Lite() {
     }
   };
 
-   const handleStandardAppsDisabled = (apps) => {
-     switch (apps) {
-       case "estadioTNT":
-         setEstadioTnt(true);
-         break;
-       case "Hube":
-         setHube(true);
-         break;
-       case "Fluid":
-         setFluid(true);
-         break;
-       case apps.includes("Deezer"):
-         setDeezer(true);
-         break;
-       case "Super Comics":
-         setSuperComics(true);
-         break;
-       case "Maia":
-         setMaia(true);
-         break;
-       case "Ubook":
-         setUbook(true);
-         break;
-       case "Looke":
-         setLooke(true);
-         break;
-       case "Playkids":
-         setPlaykids(true);
-         break;
-       case "Clube de Ciências":
-         setClubeDeCiencias(true);
-         break;
-       case "Fuze Forge":
-         setFuzeForge(true);
-         break;
-       case "Galinha Pintadinha":
-         setGalinhaPintadinha(true);
-         break;
-       case "Pocoyo":
-         setPocoyo(true);
-         break;
-       case "Lingo":
-         setTapLingo(true);
-         break;
-       case "Tô aqui":
-         setToAqui(true);
-         break;
-       case "Reforça":
-         setReforca(true);
-         break;
-       default:
-         return "";
-     }
-   };
+  const handleStandardAppsDisabled = (apps) => {
+    switch (apps) {
+      case "estadioTNT":
+        setEstadioTnt(true);
+        break;
+      case "Hube":
+        setHube(true);
+        break;
+      case "Fluid":
+        setFluid(true);
+        break;
+      case apps.includes("Deezer"):
+        setDeezer(true);
+        break;
+      case "Super Comics":
+        setSuperComics(true);
+        break;
+      case "Maia":
+        setMaia(true);
+        break;
+      case "Ubook":
+        setUbook(true);
+        break;
+      case "Looke":
+        setLooke(true);
+        break;
+      case "Playkids":
+        setPlaykids(true);
+        break;
+      case "Clube de Ciências":
+        setClubeDeCiencias(true);
+        break;
+      case "Fuze Forge":
+        setFuzeForge(true);
+        break;
+      case "Galinha Pintadinha":
+        setGalinhaPintadinha(true);
+        break;
+      case "Pocoyo":
+        setPocoyo(true);
+        break;
+      case "Lingo":
+        setTapLingo(true);
+        break;
+      case "Tô aqui":
+        setToAqui(true);
+        break;
+      case "Reforça":
+        setReforca(true);
+        break;
+      default:
+        return "";
+    }
+  };
 
   const clearDisabled = () => {
     setRitualFitDisabled(false);
@@ -261,10 +261,11 @@ export default function Lite() {
   }, [selectedAppsStandard]);
   return (
     <div className="container">
-      <h1>
-        Preencha com os dados necessarios para finalização da sua assinatura de
-        internet
-      </h1>
+      <div class="bg-light p-5 mt-3 rounded">
+        <h1>Bem Vindo a Página de Cadastro</h1>
+        <p class="lead">Preencha com os dados necessarios para finalização da sua assinatura de internet</p>
+        <a class="btn btn-lg btn-primary" href="/fibra" role="button">Voltar a página anterior »</a>
+      </div>
       <form
         className="row g-3 mt-5"
         id="formDados"
@@ -277,23 +278,23 @@ export default function Lite() {
         <span className="divider-orange mb-3" />
 
         <div className="mb-3 form-floating">
-          <input type="text" className="form-control" {...register("NOME")} />
+          <input type="text" className="form-control shadow-sm" {...register("NOME", { required: true })} />
           <label className="fw-bold">Nome completo:</label>
         </div>
         <div className="col-md-4 mb-3 form-floating">
-          <input type="cpf" className="form-control" {...register("CPF")} />
+          <input type="cpf" className="form-control shadow-sm" {...register("CPF", { required: true })} />
           <label className="fw-bold">CPF:</label>
         </div>
         <div className="col-md-4 mb-3 form-floating">
-          <input type="RG" className="form-control" {...register("RG")} />
+          <input type="RG" className="form-control shadow-sm" {...register("RG", { required: true })} />
           <label className="fw-bold">RG:</label>
         </div>
         <div className="col-md-4 mb-3 form-floating">
           <input
             type="date"
             id="date"
-            className="form-control"
-            {...register("NASCIMENTO")}
+            className="form-control shadow-sm"
+            {...register("NASCIMENTO", { required: true })}
           />
           <label className="fw-bold">Data de Nascimento:</label>
         </div>
@@ -301,8 +302,8 @@ export default function Lite() {
           <input
             type="text"
             id="date"
-            className="form-control"
-            {...register("CEP")}
+            className="form-control shadow-sm"
+            {...register("CEP", { required: true })}
           />
           <label className="fw-bold">CEP:</label>
         </div>
@@ -314,16 +315,25 @@ export default function Lite() {
             <option value="" selected>
               Escolha seu bairro...
             </option>
-            <option value="A">Option A</option>
-            <option value="B">Option B</option>
+            <option value="Nova Betânia" >Nova Betânia</option>
+            <option value="Buritis 01" >Buritis 01</option>
+            <option value="Buritis 02" >Buritis 02</option>
+            <option value="Chácara Final Feliz" >Chácara Final Feliz</option>
+            <option value="Chácara Rossio " >Chácara Rossio </option>
+            <option value="Condomínio São José" >Condomínio São José</option>
+            <option value="Dom Francisco" >Dom Francisco</option>
+            <option value="Dom Pedro" >Dom Pedro</option>
+            <option value="Salomão Elias" >Salomão Elias</option>
+            <option value="São Francisco" >São Francisco</option>
+            <option value="Zona Rural Aguas Quentes" >Zona Rural Aguas Quentes</option>
           </select>
         </div>
         <div className="col-md-4 mb-3 form-floating">
           <input
             type="text"
             id="date"
-            className="form-control"
-            {...register("Endereco")}
+            className="form-control shadow-sm"
+            {...register("Endereco", { required: true })}
           />
           <label className="fw-bold">Endereço completo:</label>
         </div>
@@ -349,7 +359,7 @@ export default function Lite() {
               type="radio"
               id="inlineRadio2"
               value="Casa Alugada"
-              {...register("Moradia")}
+              {...register("Moradia", { required: true })}
             />
             <label className="form-check-label" htmlFor="inlineRadio2">
               Casa Alugada
@@ -361,8 +371,8 @@ export default function Lite() {
           <input
             type="tel"
             id="zap02"
-            className="form-control"
-            {...register("Whatsapp01")}
+            className="form-control shadow-sm"
+            {...register("Whatsapp01", { required: true })}
           />
           <label className="fw-bold">Whatsapp 01:</label>
         </div>
@@ -370,7 +380,7 @@ export default function Lite() {
           <input
             type="tel"
             id="zap01"
-            className="form-control"
+            className="form-control shadow-sm"
             min="11"
             max="11"
             {...register("Whatsapp02")}
@@ -381,8 +391,8 @@ export default function Lite() {
           <input
             type="email"
             id="email"
-            className="form-control"
-            {...register("Email")}
+            className="form-control shadow-sm"
+            {...register("Email", { required: true })}
           />
           <label className="fw-bold">E-mail:</label>
           <div className="form-text">
@@ -400,7 +410,7 @@ export default function Lite() {
           <label className="form-label fw-bold">Plano Contratado:</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control shadow-sm"
             value="Plano Lite R$ 99,90"
             {...register("PLANO")}
             readOnly
@@ -484,7 +494,7 @@ export default function Lite() {
           <input
             type="text"
             id="date"
-            className="form-control"
+            className="form-control shadow-sm"
             {...register("Indicacao")}
           />
           <label className="fw-bold">Nome completo da Indicação:</label>
@@ -497,14 +507,14 @@ export default function Lite() {
         <div className="form-group mb-3">
           <h5 className="mb-0">Monte seu pacote de aplicativos:</h5>
           <div className="row">
-            <div className="col-sm-1 form-text">Stantadar: 03</div>
-            <div className="col-sm-1 form-text mb-3">Premium: 03</div>
+            <div className="col-sm-1 form-text">Stantadar: 00</div>
+            <div className="col-sm-1 form-text mb-3">Premium: 00</div>
           </div>
 
           {/* ################### Aplicativos Premium ################################### */}
           <div className="container shadow p-3">
             <label className="form-label fw-bold ">Aplicativos Premium</label>
-            <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+            <div className="row row-cols-1 row-cols-sm-3 row-cols-md-4">
               <div className="col my-1">
                 <div className="form-check form-switch">
                   <input
@@ -515,7 +525,8 @@ export default function Lite() {
                     id="CheckRitualfit"
                     {...register("ritualFit")}
                     onChange={handleSelectApps}
-                    disabled={ritualFitDisabled}
+                    // disabled={ritualFitDisabled}
+                    disabled
                   />
                   <label className="form-check-label" htmlFor="CheckRitualfit">
                     <img
@@ -539,7 +550,8 @@ export default function Lite() {
                     id="CheckDoutorPass"
                     {...register("doutorPass")}
                     onChange={handleSelectApps}
-                    disabled={doutorPassDisabled}
+                    // disabled={doutorPassDisabled}
+                    disabled
                   />
                   <label className="form-check-label" htmlFor="CheckDoutorPass">
                     <img
@@ -563,7 +575,8 @@ export default function Lite() {
                     id="CheckSexHot"
                     {...register("sexyHot")}
                     onChange={handleSelectApps}
-                    disabled={sexyHotDisabled}
+                    // disabled={sexyHotDisabled}
+                    disabled
                   />
                   <label className="form-check-label" htmlFor="CheckSexHot">
                     <img
@@ -587,7 +600,8 @@ export default function Lite() {
                     id="CheckHboMax"
                     {...register("hbomax")}
                     onChange={handleSelectApps}
-                    disabled={hbomaxDisabled}
+                    // disabled={hbomaxDisabled}
+                    disabled
                   />
                   <label className="form-check-label" htmlFor="CheckHboMax">
                     <img
@@ -607,17 +621,11 @@ export default function Lite() {
           {/* ################### Aplicativos Standarda ################################### */}
 
           <div className="container shadow p-3">
-            <label className="form-label fw-bold ">Aplicativos Premium</label>
-            <div className="row  row-cols-2 row-cols-sm-3 row-cols-md-4">
+            <label className="form-label fw-bold ">Aplicativos Standard</label>
+            <div className="row  row-cols-1 row-cols-sm-3 row-cols-md-4">
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard1}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -625,12 +633,20 @@ export default function Lite() {
                     id="CheckEstadioTnt"
                     {...register("Estadio TNT")}
                     onChange={handleSelectAppsStandard}
-                    disabled={estadioTNT}
+                    // disabled={estadioTNT}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckEstadioTnt"
                   >
+                    <img
+                      src={standard1}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Estádio TNT
                   </label>
@@ -639,13 +655,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard2}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -654,12 +664,20 @@ export default function Lite() {
                     id="CheckHube"
                     {...register("Hube")}
                     onChange={handleSelectAppsStandard}
-                    disabled={hube}
+                    // disabled={hube}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckHube"
                   >
+                    <img
+                      src={standard2}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Hube
                   </label>
@@ -668,13 +686,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className=" form-check form-switch">
-                  <img
-                    src={standard3}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -683,12 +695,20 @@ export default function Lite() {
                     id="CheckFluid"
                     {...register("Fluid")}
                     onChange={handleSelectAppsStandard}
-                    disabled={fluid}
+                    // disabled={fluid}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckFluid"
                   >
+                    <img
+                      src={standard3}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     fluid
                   </label>
@@ -697,13 +717,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard4}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -712,12 +726,20 @@ export default function Lite() {
                     id="CheckDeezer"
                     {...register("Deezer")}
                     onChange={handleSelectAppsStandard}
-                    disabled={deezer}
+                    // disabled={deezer}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckDeezer"
                   >
+                    <img
+                      src={standard4}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Deezer
                   </label>
@@ -726,13 +748,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard5}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -741,12 +757,20 @@ export default function Lite() {
                     id="CheckSuperComics"
                     {...register("Super Comics")}
                     onChange={handleSelectAppsStandard}
-                    disabled={superComics}
+                    // disabled={superComics}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckSuperComics"
                   >
+                    <img
+                      src={standard5}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Super Comics
                   </label>
@@ -755,13 +779,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard6}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -770,12 +788,20 @@ export default function Lite() {
                     id="CheckMaia"
                     {...register("Maia")}
                     onChange={handleSelectAppsStandard}
-                    disabled={maia}
+                    // disabled={maia}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckMaia"
                   >
+                    <img
+                      src={standard6}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Maia
                   </label>
@@ -784,13 +810,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard7}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -799,12 +819,20 @@ export default function Lite() {
                     id="CheckUbook"
                     {...register("Ubook")}
                     onChange={handleSelectAppsStandard}
-                    disabled={ubook}
+                    // disabled={ubook}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckUbook"
                   >
+                    <img
+                      src={standard7}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Ubook
                   </label>
@@ -813,13 +841,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard8}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -828,12 +850,20 @@ export default function Lite() {
                     id="CheckLooke"
                     {...register("Looke")}
                     onChange={handleSelectAppsStandard}
-                    disabled={looke}
+                    // disabled={looke}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckLooke"
                   >
+                    <img
+                      src={standard8}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Looke
                   </label>
@@ -842,13 +872,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard9}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -857,12 +881,20 @@ export default function Lite() {
                     id="CheckPlaykids"
                     {...register("Playkids")}
                     onChange={handleSelectAppsStandard}
-                    disabled={playkids}
+                    // disabled={playkids}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckPlaykids"
                   >
+                    <img
+                      src={standard9}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Playkids
                   </label>
@@ -879,19 +911,21 @@ export default function Lite() {
                     id="CheckCluberDeCiencias"
                     {...register("Clube de Ciências")}
                     onChange={handleSelectAppsStandard}
-                    disabled={clubeDeCiencias}
+                    // disabled={clubeDeCiencias}
+                    disabled
                   />
-                  <img
-                    src={standard10}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckCluberDeCiencias"
                   >
+                    <img
+                      src={standard10}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     Clube de Ciências
                   </label>
                 </div>
@@ -899,13 +933,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard11}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -914,12 +942,20 @@ export default function Lite() {
                     id="CheckFuzeForge"
                     {...register("Fuze Forge")}
                     onChange={handleSelectAppsStandard}
-                    disabled={fuzeForge}
+                    // disabled={fuzeForge}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckFuzeForge"
                   >
+                    <img
+                      src={standard11}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Fuze Forge
                   </label>
@@ -928,13 +964,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard12}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -943,12 +973,20 @@ export default function Lite() {
                     id="CheckGalinhaPintadinha"
                     {...register("Galinha Pintadinha")}
                     onChange={handleSelectAppsStandard}
-                    disabled={galinhaPintadinha}
+                    // disabled={galinhaPintadinha}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckGalinhaPintadinha"
                   >
+                    <img
+                      src={standard12}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Galinha Pintadinha
                   </label>
@@ -957,13 +995,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard13}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -972,12 +1004,20 @@ export default function Lite() {
                     id="CheckPocoyo"
                     {...register("Pocoyo")}
                     onChange={handleSelectAppsStandard}
-                    disabled={pocoyo}
+                    // disabled={pocoyo}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckPocoyo"
                   >
+                    <img
+                      src={standard13}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Pocoyo
                   </label>
@@ -986,13 +1026,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard14}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -1001,9 +1035,17 @@ export default function Lite() {
                     id="CheckTapLingo"
                     {...register("Tap Lingo")}
                     onChange={handleSelectAppsStandard}
-                    disabled={tapLingo}
+                    // disabled={tapLingo}
+                    disabled
                   />
                   <label className="form-check-label" htmlFor="CheckTapLingo">
+                    <img
+                      src={standard14}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />{" "}
                     Tap Lingo
                   </label>
                 </div>
@@ -1011,13 +1053,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard15}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt=""
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -1026,12 +1062,20 @@ export default function Lite() {
                     id="CheckToAqui"
                     {...register("Tô aqui")}
                     onChange={handleSelectAppsStandard}
-                    disabled={toAqui}
+                    // disabled={toAqui}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckToAqui"
                   >
+                    <img
+                      src={standard15}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt=""
+                    />
                     {" "}
                     Tô aqui
                   </label>
@@ -1040,13 +1084,7 @@ export default function Lite() {
 
               <div className="col my-1">
                 <div className="form-check form-switch">
-                  <img
-                    src={standard16}
-                    height={36}
-                    width={36}
-                    className="ms-2"
-                    alt="/"
-                  />
+
                   <input
                     className="form-check-input"
                     type="checkbox"
@@ -1055,12 +1093,20 @@ export default function Lite() {
                     id="CheckRefoca"
                     {...register("Reforça")}
                     onChange={handleSelectAppsStandard}
-                    disabled={reforca}
+                    // disabled={reforca}
+                    disabled
                   />
                   <label
                     className="form-check-label text-wrap"
                     htmlFor="CheckRefoca"
                   >
+                    <img
+                      src={standard16}
+                      height={36}
+                      width={36}
+                      className="ms-2"
+                      alt="/"
+                    />
                     {" "}
                     Reforça
                   </label>
