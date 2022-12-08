@@ -1,3 +1,4 @@
+import iconLogo from '../../img/icon-logo-azul.png';
 
 function Footer() {
   return (
@@ -8,7 +9,7 @@ function Footer() {
 
 
           <div class="col-6 col-md-2 mb-2 ms-2">
-            <img src="https://netsimtelecom.com.br/wp-content/uploads/2022/05/logotipo-removebg-preview-e1654348971421.png" width="100" height="32" />
+            <img src={iconLogo} width="100" height="32" />
             <ul class="nav flex-column">
               <li class="nav-item mb-2 text-muted"><p>A NetSim Telecom possui o que há de melhor em planos de Internet, Telefonia, Rádio e Empresarial.</p></li>
 

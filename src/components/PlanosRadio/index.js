@@ -12,11 +12,12 @@ import standard4 from '../Playhub/img/standard4.png';
 import standard8 from '../Playhub/img/standard8.png';
 import ModalVerMaisPremium from '../ModalVerMaisPremium';
 import ModalVerMaisStandard from '../ModalVerMaisStandard';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 function PlanosRadio() {
 
-   
+   const navigate= useNavigate();
+
 
     return (
         <>
@@ -37,7 +38,7 @@ function PlanosRadio() {
                                 <small className="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
                                 <h2 className="card-title pricing-card-title fw-light text-start">R$149,90<small className="text-muted fw-light">/mês</small></h2>
 
-                                <button type="button" className="w-100 btn btn-lg btn-primary mt-3">Assinar</button>
+                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-radio')}>Assinar</button>
 
                             </div>
                             <div className="card-footer" style={{ background: '#DCDCDC' }}>
@@ -108,7 +109,7 @@ function PlanosRadio() {
                                 <h3 className="my-0 mb-3 fw-normal offer_title text-start">35 MEGA</h3>
                                 <small className="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
                                 <h2 className="card-title pricing-card-title fw-light text-start">R$129,90<small className="text-muted fw-light">/mês</small></h2>
-                                <button type="button" className="w-100 btn btn-lg btn-primary mt-3">Assinar</button>
+                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-radio')}>Assinar</button>
 
                             </div>
 
@@ -190,7 +191,7 @@ function PlanosRadio() {
                                 <small className="text-muted fw-light"><p className="text-start mb-0">Apenas</p></small>
                                 <h2 className="card-title pricing-card-title fw-light text-start">R$99,90<small className="text-muted fw-light">/mês</small></h2>
 
-                                <button type="button" className="w-100 btn btn-lg btn-primary mt-3">Assinar</button>
+                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-radio')}>Assinar</button>
 
                             </div>
 
@@ -291,7 +292,7 @@ function PlanosRadio() {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Lite</th>
+                            {/* <th>Lite</th> */}
                             <th>Inter Digital</th>
                             <th>Master Digital</th>
                             <th>Plus Digital</th>
@@ -327,13 +328,12 @@ function PlanosRadio() {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="#FF0000" viewBox="0 0 30 30" width="24px" height="24px">    <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z" /></svg>
                             </td>
                             <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#FF0000" viewBox="0 0 30 30" width="24px" height="24px">    <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z" /></svg>
+                            </td>
+                            {/* <td>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="#008000" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
-                            </td>
-                            <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="#008000" viewBox="0 0 16 16">
-                                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
-                            </td>
+                            </td> */}
                         </tr>
 
                         <tr>
@@ -363,7 +363,7 @@ function PlanosRadio() {
                             </td>
                             <td><b>1</b></td>
                             <td><b>2</b></td>
-                            <td><b>3</b></td>
+                            {/* <td><b>3</b></td> */}
                         </tr>
 
                         <tr>
@@ -399,10 +399,10 @@ function PlanosRadio() {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="#008000" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
                             </td>
-                            <td>
+                            {/* <td>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="#008000" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
-                            </td>
+                            </td> */}
                         </tr>
                     </tbody>
 
@@ -434,7 +434,7 @@ function PlanosRadio() {
                             </td>
                             <td><b>2</b></td>
                             <td><b>2</b></td>
-                            <td><b>4</b></td>
+                            {/* <td><b>4</b></td> */}
                         </tr>
                         <tr>
                             <th scope="row" className="text-start">App's Premium
@@ -466,7 +466,7 @@ function PlanosRadio() {
 
                             </td>
                             <td><b>1</b></td>
-                            <td><b>2</b></td>
+                            {/* <td><b>2</b></td> */}
                         </tr>
                         <tr>
                             <th scope="row" className="text-start">Telefone fixo
@@ -496,10 +496,10 @@ function PlanosRadio() {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="#008000" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
                             </td>
-                            <td>
+                            {/* <td>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="#008000" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
-                            </td>
+                            </td> */}
                         </tr>
                         <tr>
                             <th scope="row" className="text-start">Velocidade de Download
@@ -519,17 +519,17 @@ function PlanosRadio() {
                                     </OverlayTrigger>
                                 ))}
                             </th>
-                            <td>
+                            {/* <td>
                                 <b>200 mbps</b>
+                            </td> */}
+                            <td>
+                                <b>30 mbps</b>
                             </td>
                             <td>
-                                <b>300 mbps</b>
+                                <b>35 mbps</b>
                             </td>
                             <td>
-                                <b>350 mbps</b>
-                            </td>
-                            <td>
-                                <b>500 mbps</b>
+                                <b>50 mbps</b>
                             </td>
 
                         </tr>

@@ -1,4 +1,4 @@
-import imgBannerfibra1 from './banner internet.png';
+import imgBannerfibra1 from '../../img/Banner-Fibra.png';
 function BannerFibra() {
     return (
         <>

@@ -97,9 +97,7 @@ function Playhub() {
                         </div>
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                                 <button type="button" class="btn btn-outline-orange btn-lg px-4 me-sm-3 fw-bold">Ver Planos</button>
-                                {values.map((v, idx) => (
-                                    <button type="button" key={idx} class="btn btn-outline-light btn-lg px-4" onClick={() => handleShow(v)}>Saiba Mais</button>
-                                 ))}
+                                    <button type="button" class="btn btn-outline-light btn-lg px-4" onClick={(v) => handleShow(v)}>Saiba Mais</button>
                         </div>
                     </div>
                 </div>

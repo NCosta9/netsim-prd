@@ -1,6 +1,15 @@
 import './Lecupon.css';
-import imglecupon from './Img-lecupon.png'
+import imglecupon from './app-lecupon.png'
+
+
 function Lecupon() {
+
+  const LecuponStyle = {
+    color: 'blue',
+    width:'300px'
+};
+
+
     return (
         <>
 
@@ -10,7 +19,7 @@ function Lecupon() {
         <h5>DESCONTOS EM MAIS DE 24 MIL ESTABELECIMENTOS</h5>
         <p class="lead">Automaticamente você ganha como nosso cliente  acesso ao nosso clube de descontos que garante descontos em estabelecimentos na sua região e em mais de 24 mil espalhados pelo Brasil.  </p>
       </div>
-      <div class=" shadow-sm mx-auto fundo-lecupon rounded-top" ><img class="imglecupon"src={imglecupon}/></div>
+      <div class=" shadow-sm mx-auto fundo-lecupon rounded-top" ><img class="imglecupon"src={imglecupon} style={LecuponStyle}/></div>
     </div>
 
 </>

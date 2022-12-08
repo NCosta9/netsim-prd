@@ -74,7 +74,7 @@ function Perguntasfrequentes(){
     </h2>
     <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlush">
       <div class="accordion-body">
-      Sim, temos uma fidelidade contratual de apenas 12 meses, apenas para cobrir os custos do cliente. A menos que, o cliente opte em pagar a taxe de adesão de 500 reais não terá fidelidade. 
+      Sim, temos uma fidelidade contratual de apenas 12 meses, apenas para cobrir os custos do cliente. A menos que, o cliente opte em pagar a taxa de adesão de 500 reais não terá fidelidade. 
       </div>
     </div>
   </div>

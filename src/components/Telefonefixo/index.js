@@ -3,12 +3,20 @@ import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import Card from 'react-bootstrap/Card';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import {useNavigate } from 'react-router-dom';
 
 import ImgTelefone from './img-telefone.jpg';
 
+
+
 function Telefonefixo() {
+    const navigate = useNavigate();
+
     const [open1, setOpen] = useState(false);
     const [open2, setOpen2] = useState(false);
+
+   
+
     return (
         <>
             <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg bg-light">
@@ -39,7 +47,7 @@ function Telefonefixo() {
                                                 <li>100 MINUTOS para qualquer operadora do Brasil.</li>
                                                 <li>Recebimento de ligações ILIMITADAS</li>
                                             </ul>
-                                            <button type="button" class="w-100 btn btn-lg btn-primary">Assinar</button>
+                                            <button type="button" class="w-100 btn btn-lg btn-primary" onClick={() => navigate("/cobertura")}>Assinar</button>
                                         </div>
                                     </Card>
 
@@ -59,7 +67,7 @@ function Telefonefixo() {
                                                 <li> Ligações ILIMITADAS para qualquer operadora do Brasil.</li>
                                                 <li>Recebimento de ligações ILIMITADAS</li>
                                             </ul>
-                                            <button type="button" class="w-100 btn btn-lg btn-primary">Assinar</button>
+                                            <button type="submit" class="w-100 btn btn-lg btn-primary" onClick={() => navigate("/cobertura")}>Assinar</button>
                                         </div>
                                     </Card>
 

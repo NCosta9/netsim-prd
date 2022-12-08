@@ -4,10 +4,13 @@ import Popover from 'react-bootstrap/Popover';
 import './Planosempresariais.css';
 import React, { useState } from 'react';
 import Collapse from 'react-bootstrap/Collapse';
+import {useNavigate} from 'react-router-dom'
 
 function Planosfibra() {
     const [silver, setOpenSilver] = useState(false);
     const [gold, setOpenGold] = useState(false);
+
+    const navigate= useNavigate();
 
     return (
         <>
@@ -29,7 +32,7 @@ function Planosfibra() {
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
                                 <h2 class="card-title pricing-card-title fw-light text-start">R$450,00<small class="text-muted fw-light">/mês</small></h2>
 
-                                <button type="button" class="w-100 btn btn-lg btn-primary mt-3">Assinar</button>
+                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-empresa')}>Assinar</button>
                             </div>
                             <div class="card-footer" style={{ background: '#DCDCDC' }}>
                                 <div id="ultra-collapse-text">
@@ -79,7 +82,7 @@ function Planosfibra() {
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
                                 <h2 class="card-title pricing-card-title fw-light text-start">R$250,00<small class="text-muted fw-light">/mês</small></h2>
 
-                                <button type="button" class="w-100 btn btn-lg btn-primary mt-3">Assinar</button>
+                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-empresa')}>Assinar</button>
                             </div>
                             <div class="card-footer" style={{ background: '#DCDCDC' }}>
                                 <div id="ultra-collapse-text">

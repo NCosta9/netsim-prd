@@ -4,7 +4,12 @@ import Home from './pages/Home';
 import Cobertura from './pages/Cobertura';
 import Fibra from './pages/Fibra';
 import AreaCliente from './pages/AreaCliente';
-import Lite from './pages/Forms/FormsFibra/Lite';
+import ContrateEmpresa from './pages/Forms/FormsGeralEmpresa';
+import ContrateFibra from './pages/Forms/FormsGeralFibra';
+import ContrateRadio from './pages/Forms/FormsGeralRadio';
+
+
+
 import Radio from './pages/Radio';
 
 function RoutesApp(){
@@ -16,7 +21,10 @@ function RoutesApp(){
                 <Route path="/fibra" element={ <Fibra/> } />
                 <Route path='/radio' element={ <Radio/>}/>
                 <Route path="/cliente" element={ <AreaCliente/> } />
-                <Route path="/lite" element={ <Lite/> } />
+                <Route path="/contrate-radio" element={ <ContrateRadio/> } />
+                <Route path="/contrate-fibra" element={ <ContrateFibra/> } />
+                <Route path="/contrate-empresa" element={ <ContrateEmpresa/> } />
+
 
             </Routes>
         
