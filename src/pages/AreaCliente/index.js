@@ -22,7 +22,6 @@ export default function AreaCliente() {
     };
 
 
-    const values = [true];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
 

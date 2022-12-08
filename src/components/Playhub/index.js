@@ -29,22 +29,15 @@ import InfoAppsPremium from '../InfoAppsPremium';
 
 function Playhub() {
 
-    const values = [true];
     const [fullscreen, setFullscreen] = useState(true);
-    const [fullscreenPremium, setFullscreenPremium] = useState(true);
     const [show, setShow] = useState(false);
-    const [showPremium, setShowPremium] = useState(false);
 
   
     function handleShow(breakpoint) {
       setFullscreen(breakpoint);
       setShow(true);
     }
-     function handleShowPremium(breakpoint) {
-        setFullscreenPremium(breakpoint);
-        setShowPremium(true);
-      }
-  
+   
 
     return (
         <>
