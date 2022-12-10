@@ -4,6 +4,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Lecupon from './Img/Lecupon-1.png';
 import Perguntasfrequentes from '../../components/Perguntasfrequentes';
+import ContatoWhatsapp from '../../components/ContatoWhatsapp';
+
 
 import SaibaLecupon from '../../components/SaibaMaisLecupon';
 
@@ -347,6 +349,9 @@ function Home() {
 <SaibaLecupon/>
         </Modal.Body>
       </Modal>
+
+      <ContatoWhatsapp/>
+
     </>
 
   )

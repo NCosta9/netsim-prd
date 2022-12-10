@@ -10,7 +10,11 @@ import BannerFibra from '../../components/BannerFibra';
 import Planosfibra from '../../components/Planosfibra';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Planosempresariais from '../../components/Planosempresariais';
+import Planosempresariais from '../../components/Planosempresariais';     
+import ContatoWhatsapp from '../../components/ContatoWhatsapp';
+
+
+
 
 function Fibra() {
   return (
@@ -53,6 +57,7 @@ function Fibra() {
         </div>
         <Footer />
       </div>
+      <ContatoWhatsapp/>
 
 
 

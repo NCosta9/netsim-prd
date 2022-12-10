@@ -49,7 +49,7 @@ function Perguntasfrequentes(){
     </h2>
     <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlush">
       <div class="accordion-body">
-      Não temos taxa de adesão. Os custos da instalação é totalmente cobrível pelos meses de fidelidade.
+      Não temos taxa de adesão. Os custos da instalação é totalmente anexado aos meses de fidelidade.
       </div>
     </div>
   </div>

@@ -5,70 +5,73 @@ import emailjs from "@emailjs/browser";
 
 export default function FormsGeralRadio() {
 
-  const { register, handleSubmit, getValues } = useForm();
+  const { register,handleSubmit, getValues} = useForm();
 
+
+
+  function linkWhatsapp(){
+    let urlValues = getValues();
+    let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
+    let end_url =`${url}Eu %0A${urlValues.NOME}%0A de CPF %0A${urlValues.CPF}%0A já enviei os dados para assinatura do %0A${urlValues.PLANO}%0A .Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09. %0A"`; 
+  window.open(end_url)
+  };
 
 
 
   function sendEmail(e) {
     e.preventDefault();
-
-    const formValues = getValues();
-    const userData = `
-        Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},contrato o ${formValues.PLANO} e CONFIRMO esta etapa de contratação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do contrato de fidelidade de 12 meses deixando a taxa de adesão de R$ 500,00 isenta que não será cobrada mediante a fidelidade, e estou ciente que a empresa tem um prazo para instalação de até 48H. Meu CPF poderá passar por uma análise antes da aprovação do contrato. Todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom.
-        
-        Dados para o cadastro:
-
-        Nome Completo: ${formValues.NOME},
-        CPF: ${formValues.CPF},
-        RG: ${formValues.RG},
-        Data de Nascimento: ${formValues.NASCIMENTO},
-        Cep: ${formValues.CEP},
-        Bairro: ${formValues.Bairro},
-        Endereço Completo: ${formValues.Endereco},
-        Moradia: ${formValues.Moradia},
-        Whatsapp01: ${formValues.Whatsapp01},
-        Whatsapp02: ${formValues.Whatsapp02},
-        Email: ${formValues.Email},
-        Plano Contratado: ${formValues.PLANO},
-        Telefone Fixo Netsim: ${formValues.Fixo},
-        Data de Vencimento: ${formValues.Vencimento},
-        Nome Completo da Indicação: ${formValues.Indicacao},
-        AppStandards: ${formValues.AppStandards},
-        Confirmação: ${formValues.Confirmação},
-    `;
-
-    console.log(userData);
-
-    const templateParams = {
-      message: userData,
+      const formValues = getValues();
+      const userData = `
+          Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},contrato o ${formValues.PLANO} e CONFIRMO esta etapa de contratação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do contrato de fidelidade de 12 meses deixando a taxa de adesão de R$ 500,00 isenta que não será cobrada mediante a fidelidade, e estou ciente que a empresa tem um prazo para instalação de até 48H. Meu CPF poderá passar por uma análise antes da aprovação do contrato. Todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom.
+  
+          Dados para o cadastro:
+  
+          Nome Completo: ${formValues.NOME},
+          CPF: ${formValues.CPF},
+          RG: ${formValues.RG},
+          Data de Nascimento: ${formValues.NASCIMENTO},
+          Cep: ${formValues.CEP},
+          Bairro: ${formValues.Bairro},
+          Endereço Completo: ${formValues.Endereco},
+          Moradia: ${formValues.Moradia},
+          Whatsapp01: ${formValues.Whatsapp01},
+          Whatsapp02: ${formValues.Whatsapp02},
+          Email: ${formValues.Email},
+          Plano Contratado: ${formValues.PLANO},
+          Telefone Fixo Netsim: ${formValues.Fixo},
+          Data de Vencimento: ${formValues.Vencimento},
+          Nome Completo da Indicação: ${formValues.Indicacao},
+          AppStandards: ${formValues.AppStandards},
+          Confirmação: ${formValues.Confirmação},
+      `;
+  
+      console.log(userData);
+  
+      const templateParams = {
+        message: userData,
+      };
+  
+      console.log(templateParams);
+  
+      emailjs
+        .send(
+          "service_au350rb",
+          "template_oh38moq",
+          templateParams,
+          "lTUpdEC1irtwxkpEq"
+        )
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
     };
+     console.log(sendEmail);
 
-    console.log(templateParams);
 
-    emailjs
-      .send(
-        "service_au350rb",
-        "template_oh38moq",
-        templateParams,
-        "lTUpdEC1irtwxkpEq"
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
-  }
-
-  let url =
-    "https://api.whatsapp.com/send?phone=556120993434&text=Eu %0A" + getValues("NOME") + "%0A de CPF %0A" + getValues("CPF") + "%0A já enviei os dados para assinatura do %0A" + getValues("PLANO") + ". %0A Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09. %0A";
-
-  const sendWhatsapp = () => {
-    window.open(url);
-  };
 
   return (
     <div className="container">
@@ -80,8 +83,9 @@ export default function FormsGeralRadio() {
       <form
         className="row g-3 mt-5"
         id="formDados"
-        onSubmit={sendEmail}
-        onSubmitCapture={handleSubmit(sendWhatsapp)}
+        onSubmit={handleSubmit(sendEmail)}
+        onSubmitCapture={handleSubmit(linkWhatsapp)}
+
       >
         {/* ################### Etapa 01 ################################### */}
 

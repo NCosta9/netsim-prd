@@ -10,6 +10,9 @@ import BannerAreaCliente from "../../img/Banner-AreaDoCliente.png"
 import Modal from 'react-bootstrap/Modal';
 import InfoAppsStandard from '../../components/InfoAppsStandard';
 import InfoAppsPremium from '../../components/InfoAppsPremium';
+import SaibaMaisLecupon from '../../components/SaibaMaisLecupon';
+import ContatoWhatsapp from '../../components/ContatoWhatsapp';
+
 
 
 export default function AreaCliente() {
@@ -22,14 +25,23 @@ export default function AreaCliente() {
     };
 
 
-    const [fullscreen, setFullscreen] = useState(true);
-    const [show, setShow] = useState(false);
+    const [appFullscreen, setAppFullscreen] = useState(true);
+    const [clubeFullscreen, setClubeFullscreen] = useState(true);
+
+    const [appShow, setAppShow] = useState(false);
+    const [clubeShow, setClubeShow] = useState(false);
 
 
-    function handleShow(breakpoint) {
-        setFullscreen(breakpoint);
-        setShow(true);
+
+    function handleAppShow(breakpoint) {
+        setAppFullscreen(breakpoint);
+        setAppShow(true);
     }
+    function handleClubeShow(breakpoint) {
+        setClubeFullscreen(breakpoint);
+        setClubeShow(true);
+    }
+
 
     return (
         <>
@@ -77,7 +89,7 @@ export default function AreaCliente() {
                                     <h3 className="mb-0">Clube de Descontos</h3>
                                     <p className="card-text mb-auto">Aplicativo que garante a você descontos em estabelecimentos em sua região.</p>
                                     <a href="/" className="btn btn-primary my-1">Acessar</a>
-                                    <a href="#" className="btn btn-outline-primary my-1">Como Configurar</a>
+                                    <a href="#" className="btn btn-outline-primary my-1" onClick={() => setClubeShow(true, handleClubeShow)}>Como Configurar</a>
 
                                 </div>
                                 <div className="col-auto d-none d-lg-block">
@@ -94,7 +106,7 @@ export default function AreaCliente() {
                                     <p className="mb-auto">Acesse agora esse portal para escolher quais aplicativos deseja utilizar</p>
                                     <a href="https://www.portaldoassinante.com/netsim" className="btn btn-primary my-1">Acessar</a>
 
-                                    <button className="btn btn-outline-primary my-1" onClick={(v) => handleShow(v)}>Como Configurar</button>
+                                    <button className="btn btn-outline-primary my-1" onClick={() => setAppShow(true, handleAppShow)}>Como Configurar</button>
 
                                 </div>
                                 <div className="col-auto d-none d-lg-block">
@@ -128,7 +140,7 @@ export default function AreaCliente() {
                                         <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                                             <div className="col p-4 d-flex flex-column position-static">
                                                 {/* <strong className="d-inline-block mb-2 text-primary">Veja</strong> */}
-                                                <h3 className="mb-3">2 via de Fatura</h3>
+                                                <h3 className="mb-3">2° via de Fatura</h3>
                                                 {/* <p className="card-text mb-auto">Aplicativo que garante a você descontos em estabelecimentos em sua região.</p> */}
                                                 <a href="https://ixc.netsimtelecom.com.br/central_assinante_web/login" className="btn btn-outline-primary">Acessar</a>
                                             </div>
@@ -178,7 +190,7 @@ export default function AreaCliente() {
                                                 {/* <strong className="d-inline-block mb-2 text-primary">Veja</strong> */}
                                                 <h3 className="mb-3">Testar Velocidade</h3>
                                                 {/* <p className="card-text mb-auto">Aplicativo que garante a você descontos em estabelecimentos em sua região.</p> */}
-                                                <a href="https://ixc.netsimtelecom.com.br/central_assinante_web/login" className="btn btn-outline-primary">Acessar</a>
+                                                <a href="fast.com/pt" className="btn btn-outline-primary">Acessar</a>
                                             </div>
                                             <div className="col-auto d-lg-block p-3">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" className="bi bi-speedometer2 mt-3" viewBox="0 0 16 16">
@@ -212,11 +224,11 @@ export default function AreaCliente() {
                                 <div className="p-4">
                                     <h4 className="fst-italic">Serviços:</h4>
                                     <ol className="list-group ">
-                                        <li className='list-group-item'><a href="/">Mudança de endereço dos equipamentos</a></li>
-                                        <li className='list-group-item'><a href="/">Mudança de titularidade</a></li>
-                                        <li className='list-group-item'><a href="/">Mudança de ponto internet</a></li>
-                                        <li className='list-group-item'><a href="/">Solicitar Migração</a></li>
-                                        <li className='list-group-item'><a href="/">Teste de velocidade</a></li>
+                                        <li className='list-group-item'><a href="https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Estou+com+algumas+duvidas+pode+me+ajudar%3F&type=phone_number&app_absent=0">Mudança de endereço dos equipamentos</a></li>
+                                        <li className='list-group-item'><a href="https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Estou+com+algumas+duvidas+pode+me+ajudar%3F&type=phone_number&app_absent=0">Mudança de titularidade</a></li>
+                                        <li className='list-group-item'><a href="https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Estou+com+algumas+duvidas+pode+me+ajudar%3F&type=phone_number&app_absent=0">Mudança de ponto internet</a></li>
+                                        <li className='list-group-item'><a href="https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Estou+com+algumas+duvidas+pode+me+ajudar%3F&type=phone_number&app_absent=0">Solicitar Migração</a></li>
+                                        <li className='list-group-item'><a href="fast.com/pt">Teste de velocidade</a></li>
 
                                     </ol>
                                 </div>
@@ -224,8 +236,8 @@ export default function AreaCliente() {
                                 <div className="p-4">
                                     <h4 className="fst-italic">Nossas Redes:</h4>
                                     <ol className="list-unstyled">
-                                        <li><a href="/">Instagram</a></li>
-                                        <li><a href="/">Facebook</a></li>
+                                        <li><a href="https://www.instagram.com/netsimtelecom/">Instagram</a></li>
+                                        <li><a href="https://pt-br.facebook.com/netsimtelecom/">Facebook</a></li>
                                     </ol>
                                 </div>
                             </div>
@@ -236,10 +248,15 @@ export default function AreaCliente() {
             </div>
 
 
-            <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-
+            <Modal 
+            show={appShow} 
+            fullscreen={appFullscreen} 
+            onHide={() => setAppShow(false)
+            }
+            aria-labelledby="example-modal-sizes-title-sm"
+            >
                 <Modal.Header closeButton>
-                    <Modal.Title><h3 className='fw-light'>Serviços digitais</h3></Modal.Title>
+                    <Modal.Title id="example-modal-sizes-title-sm"><h3 className='fw-light'>Serviços digitais</h3></Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
 
@@ -250,6 +267,27 @@ export default function AreaCliente() {
 
                 </Modal.Body>
             </Modal>
+
+            <Modal 
+            show={clubeShow} 
+            fullscreen={clubeFullscreen} 
+            onHide={() => setClubeShow(false) }
+            aria-labelledby="example-modal-sizes-title-lg"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-modal-sizes-title-lg" ><h3 className='fw-light'>Serviços digitais</h3></Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+
+                <SaibaMaisLecupon/>
+
+                </Modal.Body>
+            </Modal>
+
+
+<ContatoWhatsapp/>
+
+
 
         </>
     );
