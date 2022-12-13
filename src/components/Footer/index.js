@@ -57,7 +57,9 @@ function Footer() {
         </div>
         <div class="divider-orange"></div>
         <div class="text-center">
-          <p>&copy; 2022 Netsim provedor de sistema de integração a mídia LTDA, Cnpj: 18.156.287/0001-09.  All rights reserved.</p>
+          <p> Copyright &copy; 2019- 2022 Netsim Telecom&reg; - Todos os Direitos Reservados.
+          <br/>
+          Netsim Provedor de Sistema de Integração a Mídia LTDA- CNPJ: 18.156.287/0001-09.</p>
 
         </div>
       </footer>
