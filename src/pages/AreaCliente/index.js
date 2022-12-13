@@ -72,12 +72,12 @@ export default function AreaCliente() {
                 <main className="container">
                     <div className="p-4 p-md-5 mb-4 rounded text-bg-dark" style={BannerStyle}>
                         <div className="col-md-6 px-0">
-                            <h1 className="display-4 fst-italic">Bem- vindo a nossa area do cliente </h1>
+                            <h1 className="display-4 fst-italic">Bem- Vindo a Área Cliente Sim</h1>
                             <p className="lead my-3">
-                                Através desse canal em nosso site, os nossos clientes encontrara todas as novidade relacionadas aos nossos serviços. Alem disso, todas
-                                as operações de facilidade para o cliente conseguira ser realizado por aqui.
+                                Através desse canal, você encontra todas as informações relacionadas aos nossos serviços centralizadas em apenas um lugar e consegue
+                                realizar ou solicitar qualquer tipo de serviço.
                             </p>
-                            <p className="lead mb-0"><a href="/" className="text-white fw-bold">Voltar para Home</a></p>
+                            <a href="/" className="btn btn-outline-light mb-0" >Voltar para Home</a>
                         </div>
                     </div>
 
@@ -88,7 +88,8 @@ export default function AreaCliente() {
                                     <strong className="d-inline-block mb-2 text-primary">Veja</strong>
                                     <h3 className="mb-0">Clube de Descontos</h3>
                                     <p className="card-text mb-auto">Aplicativo que garante a você descontos em estabelecimentos em sua região.</p>
-                                    <a href="/" className="btn btn-primary my-1">Acessar</a>
+                                    <a className="btn btn-primary my-1" disabled>Acessar</a>
+                                    
                                     <a href="#" className="btn btn-outline-primary my-1" onClick={() => setClubeShow(true, handleClubeShow)}>Como Configurar</a>
 
                                 </div>
