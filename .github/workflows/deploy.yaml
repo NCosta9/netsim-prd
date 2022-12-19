@@ -9,7 +9,7 @@ on:
       build:
         runs-on: ubuntu-latest
         name: Build artifacts
-      steps: 
+        steps: 
         - uses: actions/checkout@v2
           name: Checkout
 
