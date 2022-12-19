@@ -24,8 +24,8 @@ on:
               GITHUB_SHA: ${{ github.sha }}
           run: tar -czf "${GITHUB_SHA}".tar.gz build
 
-        -name: Storing artifacts
-        uses: actions/upload-artifact@v2
+        - name: Storing artifacts
+          uses: actions/upload-artifact@v2
           with:
             name: app-build
             path: ${{ github.sha }}.tar.gz
