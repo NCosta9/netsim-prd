@@ -9,9 +9,11 @@ on:
       build:
         runs-on: ubuntu-latest
         name: Build artifacts
-        steps: 
-          - uses: actions/checkout@v2
-          name: Installing dependencies
+      steps: 
+        - uses: actions/checkout@v2
+          name: Checkout
+
+        - name: Installing dependencies
           run: npm ci
 
         - name: Build project
