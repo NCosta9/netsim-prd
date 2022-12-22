@@ -1,6 +1,6 @@
 {
   "name": "site-netsim",
-  "homepage": "https://home.netsimtelecom.com.br/",
+  "homepage": "http://netsimtelecom.com.br/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.9.1",
+    "express": "^4.18.2",
     "glightbox": "^3.2.0",
     "node-sass": "^7.0.3",
     "react": "^18.2.0",

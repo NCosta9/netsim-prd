@@ -1,4 +1,4 @@
-<IfModule mod_rewrite.c>
+<!-- <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 DirectoryIndex index.php
@@ -7,4 +7,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule . /index.php [L]
-</IfModule>
+</IfModule> -->
+
+Options -MultiViews
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.html [QSA,L]
