@@ -4,7 +4,7 @@ import { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-export default function Lite() {
+export default function Inter() {
 
   const [show, setShow] = useState(false);
 
@@ -266,7 +266,7 @@ export default function Lite() {
           <input
             type="text"
             className="form-control shadow-sm"
-            value="Plano Lite R$ 99,90"
+            value="Plano Inter Digital R$ 99,90"
             {...register("PLANO")}
             readOnly
           />

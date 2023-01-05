@@ -39,7 +39,7 @@ function Planosfibra() {
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
                                 <h2 class="card-title pricing-card-title fw-light text-start">R$199,90<small class="text-muted fw-light">/mês</small></h2>
 
-                                <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-fibra')}>Assinar</button>
+                                <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/ultra')}>Assinar</button>
 
 
                             </div>
@@ -110,7 +110,7 @@ function Planosfibra() {
                                 <h3 class="my-0 mb-3 fw-normal offer_title text-start">350 MEGA</h3>
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
                                 <h2 class="card-title pricing-card-title fw-light text-start">R$149,90<small class="text-muted fw-light">/mês</small></h2>
-                                <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-fibra')}>Assinar</button>
+                                <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/plus')}>Assinar</button>
 
                             </div>
 
@@ -190,7 +190,7 @@ function Planosfibra() {
                                 <small class="text-muted fw-light"><p class="text-start mb-0">Apenas</p></small>
                                 <h2 class="card-title pricing-card-title fw-light text-start">R$114,90<small class="text-muted fw-light">/mês</small></h2>
 
-                                <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-fibra')}>Assinar</button>
+                                <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/basic')}>Assinar</button>
 
 
                             </div>
@@ -256,7 +256,7 @@ function Planosfibra() {
                                 <h2 class="card-title pricing-card-title fw-light text-start">R$99,90<small class="text-muted fw-light">/mês</small></h2>
 
 
-                                <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-fibra')}>Assinar</button>
+                                <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/lite')}>Assinar</button>
                             </div>
                             <div class="card-footer" style={{ background: '#DCDCDC' }}>
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Benefícios do plano:</p></small>

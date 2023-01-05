@@ -38,7 +38,7 @@ function PlanosRadio() {
                                 <small className="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
                                 <h2 className="card-title pricing-card-title fw-light text-start">R$149,90<small className="text-muted fw-light">/mês</small></h2>
 
-                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-radio')}>Assinar</button>
+                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/digital')}>Assinar</button>
 
                             </div>
                             <div className="card-footer" style={{ background: '#DCDCDC' }}>
@@ -109,7 +109,7 @@ function PlanosRadio() {
                                 <h3 className="my-0 mb-3 fw-normal offer_title text-start">35 MEGA</h3>
                                 <small className="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
                                 <h2 className="card-title pricing-card-title fw-light text-start">R$129,90<small className="text-muted fw-light">/mês</small></h2>
-                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-radio')}>Assinar</button>
+                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/Master')}>Assinar</button>
 
                             </div>
 
@@ -191,7 +191,7 @@ function PlanosRadio() {
                                 <small className="text-muted fw-light"><p className="text-start mb-0">Apenas</p></small>
                                 <h2 className="card-title pricing-card-title fw-light text-start">R$99,90<small className="text-muted fw-light">/mês</small></h2>
 
-                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-radio')}>Assinar</button>
+                                  <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/inter')}>Assinar</button>
 
                             </div>
 
