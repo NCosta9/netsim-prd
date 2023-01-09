@@ -50,12 +50,14 @@ export default function Basic() {
 //
 
 function sendEmail(e) {
-        
-  e.preventDefault();
+    e.preventDefault();
     const formValues = getValues();
-    const title = "NOVA ASSINATURA DE INTERNET"
-    const nome_cliente = `${formValues.NOME}`
-    const cliente_mail = `${formValues.Email}`
+
+    const title = "NOVA ASSINATURA DE INTERNET";
+    const assunto = "DADOS RECEBIDOS PARA ASSINATURA";
+    const cabecalho = "Ficamos Felizes ter você como nosso novo cliente!&nbsp;Ja recebemos o seus dados e dentro de alguns minutos informaremos sobre sua instalação. Verifique abaixo se as informações estão corretas: ";
+    const nome_cliente = `${formValues.NOME}`;
+    const cliente_mail = `${formValues.Email}`;
     const userData = `
         Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},contrato o ${formValues.PLANO} e CONFIRMO esta etapa de contratação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do contrato de fidelidade de 12 meses deixando a taxa de adesão de R$ 500,00 isenta que não será cobrada mediante a fidelidade, e estou ciente que a empresa tem um prazo para instalação de até 48H. Meu CPF poderá passar por uma análise antes da aprovação do contrato. Todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom.
 
@@ -87,6 +89,8 @@ function sendEmail(e) {
       title_mail:title,
     };
     const templateParamsCliente = {
+      assunto:assunto,
+      cabecalho:cabecalho,
       message: userData,
       cliente:nome_cliente,
       cliente_mail: cliente_mail,

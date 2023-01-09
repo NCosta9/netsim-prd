@@ -4,17 +4,38 @@ import { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-export default function FormsGeralFibra() {
+import premium1 from "../../../../img/iconApps/premium1.png";
+import premium2 from "../../../../img/iconApps/premium2.png";
+import premium3 from "../../../../img/iconApps/premium3.png";
+import premium4 from "../../../../img/iconApps/premium4.png";
+import standard1 from "../../../../img/iconApps/standard1.png";
+import standard2 from "../../../../img/iconApps/standard2.png";
+import standard3 from "../../../../img/iconApps/standard3.jpg";
+import standard4 from "../../../../img/iconApps/standard4.png";
+import standard5 from "../../../../img/iconApps/standard5.png";
+import standard6 from "../../../../img/iconApps/standard6.jpg";
+import standard7 from "../../../../img/iconApps/standard7.png";
+import standard8 from "../../../../img/iconApps/standard8.png";
+import standard9 from "../../../../img/iconApps/standard9.png";
+import standard10 from "../../../../img/iconApps/standard10.png";
+import standard11 from "../../../../img/iconApps/standard11.png";
+import standard12 from "../../../../img/iconApps/standard12.png";
+import standard13 from "../../../../img/iconApps/standard13.png";
+import standard14 from "../../../../img/iconApps/standard14.png";
+import standard15 from "../../../../img/iconApps/standard15.png";
+import standard16 from "../../../../img/iconApps/standard16.png";
+
+
+export default function Plus() {
 
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+// esta sentado as propriedade do MODAL  que esta no fim desse codigo
 
   const { register,handleSubmit, getValues} = useForm();
 
-
+//Envia todos os dados do formulario por meio de uma url do whatsapp
   function linkWhatsapp(e){
     e.preventDefault();
     let urlValues = getValues();
@@ -26,63 +47,98 @@ export default function FormsGeralFibra() {
  
   };
 
+//Envia todos os dados do fomulario no email da empresa suporte@netsimtelecom e uma copia do email na caixa de entrada do financeiro@netsimtelecom via emailjs.com.
+//
 
+function sendEmail(e) {
+        
+  e.preventDefault();
+    const formValues = getValues();
+    const title = "NOVA ASSINATURA DE INTERNET"
+    const nome_cliente = `${formValues.NOME}`
+    const cliente_mail = `${formValues.Email}`
+    const userData = `
+        Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},contrato o ${formValues.PLANO} e CONFIRMO esta etapa de contratação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do contrato de fidelidade de 12 meses deixando a taxa de adesão de R$ 500,00 isenta que não será cobrada mediante a fidelidade, e estou ciente que a empresa tem um prazo para instalação de até 48H. Meu CPF poderá passar por uma análise antes da aprovação do contrato. Todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom.
 
-  function sendEmail(e) {
-    e.preventDefault();
-      const formValues = getValues();
-      const userData = `
-          Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},contrato o ${formValues.PLANO} e CONFIRMO esta etapa de contratação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do contrato de fidelidade de 12 meses deixando a taxa de adesão de R$ 500,00 isenta que não será cobrada mediante a fidelidade, e estou ciente que a empresa tem um prazo para instalação de até 48H. Meu CPF poderá passar por uma análise antes da aprovação do contrato. Todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom.
-  
-          Dados para o cadastro:
-  
-          Nome Completo: ${formValues.NOME},
-          CPF: ${formValues.CPF},
-          RG: ${formValues.RG},
-          Data de Nascimento: ${formValues.NASCIMENTO},
-          Cep: ${formValues.CEP},
-          Bairro: ${formValues.Bairro},
-          Endereço Completo: ${formValues.Endereco},
-          Moradia: ${formValues.Moradia},
-          Whatsapp01: ${formValues.Whatsapp01},
-          Whatsapp02: ${formValues.Whatsapp02},
-          Email: ${formValues.Email},
-          Plano Contratado: ${formValues.PLANO},
-          Telefone Fixo Netsim: ${formValues.Fixo},
-          Data de Vencimento: ${formValues.Vencimento},
-          Nome Completo da Indicação: ${formValues.Indicacao},
-          AppStandards: ${formValues.AppStandards},
-      `;
-  
-      console.log(userData);
-  
-      const templateParams = {
-        message: userData,
-      };
-  
-      console.log(templateParams);
-  
-      emailjs
-        .send(
-          "service_au350rb",
-          "template_oh38moq",
-          templateParams,
-          "lTUpdEC1irtwxkpEq"
-        )
-        .then(
-          (response) => {
-            console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-            
-          },
-          (error) => {
-            console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
-            
-          }
-        );
- console.log(sendEmail);
+        Dados para o cadastro:
+
+        Nome Completo: ${formValues.NOME},
+        CPF: ${formValues.CPF},
+        RG: ${formValues.RG},
+        Data de Nascimento: ${formValues.NASCIMENTO},
+        Cep: ${formValues.CEP},
+        Bairro: ${formValues.Bairro},
+        Endereço Completo: ${formValues.Endereco},
+        Moradia: ${formValues.Moradia},
+        Whatsapp01: ${formValues.Whatsapp01},
+        Whatsapp02: ${formValues.Whatsapp02},
+        Email: ${formValues.Email},
+        Plano Contratado: ${formValues.PLANO},
+        Telefone Fixo Netsim: ${formValues.Fixo},
+        Data de Vencimento: ${formValues.Vencimento},
+        Nome Completo da Indicação: ${formValues.Indicacao},
+        AppStandard: ${formValues.AppStandard},
+        AppPremium: ${formValues.AppPremium},
+    `;
+
+    console.log(userData);
+
+    const templateParams = {
+      message: userData,
+      title_mail:title,
     };
-     
+    const templateParamsCliente = {
+      message: userData,
+      cliente:nome_cliente,
+      cliente_mail: cliente_mail,
+    };
+
+    console.log(templateParams);
+
+    emailjs
+      .send(
+        "service_au350rb",
+        "template_oh38moq",
+        templateParams,
+        "lTUpdEC1irtwxkpEq"
+      )
+      .then(
+        (response) => {
+          console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
+          
+        },
+        (error) => {
+          console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
+          
+        }
+      );
+      
+      emailjs
+      .send(
+        "service_au350rb",
+        "template_xqy15f2",
+        templateParamsCliente,
+        "lTUpdEC1irtwxkpEq"
+      )
+      .then(
+        (response) => {
+          console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
+          
+        },
+        (error) => {
+          console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
+          
+        }
+      );
+console.log(sendEmail);
+};
+
+
+
+
+
  
+  
   return (
     <div className="container">
       <div class="bg-light p-5 mt-3 rounded">
@@ -92,9 +148,8 @@ export default function FormsGeralFibra() {
       </div>
       <form
         className="row g-3 mt-5"
-        id="formDados"
-        
-        >
+        name="formDados"
+      >
         {/* ################### Etapa 01 ################################### */}
 
         <h4>Dados pessoais - 1 Etapa</h4>
@@ -231,16 +286,13 @@ export default function FormsGeralFibra() {
 
         <div className="mb-3">
           <label className="form-label fw-bold">Plano Contratado:</label>
-          <select
-            className="form-select"
-            {...register("PLANO", { required: true })}
-          >
-            <option value="" selected>-- Escolha seu Plano --</option>
-            <option value="Lite R$ 99,90" >Lite R$ 99,90</option>
-            <option value="Basic R$ 114,90" >Basic R$ 114,90</option>
-            <option value="Plus R$ 149,90" >Plus R$ 149,90</option>
-            <option value="Ultra R$ 199,90" >Ultra R$ 199,90</option>
-          </select>
+          <input
+            type="text"
+            className="form-control shadow-sm"
+            value="Plano Plus Digital R$ 149,90"
+            {...register("PLANO")}
+            readOnly
+          />
         </div>
 
         <div className="container">
@@ -330,7 +382,18 @@ export default function FormsGeralFibra() {
           </div>
         </div>
 
-        <button type="button" className="btn btn-lg btn-success mb-4" onClick={handleSubmit(handleShow)}>
+        <div className="form-group mb-3">
+          <h5 className="mb-0">Monte seu pacote de aplicativos:</h5>
+          <div className="row">
+            <labe>Escolha:</labe>
+            <div className="col-sm-1 form-text">Standard: 2</div>
+            <div className="col-sm-1 form-text mb-3">Premium: 1</div>
+          </div>
+        </div>
+
+
+        
+          <button type="button" className="btn btn-lg btn-success mb-4" onClick={handleSubmit(handleShow)}>
           Finalizar
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -355,10 +418,18 @@ export default function FormsGeralFibra() {
             NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ
             18.156.287/0001-09 e tenho total ciência do contrato de fidelidade
             de 12 meses deixando a taxa de adesão de R$ 500,00 isenta mediante
-            a fidelidade. Estou ciente que a empresa tem um prazo para
-            instalação de até 48H. Meu CPF poderá passar por uma análise antes
-            da aprovação do contrato. Todos os dados fornecidos estão seguros
+            a fidelidade. 
+            <br/>(01)
+            Estou ciente que a empresa tem um prazo para
+            instalação de até 48 horas. 
+            <br/>(02)
+            Meu CPF poderá passar por uma análise antes
+            da aprovação do contrato. 
+            <br/>(03)
+            Todos os dados fornecidos estão seguros
             e são de inteira responsabilidade da Netsim Telecom.
+            <br/>(04)
+            No prazo de até 24 horas esta liberado o acesso aos aplicativos escolhidos com login o usuario:(Email) e Senha:(CPF).
         </Modal.Body>
         <Modal.Footer>
           <Button type="button" variant="primary" onClick={linkWhatsapp} onClickCapture={sendEmail}>
@@ -368,11 +439,6 @@ export default function FormsGeralFibra() {
       </Modal>
       </form>
 
-
-      
     </div>
-
-
-
   );
 }
