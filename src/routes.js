@@ -22,6 +22,11 @@ import Master from './pages/Forms/FormsRadio/Master';
 import Digital from './pages/Forms/FormsRadio/Digital';
 import Inter from './pages/Forms/FormsRadio/Inter';
 
+//imports para rotas de solicitação de serviços
+import Mudanca from './pages/Forms/FormMudanca';
+import Titularidade from './pages/Forms/Titularidade';
+
+
 
 
 function RoutesApp(){
@@ -42,6 +47,10 @@ function RoutesApp(){
                 <Route path="/master" element={ <Master/> } />
                 <Route path="/digital" element={ <Digital/> } />
                 <Route path="/inter" element={ <Inter/> } />
+                <Route path="/mudanca" element={ <Mudanca/> } />
+                <Route path="/titularidade" element={ <Titularidade/> } />
+
+
 
             </Routes>
         

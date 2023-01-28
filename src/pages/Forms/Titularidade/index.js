@@ -5,14 +5,14 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 
-export default function FormMudanca() {
+export default function Titulariade() {
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 // esta sentado as propriedade do MODAL  que esta no fim desse codigo
 
-  const { register,handleSubmit, getValues} = useForm();
+const { register,handleSubmit, getValues} = useForm();
 
 //Envia todos os dados do formulario por meio de uma url do whatsapp
   function linkWhatsapp(e){
@@ -111,11 +111,6 @@ console.log(sendEmail);
 };
 
 
-
-
-
- 
-  
   return (
     <div className="container">
       <div class="bg-light p-5 mt-3 rounded">
@@ -192,14 +187,12 @@ console.log(sendEmail);
             <option value="Buritis 01" >Buritis 01</option>
             <option value="Buritis 02" >Buritis 02</option>
             <option value="Chácara Final Feliz" >Chácara Final Feliz</option>
-            <option value="Chácara Final Feliz" >Chácara São José</option>
             <option value="Chácara Rossio " >Chácara Rossio </option>
             <option value="Condomínio São José" >Condomínio São José</option>
             <option value="Dom Francisco" >Dom Francisco</option>
             <option value="Dom Pedro" >Dom Pedro</option>
             <option value="Salomão Elias" >Salomão Elias</option>
             <option value="São Francisco" >São Francisco</option>
-            <option value="São Francisco" >Guarapari</option>
             <option value="Zona Rural Aguas Quentes" >Zona Rural Aguas Quentes</option>
           </select>
         </div>
@@ -230,7 +223,7 @@ console.log(sendEmail);
             className="form-control shadow-sm"
             {...register("data", { required: true })}
           />
-          <label className="fw-bold">Data da Mudança:</label>
+          <label className="fw-bold">Data de Nascimento:</label>
         </div>
 
         <div className="container">
@@ -261,7 +254,7 @@ console.log(sendEmail);
             />
             <label className="form-check-label" htmlFor="inlineRadio2">
               Tarde
-            </label> 
+            </label>
           </div>
         </div>
 
@@ -302,10 +295,10 @@ console.log(sendEmail);
           </Modal.Title>
         </Modal.Header>
         <Modal.Body> 
-          O serviço de mudança de endereço tem uma taxa de R$ 49,90, que virá junto com a próxima fatura em aberto, ou seja, no ato do serviço não precisa ser pago nada para nossos técnicos, será gerado e enviado o boleto para o contato que solicitou o serviço.<br/><br/>
-          (1) No dia da mudança nossos técnicos entrarão em contato para confirmar o horário exato da mudança de endereço.<br/><br/>
-          (2) Você recebera no e-mail adicionado uma notificação com todos os dados enviados e uma explicação de como funciona as mudanças de Endereço da Netsim telecom!<br/><br/>
-          (3) Todos os dados estão protegidos e são de inteira responsabilidade da Netsim Telecom.
+          CONFIRMO está etapa de contratação do serviço de mudança de endereço e tenho total ciência do custo de R$ 49,90 para ser realizado.<br/><br/>
+          No dia da mudança nossos técnicos entrarão em contato para confirmar o horário exato da mudança de endereço.<br/><br/>
+          Você recebera no e-mail adicionado uma notificação com todos os dados enviados e uma explicação de como funciona as mudanças de Endereço da Netsim telecom!<br/><br/>
+          Todos os dados estão protegidos e são de inteira responsabilidade da Netsim Telecom.
         </Modal.Body>
         <Modal.Footer>
           <Button type="button" variant="primary" onClick={linkWhatsapp} onClickCapture={sendEmail}>

@@ -32,7 +32,7 @@ export default function FormsGeralFibra() {
 
     const title = "NOVA ASSINATURA DE INTERNET";
     const assunto = "DADOS RECEBIDOS PARA ASSINATURA";
-    const cabecalho = "Ficamos Felizes ter você como nosso novo cliente!&nbsp;Ja recebemos o seus dados e dentro de alguns minutos informaremos sobre sua instalação. Verifique abaixo se as informações estão corretas: ";
+    const cabecalho = "Ficamos Felizes ter você como nosso novo cliente! Ja recebemos o seus dados e dentro de alguns minutos informaremos sobre sua instalação. Verifique abaixo se as informações estão corretas: ";
     const nome_cliente = `${formValues.NOME}`;
     const cliente_mail = `${formValues.Email}`;
     const userData = `

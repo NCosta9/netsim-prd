@@ -191,7 +191,7 @@ export default function AreaCliente() {
                                                 {/* <strong className="d-inline-block mb-2 text-primary">Veja</strong> */}
                                                 <h3 className="mb-3">Testar Velocidade</h3>
                                                 {/* <p className="card-text mb-auto">Aplicativo que garante a você descontos em estabelecimentos em sua região.</p> */}
-                                                <a href="fast.com/pt" className="btn btn-outline-primary">Acessar</a>
+                                                <a href="https://fast.com/pt" className="btn btn-outline-primary">Acessar</a>
                                             </div>
                                             <div className="col-auto d-lg-block p-3">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" className="bi bi-speedometer2 mt-3" viewBox="0 0 16 16">
@@ -225,11 +225,11 @@ export default function AreaCliente() {
                                 <div className="p-4">
                                     <h4 className="fst-italic">Serviços:</h4>
                                     <ol className="list-group ">
-                                        <li className='list-group-item'><a href="https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Estou+com+algumas+duvidas+pode+me+ajudar%3F&type=phone_number&app_absent=0">Mudança de endereço dos equipamentos</a></li>
-                                        <li className='list-group-item'><a href="https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Estou+com+algumas+duvidas+pode+me+ajudar%3F&type=phone_number&app_absent=0">Mudança de titularidade</a></li>
-                                        <li className='list-group-item'><a href="https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Estou+com+algumas+duvidas+pode+me+ajudar%3F&type=phone_number&app_absent=0">Mudança de ponto internet</a></li>
-                                        <li className='list-group-item'><a href="https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Estou+com+algumas+duvidas+pode+me+ajudar%3F&type=phone_number&app_absent=0">Solicitar Migração</a></li>
-                                        <li className='list-group-item'><a href="fast.com/pt">Teste de velocidade</a></li>
+                                        <li className='list-group-item'><a href="/mudanca">Mudança de endereço dos equipamentos</a></li>
+                                        <li className='list-group-item'><a href="/titularidade">Mudança de titularidade</a></li>
+                                        <li className='list-group-item'><a href="/ponto">Mudança de ponto internet</a></li>
+                                        <li className='list-group-item'><a href="migracao">Solicitar Migração</a></li>
+                                        <li className='list-group-item'><a href="https://fast.com/pt">Teste de velocidade</a></li>
 
                                     </ol>
                                 </div>
