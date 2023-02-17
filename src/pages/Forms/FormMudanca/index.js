@@ -15,100 +15,126 @@ export default function FormMudanca() {
   const { register,handleSubmit, getValues} = useForm();
 
 //Envia todos os dados do formulario por meio de uma url do whatsapp
-  function linkWhatsapp(e){
-    e.preventDefault();
-    let urlValues = getValues();
-    let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
-    let end_url =`
-    ${url}Eu ${urlValues.NOME} de CPF ${urlValues.CPF} de solicitar através do site uma mudança de endereço. E tenho total ciência do valor de 49,90. 
-    `; 
-  window.open(end_url)
- 
-  };
+function linkWhatsapp(){
+  let formValues = getValues();
+  let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
+  let end_url =`
+  ${url}Eu ${formValues.NOME} de CPF ${formValues.CPF} envio os dados para assinatura do ${formValues.PLANO} .Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09.%0A 
+  %0ADados para o cadastro:%0A
+  %0A
+  Nome Completo: ${formValues.NOME},%0A
+  CPF: ${formValues.CPF},%0A
+  RG: ${formValues.RG},%0A
+  Data de Nascimento: ${formValues.NASCIMENTO},%0A
+  Cep: ${formValues.CEP},%0A
+  Bairro: ${formValues.Bairro},%0A
+  Endereço Completo: ${formValues.Endereco},%0A
+  Moradia: ${formValues.Moradia},%0A
+  Whatsapp01: ${formValues.Whatsapp01},%0A
+  Whatsapp02: ${formValues.Whatsapp02},%0A
+  Email: ${formValues.Email},%0A
+  Plano Contratado: ${formValues.PLANO},%0A
+  Telefone Fixo Netsim: ${formValues.Fixo},%0A
+  Data de Vencimento: ${formValues.Vencimento},%0A
+  Nome Completo da Indicação: ${formValues.Indicacao},%0A
+  AppStandard: ${formValues.AppStandard},%0A
+  AppPremium: ${formValues.AppPremium},%0A
+  `; 
+window.open(end_url)
+window.location.reload()
+
+
+};
 
 //Envia todos os dados do fomulario no email da empresa suporte@netsimtelecom e uma copia do email na caixa de entrada do financeiro@netsimtelecom via emailjs.com.
 //
 
-function sendEmail(e) {
-        
-  e.preventDefault();
-    const formValues = getValues();
-    const title = "SOLICITAÇÃO DE MUDANÇA DE ENDEREÇO"
-    const assunto = "SOLICITAÇÃO RECEBIDA";
-    const cabecalho = "Ja recebemos a sua solicitação de mudança de endereço dos equipamentos de internet, dentro de alguns minutos informaremos sobre sua instalação. No dia da mudança nossos tecnicos entrara em contato para confirmar o horario exato da mudança de endereço.  Verifique abaixo se as informações estão corretas: ";
-    const nome_cliente = `${formValues.NOME}`
-    const cliente_mail = `${formValues.Email}`
-    const userData = `
-        Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF}, acabei de solicitar por meio do site uma nova mudança de endereço dos esquipamentos de internet. (1) Declaro que li e concordo com os termos e condições.(2) Tenho total ciência do custo de R$ 49,90 para ser realizado esta mudança de endereço.
+function sendEmail() {
+const formValues = getValues();
 
+const title = "NOVA ASSINATURA DE INTERNET";
+const assunto = "DADOS RECEBIDOS PARA ASSINATURA";
+const cabecalho = "Ficamos Felizes ter você como nosso novo cliente! Ja recebemos o seus dados e dentro de alguns minutos informaremos sobre sua instalação. Verifique abaixo se as informações estão corretas: ";
+const nome_cliente = `${formValues.NOME}`;
+const cliente_mail = `${formValues.Email}`;
+const userData = `
+    Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},contrato o ${formValues.PLANO} e CONFIRMO esta etapa de contratação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do contrato de fidelidade de 12 meses deixando a taxa de adesão de R$ 500,00 isenta que não será cobrada mediante a fidelidade, e estou ciente que a empresa tem um prazo para instalação de até 48H. Meu CPF poderá passar por uma análise antes da aprovação do contrato. Todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom.
 
-        Segue abaixo a informações necessarias:
+    Dados para o cadastro:
 
-        Nome Completo: ${formValues.NOME},
-        CPF: ${formValues.CPF},
-        Email: ${formValues.Email},
-        Novo Cep: ${formValues.CEP},
-        Novo Bairro: ${formValues.Bairro},
-        Novo Endereço Completo: ${formValues.Endereco},
-        Whatsapp01: ${formValues.Whatsapp01},
-        Data da Mudança: ${formValues.data},
-        Horario da Mudança: ${formValues.hora},
-        Observação: ${formValues.observacao},
-    `;
+    Nome Completo: ${formValues.NOME},
+    CPF: ${formValues.CPF},
+    RG: ${formValues.RG},
+    Data de Nascimento: ${formValues.NASCIMENTO},
+    Cep: ${formValues.CEP},
+    Bairro: ${formValues.Bairro},
+    Endereço Completo: ${formValues.Endereco},
+    Moradia: ${formValues.Moradia},
+    Whatsapp01: ${formValues.Whatsapp01},
+    Whatsapp02: ${formValues.Whatsapp02},
+    Email: ${formValues.Email},
+    Plano Contratado: ${formValues.PLANO},
+    Telefone Fixo Netsim: ${formValues.Fixo},
+    Data de Vencimento: ${formValues.Vencimento},
+    Nome Completo da Indicação: ${formValues.Indicacao},
+    AppStandard: ${formValues.AppStandard},
+    AppPremium: ${formValues.AppPremium},
+`;
 
-    console.log(userData);
+console.log(userData);
 
-    const templateParams = {
-      message: userData,
-      title_mail:title,
-    };
-    const templateParamsCliente = {
-      assunto:assunto,
-      cabecalho:cabecalho,
-      message: userData,
-      cliente:nome_cliente,
-      cliente_mail: cliente_mail,
-    };
+const templateParams = {
+  message: userData,
+  title_mail:title,
+};
+const templateParamsCliente = {
+  assunto:assunto,
+  cabecalho:cabecalho,
+  message: userData,
+  cliente:nome_cliente,
+  cliente_mail: cliente_mail,
+};
 
-    console.log(templateParams);
+console.log(templateParams);
 
-    emailjs
-      .send(
-        "service_au350rb",
-        "template_oh38moq",
-        templateParams,
-        "lTUpdEC1irtwxkpEq"
-      )
-      .then(
-        (response) => {
-          console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-          
-        },
-        (error) => {
-          console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
-          
-        }
-      );
+emailjs
+  .send(
+    "service_au350rb",
+    "template_oh38moq",
+    templateParams,
+    "lTUpdEC1irtwxkpEq"
+  )
+  .then(
+    (response) => {
+      console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
       
-      emailjs
-      .send(
-        "service_au350rb",
-        "template_xqy15f2",
-        templateParamsCliente,
-        "lTUpdEC1irtwxkpEq"
-      )
-      .then(
-        (response) => {
-          console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-          
-        },
-        (error) => {
-          console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
-          
-        }
-      );
+    },
+    (error) => {
+      console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
+      
+    }
+  );
+  
+  emailjs
+  .send(
+    "service_au350rb",
+    "template_xqy15f2",
+    templateParamsCliente,
+    "lTUpdEC1irtwxkpEq"
+  )
+  .then(
+    (response) => {
+      console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
+      
+    },
+    (error) => {
+      console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
+      
+    }
+  );
 console.log(sendEmail);
 };
+
 
 
 
