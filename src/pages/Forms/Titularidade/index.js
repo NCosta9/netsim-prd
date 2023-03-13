@@ -77,7 +77,7 @@ function sendEmail(e) {
         "service_au350rb",
         "template_oh38moq",
         templateParams,
-        "lTUpdEC1irtwxkpEq"
+        "8Lm_V9EVCD5qu2Vqk"
       )
       .then(
         (response) => {
@@ -95,15 +95,15 @@ function sendEmail(e) {
         "service_au350rb",
         "template_xqy15f2",
         templateParamsCliente,
-        "lTUpdEC1irtwxkpEq"
+        "8Lm_V9EVCD5qu2Vqk"
       )
       .then(
         (response) => {
-          console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
+          alert("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
           
         },
         (error) => {
-          console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
+          alert("OPS!! NÃO FOI POSSIVEL RECEBER OS DADOS...", error);
           
         }
       );

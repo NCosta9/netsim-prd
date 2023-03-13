@@ -35,7 +35,8 @@ export default function Plus() {
   const { register,handleSubmit, getValues} = useForm();
 
 //Envia todos os dados do formulario por meio de uma url do whatsapp
-function linkWhatsapp(){
+function linkWhatsapp(e){
+  e.preventDefault()
   let formValues = getValues();
   let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
   let end_url =`
@@ -61,7 +62,6 @@ function linkWhatsapp(){
   AppPremium: ${formValues.AppPremium},%0A
   `; 
 window.open(end_url)
-window.location.reload()
 
 
 };
@@ -69,91 +69,92 @@ window.location.reload()
 //Envia todos os dados do fomulario no email da empresa suporte@netsimtelecom e uma copia do email na caixa de entrada do financeiro@netsimtelecom via emailjs.com.
 //
 
-function sendEmail() {
-const formValues = getValues();
-
-const title = "NOVA ASSINATURA DE INTERNET";
-const assunto = "DADOS RECEBIDOS PARA ASSINATURA";
-const cabecalho = "Ficamos Felizes ter você como nosso novo cliente! Ja recebemos o seus dados e dentro de alguns minutos informaremos sobre sua instalação. Verifique abaixo se as informações estão corretas: ";
-const nome_cliente = `${formValues.NOME}`;
-const cliente_mail = `${formValues.Email}`;
-const userData = `
-    Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},contrato o ${formValues.PLANO} e CONFIRMO esta etapa de contratação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do contrato de fidelidade de 12 meses deixando a taxa de adesão de R$ 500,00 isenta que não será cobrada mediante a fidelidade, e estou ciente que a empresa tem um prazo para instalação de até 48H. Meu CPF poderá passar por uma análise antes da aprovação do contrato. Todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom.
-
-    Dados para o cadastro:
-
-    Nome Completo: ${formValues.NOME},
-    CPF: ${formValues.CPF},
-    RG: ${formValues.RG},
-    Data de Nascimento: ${formValues.NASCIMENTO},
-    Cep: ${formValues.CEP},
-    Bairro: ${formValues.Bairro},
-    Endereço Completo: ${formValues.Endereco},
-    Moradia: ${formValues.Moradia},
-    Whatsapp01: ${formValues.Whatsapp01},
-    Whatsapp02: ${formValues.Whatsapp02},
-    Email: ${formValues.Email},
-    Plano Contratado: ${formValues.PLANO},
-    Telefone Fixo Netsim: ${formValues.Fixo},
-    Data de Vencimento: ${formValues.Vencimento},
-    Nome Completo da Indicação: ${formValues.Indicacao},
-    AppStandard: ${formValues.AppStandard},
-    AppPremium: ${formValues.AppPremium},
-`;
-
-console.log(userData);
-
-const templateParams = {
-  message: userData,
-  title_mail:title,
-};
-const templateParamsCliente = {
-  assunto:assunto,
-  cabecalho:cabecalho,
-  message: userData,
-  cliente:nome_cliente,
-  cliente_mail: cliente_mail,
-};
-
-console.log(templateParams);
-
-emailjs
-  .send(
-    "service_au350rb",
-    "template_oh38moq",
-    templateParams,
-    "lTUpdEC1irtwxkpEq"
-  )
-  .then(
-    (response) => {
-      console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-      
-    },
-    (error) => {
-      console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
-      
-    }
-  );
+function sendEmail(e) {
+  e.preventDefault()
+  const formValues = getValues();
+  const title = "NOVA ASSINATURA DE INTERNET";
+  const assunto = "DADOS RECEBIDOS PARA ASSINATURA";
+  const cabecalho = "Ficamos Felizes ter você como nosso novo cliente! Ja recebemos o seus dados e dentro de alguns minutos informaremos sobre sua instalação. Verifique abaixo se as informações estão corretas: ";
+  const nome_cliente = `${formValues.NOME}`;
+  const cliente_mail = `${formValues.Email}`;
+  const userData = `
+      Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},contrato o ${formValues.PLANO} e CONFIRMO esta etapa de contratação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do contrato de fidelidade de 12 meses deixando a taxa de adesão de R$ 500,00 isenta que não será cobrada mediante a fidelidade, e estou ciente que a empresa tem um prazo para instalação de até 48H. Meu CPF poderá passar por uma análise antes da aprovação do contrato. Todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom.
+  
+      Dados para o cadastro:
+  
+      Nome Completo: ${formValues.NOME},
+      CPF: ${formValues.CPF},
+      RG: ${formValues.RG},
+      Data de Nascimento: ${formValues.NASCIMENTO},
+      Cep: ${formValues.CEP},
+      Bairro: ${formValues.Bairro},
+      Endereço Completo: ${formValues.Endereco},
+      Moradia: ${formValues.Moradia},
+      Whatsapp01: ${formValues.Whatsapp01},
+      Whatsapp02: ${formValues.Whatsapp02},
+      Email: ${formValues.Email},
+      Plano Contratado: ${formValues.PLANO},
+      Telefone Fixo Netsim: ${formValues.Fixo},
+      Data de Vencimento: ${formValues.Vencimento},
+      Nome Completo da Indicação: ${formValues.Indicacao},
+      AppStandard: ${formValues.AppStandard},
+      AppPremium: ${formValues.AppPremium},
+  `;
+  
+  console.log(userData);
+  
+  const templateParams = {
+    message: userData,
+    title_mail:title,
+  };
+  const templateParamsCliente = {
+    assunto:assunto,
+    cabecalho:cabecalho,
+    message: userData,
+    cliente:nome_cliente,
+    cliente_mail: cliente_mail,
+  };
+  
+  console.log(templateParams);
   
   emailjs
-  .send(
-    "service_au350rb",
-    "template_xqy15f2",
-    templateParamsCliente,
-    "lTUpdEC1irtwxkpEq"
-  )
-  .then(
-    (response) => {
-      console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-      
-    },
-    (error) => {
-      console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
-      
-    }
-  );
-console.log(sendEmail);
-};
+    .send(
+      "service_au350rb",
+      "template_oh38moq",
+      templateParams,
+      "8Lm_V9EVCD5qu2Vqk"
+    )
+    .then(
+      (response) => {
+        console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
+        
+      },
+      (error) => {
+        console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
+        
+      }
+    );
+    
+    emailjs
+    .send(
+      "service_au350rb",
+      "template_xqy15f2",
+      templateParamsCliente,
+      "8Lm_V9EVCD5qu2Vqk"
+    )
+    .then(
+      (response) => {
+        alert("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
+        
+      },
+      (error) => {
+        alert("OPS!! NÃO FOI POSSIVEL RECEBER OS DADOS...", error);
+        
+      }
+    );
+  console.log(sendEmail);
+  };
+  
 
 
 // A partir daqui verifica os aplicativos que estão marcados

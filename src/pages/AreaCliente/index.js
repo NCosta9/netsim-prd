@@ -11,7 +11,6 @@ import Modal from 'react-bootstrap/Modal';
 import InfoAppsStandard from '../../components/InfoAppsStandard';
 import InfoAppsPremium from '../../components/InfoAppsPremium';
 import SaibaMaisLecupon from '../../components/SaibaMaisLecupon';
-import ContatoWhatsapp from '../../components/ContatoWhatsapp';
 
 
 
@@ -61,7 +60,9 @@ export default function AreaCliente() {
                             </div>
                             <div className="col-4 d-flex justify-content-end align-items-center">
 
-                                <a className="btn btn-sm btn-outline-primary" href="tel:6120993434">Ligar para Netsim</a>
+                                <a className="btn btn-sm btn-outline-primary me-2" href="tel:6120993434">Ligar para Netsim</a>
+                                <a className="btn btn-sm btn-outline-success" href="https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Estou+com+algumas+dúvidas+pode+me+ajudar+%3F(site)&type=phone_number&app_absent=0">Whatsapp</a>
+
                             </div>
                         </div>
                     </header>
@@ -121,18 +122,12 @@ export default function AreaCliente() {
 
                     <div className="row g-5">
                         <div className="col-md-8">
-                            <h3 className="pb-4 mb-4 fst-italic divider-orange">
-                                Notícias
-                            </h3>
+                            
 
                             <div className="blog-post">
-                                <CarouselNoticias />
-
-                                <span className='divider-orange' />
-                                <br />
 
 
-                                <h2>Escolhar o que deseja fazer...</h2>
+                                <h2>Autoatendimento</h2>
 
 
 
@@ -207,10 +202,7 @@ export default function AreaCliente() {
 
 
 
-                            <nav className="blog-pagination my-5" aria-label="Pagination">
-                                <a className="btn btn-outline-primary rounded-pill " href="/"> Voltar para pagina principal </a>
-                                <a className="btn btn-outline-secondary rounded-pill disabled" href='/cliente'>Voltar ao ínicio</a>
-                            </nav>
+        
 
                         </div>
 
@@ -229,7 +221,6 @@ export default function AreaCliente() {
                                         <li className='list-group-item'><a href="/titularidade">Mudança de titularidade</a></li>
                                         <li className='list-group-item'><a href="/ponto">Mudança de ponto internet</a></li>
                                         <li className='list-group-item'><a href="migracao">Solicitar Migração</a></li>
-                                        <li className='list-group-item'><a href="https://fast.com/pt">Teste de velocidade</a></li>
 
                                     </ol>
                                 </div>
@@ -239,8 +230,12 @@ export default function AreaCliente() {
                                     <ol className="list-unstyled">
                                         <li><a href="https://www.instagram.com/netsimtelecom/">Instagram</a></li>
                                         <li><a href="https://pt-br.facebook.com/netsimtelecom/">Facebook</a></li>
+
                                     </ol>
                                 </div>
+                                <nav className="blog-pagination my-5" aria-label="Pagination">
+                                <a className="btn btn-outline-primary rounded-pill " href="/"> Voltar para pagina principal </a>
+                            </nav>
                             </div>
                         </div>
                     </div>
@@ -286,7 +281,6 @@ export default function AreaCliente() {
             </Modal>
 
 
-<ContatoWhatsapp/>
 
 
 

@@ -34,7 +34,8 @@ export default function Basic() {
 
   const { register,handleSubmit, getValues} = useForm();
 
-function linkWhatsapp(){
+function linkWhatsapp(e){
+  e.preventDefault();
   let formValues = getValues();
   let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
   let end_url =`
@@ -60,14 +61,14 @@ function linkWhatsapp(){
   AppPremium: ${formValues.AppPremium},%0A
   `; 
 window.open(end_url)
-window.location.reload()
 
 };
 
 //Envia todos os dados do fomulario no email da empresa suporte@netsimtelecom e uma copia do email na caixa de entrada do financeiro@netsimtelecom via emailjs.com.
 //
 
-function sendEmail() {
+function sendEmail(e) {
+  e.preventDefault();
 const formValues = getValues();
 const title = "NOVA ASSINATURA DE INTERNET";
 const assunto = "DADOS RECEBIDOS PARA ASSINATURA";
@@ -119,7 +120,7 @@ emailjs
     "service_au350rb",
     "template_oh38moq",
     templateParams,
-    "lTUpdEC1irtwxkpEq"
+    "8Lm_V9EVCD5qu2Vqk"
   )
   .then(
     (response) => {
@@ -137,15 +138,15 @@ emailjs
     "service_au350rb",
     "template_xqy15f2",
     templateParamsCliente,
-    "lTUpdEC1irtwxkpEq"
+    "8Lm_V9EVCD5qu2Vqk"
   )
   .then(
     (response) => {
-      console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
+      alert("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
       
     },
     (error) => {
-      console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
+      alert("OPS!! NÃO FOI POSSIVEL RECEBER OS DADOS...", error);
       
     }
   );

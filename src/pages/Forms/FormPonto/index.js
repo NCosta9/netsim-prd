@@ -33,7 +33,7 @@ const obs =  `${formValues.observacao}`;
     let urlValues = getValues();
     let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
     let end_url =`
-    ${url}Eu ${urlValues.NOME} de CPF ${urlValues.CPF} de solicitar através do site uma mudança de endereço. E tenho total ciência do custo de 29,90. 
+    ${url}Eu ${urlValues.NOME} de CPF ${urlValues.CPF} acabei de solicitar através do site uma mudança de ponto dos meus equipamentos de internet. E tenho total ciência do custo de 29,90. 
     `; 
   window.open(end_url)
  
@@ -46,7 +46,7 @@ e.preventDefault();
         
 <TemplatePonto 
 
-title = 'SOLICITAÇÃO DE MUDANÇA DE PONTO' 
+title = 'mudança de ponto' 
 assunto= 'SOLICITAÇÃO RECEBIDA' 
 nome= {nome} 
 cpf = {cpf} 

@@ -23,17 +23,19 @@ export default function Cobertura() {
 
             <select className="form-select form-select-lg mb-3 " aria-label=".form-select-lg example" {...register("cidade")} autofocus>
             <option selected>-- Escolha aqui o bairro --</option>
-              <option value="1" >Nova Betânia</option>
-              <option value="0" >Buritis 01</option>
-              <option value="1" >Buritis 02</option>
-              <option value="1" >Chácara Final Feliz</option>
-              <option value="1" >Chácara Rossio </option>
-              <option value="1" >Condomínio São José</option>
-              <option value="0" >Dom Francisco</option>
-              <option value="0" >Dom Pedro</option>
-              <option value="1" >Salomão Elias</option>
-              <option value="1" >São Francisco</option>
-              <option value="0" >Zona Rural Aguas Quentes</option>
+            <option value="1" >Nova Betânia</option>
+            <option value="0" >Buritis 01</option>
+            <option value="1" >Buritis 02</option>
+            <option value="1" >Chácara Final Feliz</option>
+            <option value="1" >Chácara São José</option>
+            <option value="1" >Chácara Rossio </option>
+            <option value="1" >Condomínio São José</option>
+            <option value="0" >Dom Francisco</option>
+            <option value="0" >Dom Pedro</option>
+            <option value="1" >Salomão Elias</option>
+            <option value="1" >São Francisco</option>
+            <option value="1" >Guarapari</option>
+            <option value="0" >Zona Rural de Aguas Quentes</option>
             </select>
 
             <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
