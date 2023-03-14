@@ -30,6 +30,7 @@ export default function Basic() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 // esta sentado as propriedade do MODAL  que esta no fim desse codigo
 
   const { register,handleSubmit, getValues} = useForm();
@@ -389,7 +390,7 @@ console.log(sendEmail);
           <input
             type="text"
             className="form-control shadow-sm"
-            value="Plano Basic R$ 114,,90"
+            value="Plano Basic 114,90"
             {...register("PLANO")}
             readOnly
           />

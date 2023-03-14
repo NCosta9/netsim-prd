@@ -1,8 +1,5 @@
-import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
-import React, { useState } from 'react';
-import Collapse from 'react-bootstrap/Collapse';
 import './PlanosFibra.css';
 import premium1 from '../Playhub/img/premium1.png';
 import premium2 from '../Playhub/img/premium2.png';
@@ -12,13 +9,25 @@ import standard4 from '../Playhub/img/standard4.png';
 import standard8 from '../Playhub/img/standard8.png';
 import ModalVerMaisPremium from '../ModalVerMaisPremium';
 import ModalVerMaisStandard from '../ModalVerMaisStandard';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import VelocidadePlanos from '../DadosPlanos/VelocidadePlanos';
+import ValorPlanos from '../DadosPlanos/ValorPlanos';
 
 function Planosfibra() {
 
 
     const navigate = useNavigate()
 
+//velocidade dos planos via props
+    const lite = 350 ;
+    const basic = 450 ;
+    const plus = 600 ;
+    const ultra = 750;
+//Valor dos planos via props
+    const ValorLite = 'R$99,90' ;
+    const ValorBasic = 'R$114,90' ;
+    const ValorPlus = 'R$149,90' ;
+    const ValorUltra = 'R$199,90';
 
     return (
         <>
@@ -35,9 +44,9 @@ function Planosfibra() {
                             </div>
                             <div class="card-body ">
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Velocidade</p></small>
-                                <h3 class="my-0 mb-3 fw-normal offer_title text-start">500 MEGA</h3>
+                                <h3 class="my-0 mb-3 fw-normal offer_title text-start"> <VelocidadePlanos velocidade={ultra}/> MEGA</h3>
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
-                                <h2 class="card-title pricing-card-title fw-light text-start">R$199,90<small class="text-muted fw-light">/mês</small></h2>
+                                <h2 class="card-title pricing-card-title fw-light text-start"><ValorPlanos valor={ValorUltra} /><small class="text-muted fw-light">/mês</small></h2>
 
                                 <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/ultra')}>Assinar</button>
 
@@ -143,9 +152,9 @@ function Planosfibra() {
                             </div>
                             <div class="card-body">
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Velocidade</p></small>
-                                <h3 class="my-0 mb-3 fw-normal offer_title text-start">350 MEGA</h3>
+                                <h3 class="my-0 mb-3 fw-normal offer_title text-start"> <VelocidadePlanos velocidade={plus} /> MEGA</h3>
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
-                                <h2 class="card-title pricing-card-title fw-light text-start">R$149,90<small class="text-muted fw-light">/mês</small></h2>
+                                <h2 class="card-title pricing-card-title fw-light text-start"><ValorPlanos valor={ValorPlus}/><small class="text-muted fw-light">/mês</small></h2>
                                 <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/plus')}>Assinar</button>
 
                             </div>
@@ -254,9 +263,9 @@ function Planosfibra() {
                             </div>
                             <div class="card-body ">
                                 <small class="text-muted fw-light"><p class="text-start mb-0">Velocidade</p></small>
-                                <h3 class="my-0 mb-3 fw-normal offer_title text-start ">300 MEGA</h3>
+                                <h3 class="my-0 mb-3 fw-normal offer_title text-start "><VelocidadePlanos velocidade={basic}/> MEGA</h3>
                                 <small class="text-muted fw-light"><p class="text-start mb-0">Apenas</p></small>
-                                <h2 class="card-title pricing-card-title fw-light text-start">R$114,90<small class="text-muted fw-light">/mês</small></h2>
+                                <h2 class="card-title pricing-card-title fw-light text-start"><ValorPlanos valor={ValorBasic}/><small class="text-muted fw-light">/mês</small></h2>
 
                                 <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/basic')}>Assinar</button>
 
@@ -352,9 +361,9 @@ function Planosfibra() {
 
                             <div class="card-body">
                                 <small class="text-muted fw-light"><p class="text-start mb-0">Velocidade</p></small>
-                                <h3 class="my-0 mb-3 fw-normal offer_title text-start ">200 MEGA</h3>
+                                <h3 class="my-0 mb-3 fw-normal offer_title text-start "><VelocidadePlanos velocidade={lite}/> MEGA</h3>
                                 <small class="text-muted fw-light"><p class="text-start mb-0">Apenas</p></small>
-                                <h2 class="card-title pricing-card-title fw-light text-start">R$99,90<small class="text-muted fw-light">/mês</small></h2>
+                                <h2 class="card-title pricing-card-title fw-light text-start"><ValorPlanos valor={ValorLite}/><small class="text-muted fw-light">/mês</small></h2>
 
 
                                 <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/lite')}>Assinar</button>
@@ -641,16 +650,16 @@ function Planosfibra() {
                                 ))}
                             </th>
                             <td>
-                                <b>200 mbps</b>
+                                <b><VelocidadePlanos velocidade={lite}/> mbps</b>
                             </td>
                             <td>
-                                <b>300 mbps</b>
+                                <b><VelocidadePlanos velocidade={basic}/> mbps</b>
                             </td>
                             <td>
-                                <b>350 mbps</b>
+                                <b><VelocidadePlanos velocidade={plus}/> mbps</b>
                             </td>
                             <td>
-                                <b>500 mbps</b>
+                                <b><VelocidadePlanos velocidade={ultra}/> mbps</b>
                             </td>
 
                         </tr>
