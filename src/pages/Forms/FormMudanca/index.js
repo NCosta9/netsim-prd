@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
-import ButtonFinalizar from "../../../components/Forms/ButtonFinalizar";
+
+
+import SendDadosPlanos from "../../../utils/SendDadosMudanca";
+import TermoPlanos from "../../../components/Termos/TermoPlanos";
 
 
 export default function FormMudanca() {
@@ -17,116 +19,33 @@ export default function FormMudanca() {
   const { register,handleSubmit, getValues} = useForm();
 
 //Envia todos os dados do formulario por meio de uma url do whatsapp
-function linkWhatsapp(e){
-  e.preventDefault();
-  let formValues = getValues();
-  let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
-  let end_url =`
-  ${url}Eu ${formValues.NOME} de CPF ${formValues.CPF} acabei de solicitar atravez do site uma mudança de endereço. Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09.%0A 
-  
-  %0ADados para a mudança:%0A
-  %0A
-  Cep: ${formValues.CEP},%0A
-  Bairro: ${formValues.Bairro},%0A
-  Novo Endereço: ${formValues.Endereco},%0A
-  Data: ${formValues.data},%0A
-  Horario: ${formValues.hora},%0A
-  Observação: ${formValues.observacao},%0A
-  Whatsapp01: ${formValues.Whatsapp01},%0A
-  Email: ${formValues.Email},%0A
- 
-  `; 
-window.open(end_url)
-
-
-
-};
-
-//Envia todos os dados do fomulario no email da empresa suporte@netsimtelecom e uma copia do email na caixa de entrada do financeiro@netsimtelecom via emailjs.com.
-//
-
-function sendEmail(e) {
-  e.preventDefault();
-  
 const formValues = getValues();
+const nome=`${formValues.NOME}` 
+const cpf=`${formValues.CPF}`        
+const rg=`${formValues.RG}` 
+const nascimento =`${formValues.NASCIMENTO}`
+const cep=`${formValues.CEP}`           
+const bairro=`${formValues.Bairro}` 
+const endereco=`${formValues.Endereco}`           
+const moradia=`${formValues.Moradia}` 
+const whatsapp01=`${formValues.Whatsapp01}` 
+const whatsapp02=`${formValues.Whatsapp02}` 
+const email=`${formValues.Email}`           
+const plano=`${formValues.PLANO}`          
+const fixo=`${formValues.Fixo}`          
+const vencimento=`${formValues.Vencimento}`
+const indicacao=`${formValues.Indicacao}`         
+const data=`${formValues.Data}` 
+const hora=`${formValues.Hora}`
+const obs=`${formValues.OBS}`
+const premium =`${formValues.AppStandard}`
+const standard = `${formValues.AppPremium}`
 
-const title = "Mudança de Endereço";
-const assunto = "Dados para Mudança de Endereço";
-const cabecalho = "Aguarde!! Em instante um de nossos atendentes o informara mais detalhes sobre sua solicitação de mudança de endereço dos equipamentos. Verifique abaixo se as informações estão corretas: ";
-const nome_cliente = `${formValues.NOME}`;
-const cliente_mail = `${formValues.Email}`;
-const userData = `
-    Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},acabei de solicitar atravez do site uma mudança de endereço. Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09.
+//Dados para envio via Email
+const assunto = "Mudança de Endereço";
+const termos = "Declaro que li e concordo com os termos e condições descritos no site."
+const cabecalho = "Ja recebemos a informações para sua "+ assunto + " ,dentro de alguns instantes entraremos em contato com mais informações. Verifique abaixo se os dados estão corretos: ";
 
-    Dados para a mudança:
-
-    Cep: ${formValues.CEP},
-    Bairro: ${formValues.Bairro},
-    Endereço Completo: ${formValues.Endereco},
-    Data: ${formValues.data},
-    Horario: ${formValues.hora},
-    Observação: ${formValues.observacao},
-    Whatsapp01: ${formValues.Whatsapp01},
-    Email: ${formValues.Email},
-   
-    
-`;
-
-console.log(userData);
-
-const templateParams = {
-  message: userData,
-  title_mail:title,
-};
-const templateParamsCliente = {
-  assunto:assunto,
-  cabecalho:cabecalho,
-  message: userData,
-  cliente:nome_cliente,
-  cliente_mail: cliente_mail,
-};
-
-console.log(templateParams);
-
-emailjs
-  .send(
-    "service_au350rb",
-    "template_oh38moq",
-    templateParams,
-    "8Lm_V9EVCD5qu2Vqk"
-  )
-  .then(
-    (response) => {
-      console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-      
-    },
-    (error) => {
-      console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
-      
-    }
-  );
-  
-  emailjs
-  .send(
-    "service_au350rb",
-    "template_xqy15f2",
-    templateParamsCliente,
-    "8Lm_V9EVCD5qu2Vqk"
-  )
-  .then(
-    (response) => {
-      alert("DADOS ENVIADO COM SUCCESSO!", response.status, response.text)
-      
-      
-    },
-    (error) => {
-      alert("OPS!! NÃO RECEBEMOS OS DADOS...", error);
-
-      
-    }
-  );
-console.log(sendEmail);
-};
 
   return (
     <div className="container">
@@ -314,13 +233,38 @@ console.log(sendEmail);
           </Modal.Title>
         </Modal.Header>
         <Modal.Body> 
-          O serviço de mudança de endereço tem uma taxa de R$ 49,90, que virá junto com a próxima fatura em aberto, ou seja, no ato do serviço não precisa ser pago nada para nossos técnicos, será gerado e enviado o boleto para o contato que solicitou o serviço.<br/><br/>
-          (1) No dia da mudança nossos técnicos entrarão em contato para confirmar o horário exato da mudança de endereço.<br/><br/>
-          (2) Você recebera no e-mail adicionado uma notificação com todos os dados enviados e uma explicação de como funciona as mudanças de Endereço da Netsim telecom!<br/><br/>
-          (3) Todos os dados estão protegidos e são de inteira responsabilidade da Netsim Telecom.
+           <TermoPlanos/>
         </Modal.Body>
         <Modal.Footer>
-            <ButtonFinalizar event={linkWhatsapp} event01={sendEmail} text='Aceitar'/>
+        <SendDadosPlanos
+           text="Aceitar"
+           nome={nome} 
+           cpf={cpf}        
+           rg={rg} 
+           nascimento= {nascimento}
+           cep={cep}           
+           bairro={bairro} 
+           endereco={endereco}           
+           moradia={moradia} 
+           whatsapp01={whatsapp01}
+           whatsapp02={whatsapp02} 
+           email={email}           
+           plano={plano}          
+           fixo={fixo}          
+           vencimento={vencimento}
+           premium = {premium}
+           standard = {standard}
+           indicacao={indicacao}         
+           data={data} 
+           hora={hora}
+           obs={obs} 
+
+          termos = {termos}
+          assunto ={assunto}
+          cabecalho={cabecalho}
+
+           
+    />
         </Modal.Footer>
       </Modal>
       </form>

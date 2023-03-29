@@ -6,7 +6,7 @@ function Button(props){
 
     return(
 
-        <button type="button" className="btn btn-lg btn-success mb-4" onClick={props.event} onClickCapture={props.event01} disabled ={props.disabled}>
+        <button type="button" className="btn btn-lg btn-success mb-4" onClick={props.event()} onClickCapture={props.event01} disabled ={props.disabled}>
        {props.text}
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"

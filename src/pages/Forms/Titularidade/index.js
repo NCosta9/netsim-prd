@@ -1,8 +1,7 @@
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import SendDadosPlanos from "../../../utils/SendDadosPlanos";
 
 
 export default function Titulariade() {
@@ -10,105 +9,37 @@ export default function Titulariade() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 // esta sentado as propriedade do MODAL  que esta no fim desse codigo
 
 const { register,handleSubmit, getValues} = useForm();
 
-//Envia todos os dados do formulario por meio de uma url do whatsapp
-  function linkWhatsapp(e){
-    e.preventDefault();
-    let urlValues = getValues();
-    let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
-    let end_url =`
-    ${url}Eu ${urlValues.NOME} de CPF ${urlValues.CPF} de solicitar através do site uma mudança de endereço. E tenho total ciência do valor de 49,90. 
-    `; 
-  window.open(end_url)
- 
-  };
+//Dados dar envio via url Whatsapp
+const formValues = getValues();
+const nome=`${formValues.NOME}` 
+const cpf=`${formValues.CPF}`        
+const rg=`${formValues.RG}` 
+const cep=`${formValues.CEP}`           
+const bairro=`${formValues.BAIRRO}` 
+const endereco=`${formValues.ENDERECO}`           
+const moradia=`${formValues.MORADIA}` 
+const whatsapp01=`${formValues.WHATASAPP01}` 
+const whatsapp02=`${formValues.WHATASAPP02}` 
+const email=`${formValues.EMAIL}`           
+const plano=`${formValues.PLANOS}`          
+const fixo=`${formValues.FIXO}`          
+const vencimento=`${formValues.VENCIMENTO}`
+const indicacao=`${formValues.INDICACAO}`         
+const data=`${formValues.DATA}` 
+const hora=`${formValues.HORA}`
+const obs=`${formValues.OBS}`
+//const premium =`${formValues.AppStandard}`
+//const standard = `${formValues.AppPremium}`
 
-//Envia todos os dados do fomulario no email da empresa suporte@netsimtelecom e uma copia do email na caixa de entrada do financeiro@netsimtelecom via emailjs.com.
-//
-
-function sendEmail(e) {
-        
-  e.preventDefault();
-    const formValues = getValues();
-    const title = "SOLICITAÇÃO DE MUDANÇA DE ENDEREÇO"
-    const assunto = "SOLICITAÇÃO RECEBIDA";
-    const cabecalho = "Ja recebemos a sua solicitação de mudança de endereço dos equipamentos de internet, dentro de alguns minutos informaremos sobre sua instalação. No dia da mudança nossos tecnicos entrara em contato para confirmar o horario exato da mudança de endereço.  Verifique abaixo se as informações estão corretas: ";
-    const nome_cliente = `${formValues.NOME}`
-    const cliente_mail = `${formValues.Email}`
-    const userData = `
-        Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF}, acabei de solicitar por meio do site uma nova mudança de endereço dos esquipamentos de internet. (1) Declaro que li e concordo com os termos e condições.(2) Tenho total ciência do custo de R$ 49,90 para ser realizado esta mudança de endereço.
-
-
-        Segue abaixo a informações necessarias:
-
-        Nome Completo: ${formValues.NOME},
-        CPF: ${formValues.CPF},
-        Email: ${formValues.Email},
-        Novo Cep: ${formValues.CEP},
-        Novo Bairro: ${formValues.Bairro},
-        Novo Endereço Completo: ${formValues.Endereco},
-        Whatsapp01: ${formValues.Whatsapp01},
-        Data da Mudança: ${formValues.data},
-        Horario da Mudança: ${formValues.hora},
-        Observação: ${formValues.observacao},
-    `;
-
-    console.log(userData);
-
-    const templateParams = {
-      message: userData,
-      title_mail:title,
-    };
-    const templateParamsCliente = {
-      assunto:assunto,
-      cabecalho:cabecalho,
-      message: userData,
-      cliente:nome_cliente,
-      cliente_mail: cliente_mail,
-    };
-
-    console.log(templateParams);
-
-    emailjs
-      .send(
-        "service_au350rb",
-        "template_oh38moq",
-        templateParams,
-        "8Lm_V9EVCD5qu2Vqk"
-      )
-      .then(
-        (response) => {
-          console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-          
-        },
-        (error) => {
-          console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
-          
-        }
-      );
-      
-      emailjs
-      .send(
-        "service_au350rb",
-        "template_xqy15f2",
-        templateParamsCliente,
-        "8Lm_V9EVCD5qu2Vqk"
-      )
-      .then(
-        (response) => {
-          alert("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-          
-        },
-        (error) => {
-          alert("OPS!! NÃO FOI POSSIVEL RECEBER OS DADOS...", error);
-          
-        }
-      );
-console.log(sendEmail);
-};
+//Dados para envio via Email
+const termos = "(1) Declaro que li e concordo com os termos e condições.(2) Tenho total ciência do custo de R$ 49,90 para ser realizado esta mudança de endereço."
+const assunto = "Mudança de Titularidade";
+const cabecalho = "Ja recebemos a sua solicitação de mudança de endereço dos equipamentos de internet, dentro de alguns minutos informaremos sobre sua instalação. No dia da mudança nossos tecnicos entrara em contato para confirmar o horario exato da mudança de endereço.  Verifique abaixo se as informações estão corretas: ";
 
 
   return (
@@ -125,7 +56,7 @@ console.log(sendEmail);
       >
         {/* ################### Etapa 01 ################################### */}
 
-        <h4>Dados pessoais - 1 Etapa</h4>
+        <h4>Dados Atuais - 1 Etapa</h4>
         <span className="divider-orange mb-3" />
 
         <div className="mb-3 form-floating">
@@ -137,16 +68,6 @@ console.log(sendEmail);
           <input type="cpf" className="form-control shadow-sm" {...register("CPF", { required: true })} />
           <label className="fw-bold">CPF:</label>
         </div>
-
-        <div className="col-md-4 mb-3 form-floating">
-          <input
-            type="tel"
-            className="form-control shadow-sm"
-            {...register("Whatsapp01", { required: true })}
-          />
-          <label className="fw-bold">Whatsapp 01:</label>
-        </div>
-
 
         <div className="col mb-3 form-floating">
           <input
@@ -301,9 +222,31 @@ console.log(sendEmail);
           Todos os dados estão protegidos e são de inteira responsabilidade da Netsim Telecom.
         </Modal.Body>
         <Modal.Footer>
-          <Button type="button" variant="primary" onClick={linkWhatsapp} onClickCapture={sendEmail}>
-            Concluir
-          </Button>
+        <SendDadosPlanos
+           nome={nome} 
+           cpf={cpf}        
+           rg={rg} 
+           cep={cep}           
+           bairro={bairro} 
+           endereco={endereco}           
+           moradia={moradia} 
+           whatsapp01={whatsapp01}
+           whatsapp02={whatsapp02} 
+           email={email}           
+           plano={plano}          
+           fixo={fixo}          
+           vencimento={vencimento}
+           indicacao={indicacao}         
+           data={data} 
+           hora={hora}
+           obs={obs} 
+
+          termos = {termos}
+          assunto ={assunto}
+          cabecalho={cabecalho}
+
+           
+    />
         </Modal.Footer>
       </Modal>
       </form>

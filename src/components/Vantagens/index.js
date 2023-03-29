@@ -1,5 +1,5 @@
 
-function Timeline() {
+function Vantagens() {
     return (
         <>
             
@@ -27,7 +27,7 @@ function Timeline() {
                                         <path d="M8.5 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z" />
                                     </svg>
                                     <div>
-                                        <h3 class="fw-bold mb-0 fs-4">ROTEADOR FORNECIDOS PELA EMPRESA</h3>
+                                        <h3 class="fw-bold mb-0 fs-4">EQUIPAMENTOS FORNECIDO PELA EMPRESA</h3>
                                         <p>Havendo qualquer problema com os equipamentos de internet, imediatamente fazemos a troca sem custos adicionais.</p>
                                     </div>
                                 </div>
@@ -87,6 +87,6 @@ function Timeline() {
         </>
     )
 }
-export default Timeline;
+export default Vantagens;
 
 

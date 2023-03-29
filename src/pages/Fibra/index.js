@@ -1,4 +1,4 @@
-import Timeline1 from '../../components/Timeline1';
+import Vantagens from '../../components/Vantagens';
 import Header from '../../components/Header'
 import './Fibra.css';
 import Perguntasfrequentes from '../../components/Perguntasfrequentes';
@@ -24,7 +24,7 @@ function Fibra() {
         <BannerFibra />
         <div class="container-fluid">
           <div id="cardCentral" class="card shadow-lg p-5 ">
-            <Timeline1 />
+            <Vantagens />
             <div id="Valores-Planos" class="pricing-header p-3 pb-md-4 mx-auto text-center">
                 <h1 class="display-4 fw-normal">Planos Fibra ótica</h1>
                 <p class="fs-5 text-muted">Temos os melhores planos fibra ótica da cidade. </p>

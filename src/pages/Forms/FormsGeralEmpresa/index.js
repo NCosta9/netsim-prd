@@ -1,8 +1,9 @@
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import SendDadosPlanos from "../../../utils/SendDadosPlanos";
+import TermoPlanos from "../../../components/Termos/TermoPlanos";
+
 
 export default function FormsGeralFibra() {
 
@@ -15,127 +16,33 @@ export default function FormsGeralFibra() {
   const { register,handleSubmit, getValues} = useForm();
 
 
-  function linkWhatsapp(e){
-    e.preventDefault();
-    let formValues = getValues();
-    let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
-    let end_url =`
-    ${url}Eu ${formValues.NOME} de CPF ${formValues.CPF} envio os dados para assinatura do ${formValues.PLANO} .Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09.%0A 
-    %0ADados para o cadastro:%0A
-    %0A
-    Nome Completo: ${formValues.NOME},%0A
-    CPF: ${formValues.CPF},%0A
-    RG: ${formValues.RG},%0A
-    Data de Nascimento: ${formValues.NASCIMENTO},%0A
-    Cep: ${formValues.CEP},%0A
-    Bairro: ${formValues.Bairro},%0A
-    Endereço Completo: ${formValues.Endereco},%0A
-    Moradia: ${formValues.Moradia},%0A
-    Whatsapp01: ${formValues.Whatsapp01},%0A
-    Whatsapp02: ${formValues.Whatsapp02},%0A
-    Email: ${formValues.Email},%0A
-    Plano Contratado: ${formValues.PLANO},%0A
-    Telefone Fixo Netsim: ${formValues.Fixo},%0A
-    Data de Vencimento: ${formValues.Vencimento},%0A
-    Nome Completo da Indicação: ${formValues.Indicacao},%0A
-    AppStandard: ${formValues.AppStandard},%0A
-    AppPremium: ${formValues.AppPremium},%0A
-    `; 
-  window.open(end_url)
- 
+  const formValues = getValues();
+  const nome=`${formValues.NOME}` 
+  const cpf=`${formValues.CPF}`        
+  const rg=`${formValues.RG}` 
+  const nascimento =`${formValues.NASCIMENTO}`
+  const cep=`${formValues.CEP}`           
+  const bairro=`${formValues.Bairro}` 
+  const endereco=`${formValues.Endereco}`           
+  const moradia=`${formValues.Moradia}` 
+  const whatsapp01=`${formValues.Whatsapp01}` 
+  const whatsapp02=`${formValues.Whatsapp02}` 
+  const email=`${formValues.Email}`           
+  const plano=`${formValues.PLANO}`          
+  const fixo=`${formValues.Fixo}`          
+  const vencimento=`${formValues.Vencimento}`
+  const indicacao=`${formValues.Indicacao}`         
+  const data=`${formValues.Data}` 
+  const hora=`${formValues.Hora}`
+  const obs=`${formValues.OBS}`
+  const premium =`${formValues.AppStandard}`
+  const standard = `${formValues.AppPremium}`
   
+  //Dados para envio via Email
+  const assunto = "Assinatura de Internet";
+  const termos = "Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09."
+  const cabecalho = "Ja recebemos a informações para sua "+ assunto + " ,dentro de alguns instantes entraremos em contato com mais informações. Verifique abaixo se os dados estão corretos: ";
   
-  };
-  
-  //Envia todos os dados do fomulario no email da empresa suporte@netsimtelecom e uma copia do email na caixa de entrada do financeiro@netsimtelecom via emailjs.com.
-  //
-  
-  function sendEmail(e) {
-    e.preventDefault();
-    const formValues = getValues();
-    const title = "NOVA ASSINATURA DE INTERNET";
-    const assunto = "DADOS RECEBIDOS PARA ASSINATURA";
-    const cabecalho = "Ficamos Felizes ter você como nosso novo cliente! Ja recebemos o seus dados e dentro de alguns minutos informaremos sobre sua instalação. Verifique abaixo se as informações estão corretas: ";
-    const nome_cliente = `${formValues.NOME}`;
-    const cliente_mail = `${formValues.Email}`;
-    const userData = `
-        Eu ${formValues.NOME} de CPF/CNPJ ${formValues.CPF},contrato o ${formValues.PLANO} e CONFIRMO esta etapa de contratação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do contrato de fidelidade de 12 meses deixando a taxa de adesão de R$ 500,00 isenta que não será cobrada mediante a fidelidade, e estou ciente que a empresa tem um prazo para instalação de até 48H. Meu CPF poderá passar por uma análise antes da aprovação do contrato. Todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom.
-    
-        Dados para o cadastro:
-    
-        Nome Completo: ${formValues.NOME},
-        CPF: ${formValues.CPF},
-        RG: ${formValues.RG},
-        Data de Nascimento: ${formValues.NASCIMENTO},
-        Cep: ${formValues.CEP},
-        Bairro: ${formValues.Bairro},
-        Endereço Completo: ${formValues.Endereco},
-        Moradia: ${formValues.Moradia},
-        Whatsapp01: ${formValues.Whatsapp01},
-        Whatsapp02: ${formValues.Whatsapp02},
-        Email: ${formValues.Email},
-        Plano Contratado: ${formValues.PLANO},
-        Telefone Fixo Netsim: ${formValues.Fixo},
-        Data de Vencimento: ${formValues.Vencimento},
-        Nome Completo da Indicação: ${formValues.Indicacao},
-        AppStandard: ${formValues.AppStandard},
-        AppPremium: ${formValues.AppPremium},
-    `;
-    
-    console.log(userData);
-    
-    const templateParams = {
-      message: userData,
-      title_mail:title,
-    };
-    const templateParamsCliente = {
-      assunto:assunto,
-      cabecalho:cabecalho,
-      message: userData,
-      cliente:nome_cliente,
-      cliente_mail: cliente_mail,
-    };
-    
-    console.log(templateParams);
-    
-    emailjs
-      .send(
-        "service_au350rb",
-        "template_oh38moq",
-        templateParams,
-        "8Lm_V9EVCD5qu2Vqk"
-      )
-      .then(
-        (response) => {
-          console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-          
-        },
-        (error) => {
-          console.log("NÃO FOI POSSIVEL ENVIAR RECEBER OS DADOS...", error);
-          
-        }
-      );
-      
-      emailjs
-      .send(
-        "service_au350rb",
-        "template_xqy15f2",
-        templateParamsCliente,
-        "8Lm_V9EVCD5qu2Vqk"
-      )
-      .then(
-        (response) => {
-          alert("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-          
-        },
-        (error) => {
-          alert("OPS!! NÃO FOI POSSIVEL RECEBER OS DADOS...", error);
-          
-        }
-      );
-    console.log(sendEmail);
-    };
-    
 
 
   return (
@@ -148,8 +55,6 @@ export default function FormsGeralFibra() {
       <form
         className="row g-3 mt-5"
         id="formDados"
-        onSubmit={handleSubmit(sendEmail)}
-        onSubmitCapture={handleSubmit(linkWhatsapp)}
       >
         {/* ################### Etapa 01 ################################### */}
 
@@ -161,8 +66,8 @@ export default function FormsGeralFibra() {
           <label className="fw-bold">Nome completo:</label>
         </div>
         <div className="col-md-4 mb-3 form-floating">
-          <input type="cpf" className="form-control shadow-sm" {...register("CPF", { required: true })} />
-          <label className="fw-bold">CPF:</label>
+          <input type="cpf" className="form-control shadow-sm" {...register("CNPJ", { required: true })} />
+          <label className="fw-bold">CNPJ:</label>
         </div>
         <div className="col-md-4 mb-3 form-floating">
           <input type="RG" className="form-control shadow-sm" {...register("RG", { required: true })} />
@@ -219,34 +124,6 @@ export default function FormsGeralFibra() {
           <label className="fw-bold">Endereço completo:</label>
         </div>
 
-        <div className="container my-3">
-          <label className="d-flex fw-bold mb-2">Moradia:</label>
-
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input p-2"
-              type="radio"
-              id="inlineRadio1"
-              value="Casa Própria"
-              {...register("Moradia")}
-            />
-            <label className="form-check-label" htmlFor="inlineRadio1">
-              Casa Própria
-            </label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input p-2"
-              type="radio"
-              id="inlineRadio2"
-              value="Casa Alugada"
-              {...register("Moradia", { required: true })}
-            />
-            <label className="form-check-label" htmlFor="inlineRadio2">
-              Casa Alugada
-            </label>
-          </div>
-        </div>
 
         <div className="col-md-6 mb-3 form-floating">
           <input
@@ -409,19 +286,38 @@ export default function FormsGeralFibra() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body> 
-            CONFIRMO esta etapa de contratação dos serviços da contratada
-            NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ
-            18.156.287/0001-09 e tenho total ciência do contrato de fidelidade
-            de 12 meses deixando a taxa de adesão de R$ 500,00 isenta mediante
-            a fidelidade. Estou ciente que a empresa tem um prazo para
-            instalação de até 48H. Meu CPF poderá passar por uma análise antes
-            da aprovação do contrato. Todos os dados fornecidos estão seguros
-            e são de inteira responsabilidade da Netsim Telecom.
+           <TermoPlanos/>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="button" variant="primary" onClick={linkWhatsapp} onClickCapture={sendEmail}>
-            Aceitar
-          </Button>
+        <SendDadosPlanos
+           text="Aceitar"
+           nome={nome} 
+           cpf={cpf}        
+           rg={rg} 
+           nascimento= {nascimento}
+           cep={cep}           
+           bairro={bairro} 
+           endereco={endereco}           
+           moradia={moradia} 
+           whatsapp01={whatsapp01}
+           whatsapp02={whatsapp02} 
+           email={email}           
+           plano={plano}          
+           fixo={fixo}          
+           vencimento={vencimento}
+           premium = {premium}
+           standard = {standard}
+           indicacao={indicacao}         
+           data={data} 
+           hora={hora}
+           obs={obs} 
+
+          termos = {termos}
+          assunto ={assunto}
+          cabecalho={cabecalho}
+
+           
+    />
         </Modal.Footer>
       </Modal>
       </form>

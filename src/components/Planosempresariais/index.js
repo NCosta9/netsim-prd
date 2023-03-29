@@ -5,10 +5,23 @@ import './Planosempresariais.css';
 import React, { useState } from 'react';
 import Collapse from 'react-bootstrap/Collapse';
 import {useNavigate} from 'react-router-dom'
+import VelocidadePlanos from '../DadosPlanos/VelocidadePlanos';
+import ValorPlanos from '../DadosPlanos/ValorPlanos';
 
 function Planosfibra() {
     const [silver, setOpenSilver] = useState(false);
     const [gold, setOpenGold] = useState(false);
+    
+// velocidade dos planos
+    const silverDown = 450;
+    const silverUp = 250;
+    const goldDown = 750;
+    const goldUp = 250;
+
+// valor dos planos
+
+    const valorSilver = 'R$ 250,00';
+    const valorGold = 'R$ 450,00';
 
     const navigate= useNavigate();
 
@@ -26,11 +39,11 @@ function Planosfibra() {
                             </div>
                             <div class="card-body ">
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Download</p></small>
-                                <h3 class="my-0 mb-3 fw-normal offer_title text-start">500 MEGA</h3>
+                                <h3 class="my-0 mb-3 fw-normal offer_title text-start"><VelocidadePlanos velocidade={goldDown}/> MEGA</h3>
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Upload</p></small>
-                                <h3 class="my-0 mb-3 fw-normal offer_title text-start">250 MEGA</h3>
+                                <h3 class="my-0 mb-3 fw-normal offer_title text-start"><VelocidadePlanos velocidade={goldUp}/> MEGA</h3>
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
-                                <h2 class="card-title pricing-card-title fw-light text-start">R$450,00<small class="text-muted fw-light">/mês</small></h2>
+                                <h2 class="card-title pricing-card-title fw-light text-start"><ValorPlanos valor={valorGold}/><small class="text-muted fw-light">/mês</small></h2>
 
                                   <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-empresa')}>Assinar</button>
                             </div>
@@ -76,11 +89,11 @@ function Planosfibra() {
                             </div>
                             <div class="card-body ">
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Download</p></small>
-                                <h3 class="my-0 mb-3 fw-normal offer_title text-start">200 MEGA</h3>
+                                <h3 class="my-0 mb-3 fw-normal offer_title text-start"><VelocidadePlanos velocidade={silverDown}/> MEGA</h3>
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Upload</p></small>
-                                <h3 class="my-0 mb-3 fw-normal offer_title text-start">150 MEGA</h3>
+                                <h3 class="my-0 mb-3 fw-normal offer_title text-start"><VelocidadePlanos velocidade={silverUp}/> MEGA</h3>
                                 <small class="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
-                                <h2 class="card-title pricing-card-title fw-light text-start">R$250,00<small class="text-muted fw-light">/mês</small></h2>
+                                <h2 class="card-title pricing-card-title fw-light text-start"><ValorPlanos valor={valorSilver}/><small class="text-muted fw-light">/mês</small></h2>
 
                                   <button type="button" class="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate('/contrate-empresa')}>Assinar</button>
                             </div>
@@ -274,10 +287,10 @@ function Planosfibra() {
                                 ))}
                             </th>
                             <td>
-                                <b>500 Mega</b>
+                                <b><VelocidadePlanos velocidade={goldDown}/> Mega</b>
                             </td>
                             <td>
-                                <b>200 Mega</b>
+                                <b><VelocidadePlanos velocidade={silverDown}/> Mega</b>
                             </td>
 
                         </tr>
@@ -301,10 +314,10 @@ function Planosfibra() {
                                 ))}
                             </th>
                             <td>
-                                <b>250 Mega</b>
+                                <b><VelocidadePlanos velocidade={goldUp}/> Mega</b>
                             </td>
                             <td>
-                                <b>150 Mega</b>
+                                <b><VelocidadePlanos velocidade={silverUp}/> Mega</b>
                             </td>
 
                         </tr>
