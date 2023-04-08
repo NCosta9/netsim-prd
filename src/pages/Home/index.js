@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -9,9 +9,6 @@ import ContatoWhatsapp from '../../components/ContatoWhatsapp';
 
 import SaibaLecupon from '../../components/SaibaMaisLecupon';
 
-import BannerMigra from '../../img/Banner-migracao.jpg';
-import imgBannerfibra from '../../img/Banner-Fibra.png';
-import imgBannerHome from '../../img/Banner-Home.png';
 import imageDeezer from '../../img/image-deezer.png';
 import imageHBO from '../../img/image-hbomax.png';
 import imageLooke from '../../img/image-looke.png';
@@ -20,32 +17,31 @@ import imageTNT from '../../img/image-tnt.png';
 import iconLogoAzul from '../../img/icon-logo-azul.png';
 import mockupAppAssinante from '../../img/image-app-central-assinante.png';
 
+import Banner01 from '../../img/carousel/Banner01.png';
+import Banner02 from '../../img/carousel/Banner02.png';
+import Banner03 from '../../img/carousel/Banner03.png';
+
 
 
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import CarouselHome from '../../components/Carousel/CarouselHome';
 
 function Home() {
 
   const navigate = useNavigate();
 
 
-
   const values = [true];
   const [fullscreen, setFullscreen] = useState(true);
-  const [fullscreenPremium, setFullscreenPremium] = useState(true);
   const [show, setShow] = useState(false);
-  const [showPremium, setShowPremium] = useState(false);
 
 
   function handleShow(breakpoint) {
     setFullscreen(breakpoint);
     setShow(true);
   }
-  function handleShowPremium(breakpoint) {
-    setFullscreenPremium(breakpoint);
-    setShowPremium(true);
-  }
+
 
   return (
     <>
@@ -53,44 +49,8 @@ function Home() {
         <Header />
       </div>
       {/*Onde inicia o Banner rotativo */}
-      <div className="">
-        <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src={imgBannerHome} className="d-block w-100" alt="..." />
-              {/* <div className="carousel-caption text-end d-none d-md-block">
-                <p className="titulo-home">Bem- Vindo a</p>
-                <img className="alignright" src="https://netsimtelecom.com.br/wp-content/uploads/2021/11/logo-branca.png" width="400" />
-                <p className="subtitulo-home">Planos de ultravelocidade
-                  com soluções em tecnologia e internet para garantir a melhor conexão para você.</p>
-
-
-              </div> */}
-            </div>
-            <div className="carousel-item">
-              <img src={imgBannerfibra} className="d-block w-100" alt="..." />
-              {/* <div className="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>*/}
-            </div>
-            <div className="carousel-item">
-              <img src={BannerMigra} className="d-block w-100" alt="..." />
-              <div className="carousel-caption d-none d-md-block">
-                {/* <h5>Agora ficou simples de solicitar sua migração de internet via radio para fibra otica, basta preencher um formulario com os dados necessarios e entraremos em contato para realizar sua instalação</h5>
-                <p><button type="button" className="btn-netsim">CLIQUE AQUI</button></p> */}
-              </div>
-            </div>
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
+      <div className="mx-1">
+        <CarouselHome  img01={Banner01} img02={Banner02} img03={Banner03}/>
       </div>{/*fim Banner rotativo */}
 
       <div className="container px-4 py-5" id="featured-3">
@@ -107,7 +67,7 @@ function Home() {
             </div>
             <h3 className="fs-2">Planos de Internet</h3>
             <p>Planos apartir de R$ 99,90 + ultima tecnologia wi-fi do mercado </p>
-            <a onClick={() => navigate("/cobertura")} className="icon-link d-inline-flex align-items-center link-orange">
+            <a className="icon-link d-inline-flex align-items-center link-orange" onClick={() => navigate("/cobertura")} >
               Saiba Mais
             </a>
           </div>

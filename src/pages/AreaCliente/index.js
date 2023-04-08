@@ -5,23 +5,21 @@ import { Link } from 'react-router-dom';
 
 import iconPortalApp from "../../img/portaldeapp-icon.png"
 import iconDesconto from "../../img/clubededecontos-icon.png"
-import BannerAreaCliente from "../../img/Banner-AreaDoCliente.png"
+
+import Banner01 from '../../img/carousel/Banner01.png';
+import Banner02 from '../../img/carousel/Banner02.png';
+import Banner03 from '../../img/carousel/Banner03.png';
+import Banner04 from "../../img/carousel/Banner04.png"
 
 import Modal from 'react-bootstrap/Modal';
 import InfoAppsStandard from '../../components/InfoAppsStandard';
 import InfoAppsPremium from '../../components/InfoAppsPremium';
 import SaibaMaisLecupon from '../../components/SaibaMaisLecupon';
+import CarouselHome from '../../components/Carousel/CarouselHome';
 
 
 
 export default function AreaCliente() {
-
-    const BannerStyle = {
-        color: 'blue',
-        backgroundImage: 'url(' + BannerAreaCliente + ')',
-        backgroundSize: '100% 100%',
-        backgroundRepeat: 'no-repeat',
-    };
 
 
     const [appFullscreen, setAppFullscreen] = useState(true);
@@ -41,7 +39,6 @@ export default function AreaCliente() {
         setClubeShow(true);
     }
 
-
     return (
         <>
             <div className="vsc-initialized">
@@ -56,13 +53,11 @@ export default function AreaCliente() {
 
                             </div>
                             <div className="col-4 text-center">
-                                {/* <a className="blog-header-logo text-dark" href="/">Area do cliente</a> */}
+                               Área do Cliente 
                             </div>
                             <div className="col-4 d-flex justify-content-end align-items-center">
 
-                                <a className="btn btn-sm btn-outline-primary me-2" href="tel:6120993434">Ligar para Netsim</a>
-                                <a className="btn btn-sm btn-outline-success" href="https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Estou+com+algumas+dúvidas+pode+me+ajudar+%3F(site)&type=phone_number&app_absent=0">Whatsapp</a>
-
+                                <a className="btn btn-sm btn-outline-primary me-2" href="/">Home</a>
                             </div>
                         </div>
                     </header>
@@ -71,15 +66,8 @@ export default function AreaCliente() {
 
 
                 <main className="container">
-                    <div className="p-4 p-md-5 mb-4 rounded text-bg-dark" style={BannerStyle}>
-                        <div className="col-md-6 px-0">
-                            <h1 className="display-4 fst-italic">Bem- Vindo a Área Cliente Sim</h1>
-                            <p className="lead my-3">
-                                Através desse canal, você encontra todas as informações relacionadas aos nossos serviços centralizadas em apenas um lugar e consegue
-                                realizar ou solicitar qualquer tipo de serviço.
-                            </p>
-                            <a href="/" className="btn btn-outline-light mb-0" >Voltar para Home</a>
-                        </div>
+                    <div className='mx-1 mb-4'>
+                    <CarouselHome img01={Banner04} img02={Banner02} img03={Banner01} />
                     </div>
 
                     <div className="row mb-2">
@@ -89,7 +77,7 @@ export default function AreaCliente() {
                                     <strong className="d-inline-block mb-2 text-primary">Veja</strong>
                                     <h3 className="mb-0">Clube de Descontos</h3>
                                     <p className="card-text mb-auto">Aplicativo que garante a você descontos em estabelecimentos em sua região.</p>
-                                    <a className="btn btn-primary my-1" disabled>Acessar</a>
+                                    <a className="btn btn-primary my-1" href='https://qrco.de/bcW6T9'>Acessar</a>
                                     
                                     <a href="#" className="btn btn-outline-primary my-1" onClick={() => setClubeShow(true, handleClubeShow)}>Como Configurar</a>
 

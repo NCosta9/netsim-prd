@@ -24,7 +24,7 @@ function Footer() {
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Politica de privacidade</a></li>
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Termo de serviços</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Central do colaborador</a></li>
+              <li class="nav-item mb-2"><a href="https://netsim.sharepoint.com/sites/team/" class="nav-link p-0 text-muted">Central do colaborador</a></li>
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pergutas frequentes</a></li>
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Trabalhe Conosco</a></li>
 
