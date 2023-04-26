@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import CarouselNoticias from '../../components/CarouselNoticias';
 import Iconlogo from '../../img/icon-logo.png';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +7,6 @@ import iconDesconto from "../../img/clubededecontos-icon.png"
 
 import Banner01 from '../../img/carousel/Banner01.png';
 import Banner02 from '../../img/carousel/Banner02.png';
-import Banner03 from '../../img/carousel/Banner03.png';
 import Banner04 from "../../img/carousel/Banner04.png"
 
 import Modal from 'react-bootstrap/Modal';
@@ -190,8 +188,6 @@ export default function AreaCliente() {
 
 
 
-        
-
                         </div>
 
                         <div className="col-md-4">
@@ -205,9 +201,9 @@ export default function AreaCliente() {
                                 <div className="p-4">
                                     <h4 className="fst-italic">Serviços:</h4>
                                     <ol className="list-group ">
-                                        <li className='list-group-item'><a href="/mudanca">Mudança de endereço dos equipamentos</a></li>
-                                        <li className='list-group-item'><a href="/titularidade">Mudança de titularidade</a></li>
-                                        <li className='list-group-item'><a href="/ponto">Mudança de ponto internet</a></li>
+                                        <li className='list-group-item'><a href="/mudanca">Mudança de Endereço</a></li>
+                                        <li className='list-group-item'><a href="/titularidade">Mudança de Titular</a></li>
+                                        <li className='list-group-item'><a href="/ponto">Mudança de Ponto internet</a></li>
                                         <li className='list-group-item'><a href="migracao">Solicitar Migração</a></li>
 
                                     </ol>

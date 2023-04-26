@@ -6,7 +6,7 @@ function SendDadosPlanos (props){
 
   const navigate = useNavigate();
 
-  function sendWhatsapp(e){
+  function send(e){
     e.preventDefault();
 
     const userData = `
@@ -21,7 +21,7 @@ function SendDadosPlanos (props){
     Endereço: ${props.endereco}
     Moradia: ${props.moradia}
     Whatsapp01: ${props.whatsapp01}
-    Whatsapp01: ${props.whatsapp02}
+    Whatsapp02: ${props.whatsapp02}
     Email: ${props.email}
     Plano constratado: ${props.plano}
     Fixo: ${props.fixo}
@@ -59,7 +59,7 @@ emailjs
   ).then(
     (response) => {
      // console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-          navigate("/cliente")
+          navigate("/alert")
 
     },
     (error) => {
@@ -89,7 +89,7 @@ emailjs
     <button 
     type="button" 
     className="btn btn-lg btn-primary mb-4" 
-    onClick={sendWhatsapp} 
+    onClick={send} 
     disabled ={props.disabled}
     >
      {props.text}

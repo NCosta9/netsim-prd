@@ -2,7 +2,7 @@ import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 
 
-function SendDadosMudanca (props){
+function SendDadosService (props){
 
   const navigate = useNavigate();
 
@@ -10,7 +10,7 @@ function SendDadosMudanca (props){
     e.preventDefault();
 
     const userData = `
-    Eu ${props.nome} de CPF/CNPJ ${props.cpf}, solicito uma mudança de endereço para:
+    Eu ${props.nome} de CPF/CNPJ ${props.cpf}, solicito uma ${props.assunto} e ${props.conditions}
 
     Cep: ${props.cep}
     Bairro: ${props.bairro}
@@ -88,4 +88,4 @@ emailjs
 
   )
 }
-export default SendDadosMudanca;
+export default SendDadosService;

@@ -2,7 +2,8 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
 import ButtonFinalizar from "../../../components/Forms/ButtonFinalizar";
-import TemplatePonto from "../../../components/TemplateEmail/TemplatePonto";
+
+import SendDadosService from "../../../utils/SendDadosService";
 
 
 
@@ -15,63 +16,24 @@ export default function FormPonto( props) {
 
   const {register, handleSubmit, getValues} = useForm();
 
-  const formValues = getValues();
-const nome= `${formValues.NOME}`;
-const cpf = `${formValues.CPF}`;
-const email = `${formValues.Email}`;
-const cep = `${formValues.CEP}`;
-const bairro = `${formValues.Bairro}`;
-const endereco = `${formValues.Endereco}`;
-const whatsapp= `${formValues.Whatsapp01}`;
-const data = `${formValues.data}`;
-const horario = ` ${formValues.hora}`;
-const obs =  `${formValues.observacao}`;
-
 //Envia todos os dados do formulario por meio de uma url do whatsapp
-  function linkWhatsapp(e){
-    e.preventDefault();
-    let urlValues = getValues();
-    let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
-    let end_url =`
-    ${url}Eu ${urlValues.NOME} de CPF ${urlValues.CPF} acabei de solicitar através do site uma mudança de ponto dos meus equipamentos de internet. E tenho total ciência do custo de 29,90. 
-    `; 
-  window.open(end_url)
- 
-  };
+const formValues = getValues();
+const nome=`${formValues.NOME}` 
+const cpf=`${formValues.CPF}`        
+const cep=`${formValues.CEP}`           
+const bairro=`${formValues.Bairro}` 
+const endereco=`${formValues.Endereco}`           
+const whatsapp01=`${formValues.Whatsapp01}` 
+const email=`${formValues.Email}`           
+const data=`${formValues.data}` 
+const hora=`${formValues.hora}`
+const obs=`${formValues.observacacao}`
 
-//Envia todos os dados do fomulario no email da empresa suporte@netsimtelecom e uma copia do email na caixa de entrada do financeiro@netsimtelecom via emailjs.com.
-//
-function sendEmail(e) {
-e.preventDefault();
-        
-<TemplatePonto 
-
-title = 'mudança de ponto' 
-assunto= 'SOLICITAÇÃO RECEBIDA' 
-nome= {nome} 
-cpf = {cpf} 
-email = {email} 
-cep = {cep}
-bairro = {bairro}
-endereco = {endereco}
-whatsapp = {whatsapp}
-data = {data}
-horario = {horario}
-obs = {obs}
-
-/>
-
-};
-
-
-const termos =
- <p>
-          O serviço de mudança de Ponto tem um custo de R$ 29,90, que virá junto com a próxima fatura em aberto, ou seja, no ato do serviço não precisa ser pago nada para nossos técnicos, será gerado e enviado o boleto para o contato que solicitou o serviço.<br/><br/>
-          (1) No dia da mudança nossos técnicos entrarão em contato para confirmar o horário exato da mudança da.<br/><br/>
-          (2) Você recebera no e-mail adicionado uma notificação com todos os dados enviados e uma explicação de como funcionará mudança de ponto da Netsim telecom!<br/><br/>
-          (3) Todos os dados estão protegidos e são de inteira responsabilidade da Netsim Telecom.
- </p> 
-;
+//Dados para envio via Email
+const assunto = "Mudança de Ponto";
+const termos = "Declaro que li e concordo com os termos e condições descritos no site."
+const conditions = "CONFIRMO esta etapa de contratação dos serviços da NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do custo de 29,90 adicionado a proxima fatura em aberto e prazo máximo de até 48 horas para realização desse serviço."
+const cabecalho = "Ja recebemos a informações para sua "+ assunto + " ,dentro de alguns instantes entraremos em contato com mais informações. Verifique abaixo se os dados estão corretos: ";
 
 
 
@@ -126,11 +88,12 @@ const termos =
           />
           <label className="fw-bold">E-mail:</label>
           <div className="form-text">
-            Nesse email você recebera uma mensagem com as informações da solicitação.{" "}
+            Nesse email você recebera uma mensagem com mais informações sobre o processo em andamento.
           </div>
         </div>
+
 {/* ################### Etapa 02 ################################### */}
-        <h4>Endereço - 2 Etapa</h4>
+<h4>Dados do Novo Endereço - 2 Etapa</h4>
         <span className="divider-orange mb-3" />
 
       
@@ -141,7 +104,7 @@ const termos =
             className="form-control shadow-sm"
             {...register("CEP", { required: true })}
           />
-          <label className="fw-bold">CEP:</label>
+          <label className="fw-bold">Novo CEP:</label>
         </div>
 
         <div className="col-md-4 mb-3 form-floating">
@@ -156,14 +119,15 @@ const termos =
             <option value="Buritis 01" >Buritis 01</option>
             <option value="Buritis 02" >Buritis 02</option>
             <option value="Chácara Final Feliz" >Chácara Final Feliz</option>
-            <option value="Chácara Final Feliz" >Chácara São José</option>
+            <option value="Chácara São José" >Chácara São José</option>
             <option value="Chácara Rossio " >Chácara Rossio </option>
             <option value="Condomínio São José" >Condomínio São José</option>
             <option value="Dom Francisco" >Dom Francisco</option>
             <option value="Dom Pedro" >Dom Pedro</option>
             <option value="Salomão Elias" >Salomão Elias</option>
             <option value="São Francisco" >São Francisco</option>
-            <option value="São Francisco" >Guarapari</option>
+            <option value="Guarapari" >Guarapari</option>
+            <option value="Galileia" >Galileia</option>
             <option value="Zona Rural Aguas Quentes" >Zona Rural Aguas Quentes</option>
           </select>
         </div>
@@ -174,15 +138,13 @@ const termos =
             className="form-control shadow-sm"
             {...register("Endereco", { required: true })}
           />
-          <label className="fw-bold">Endereço completo:</label>
+          <label className="fw-bold">Novo Endereço completo:</label>
         </div>
 
 
-       
-      
-      
 
-        {/* ################### Etapa 03 ################################### */}
+{/* ################### Etapa 03 ################################### */}
+    
 
         <h4> Informações da Mudança - 3 Etapa</h4>
         <span className="divider-orange mb-3" />
@@ -243,7 +205,20 @@ const termos =
 
      
         
-        <ButtonFinalizar event={handleSubmit(handleShow)} text='Finalizar'/>
+        <button type="button" className="btn btn-lg btn-success mb-4" onClick={handleSubmit(handleShow)}>
+          Finalizar
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            className="bi bi-whatsapp ms-2"
+            viewBox="0 0 16 16"
+          >
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+          </svg>
+        </button>
+
 
 
         <Modal show={show} onHide={handleClose} animation={false}>
@@ -254,12 +229,30 @@ const termos =
         </Modal.Header>
         <Modal.Body> 
 
-              {termos}
+              {conditions}
 
         </Modal.Body>
         <Modal.Footer>
 
-          <ButtonFinalizar event={linkWhatsapp} event01={sendEmail} text='Aceitar'/>
+        <SendDadosService
+           text="Aceitar"
+           nome={nome} 
+           cpf={cpf}
+           cep={cep}           
+           bairro={bairro} 
+           endereco={endereco}          
+           whatsapp01={whatsapp01}
+           email={email}           
+           data={data} 
+           hora={hora}
+           obs={obs} 
+
+          termos = {termos}
+          assunto ={assunto}
+          cabecalho={cabecalho}
+
+           
+    />
          
         </Modal.Footer>
       </Modal>

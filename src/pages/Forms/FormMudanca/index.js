@@ -3,8 +3,7 @@ import { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
 
 
-import SendDadosPlanos from "../../../utils/SendDadosMudanca";
-import TermoPlanos from "../../../components/Termos/TermoPlanos";
+import SendDadosService from "../../../utils/SendDadosService";
 
 
 export default function FormMudanca() {
@@ -22,28 +21,20 @@ export default function FormMudanca() {
 const formValues = getValues();
 const nome=`${formValues.NOME}` 
 const cpf=`${formValues.CPF}`        
-const rg=`${formValues.RG}` 
-const nascimento =`${formValues.NASCIMENTO}`
 const cep=`${formValues.CEP}`           
 const bairro=`${formValues.Bairro}` 
 const endereco=`${formValues.Endereco}`           
 const moradia=`${formValues.Moradia}` 
 const whatsapp01=`${formValues.Whatsapp01}` 
-const whatsapp02=`${formValues.Whatsapp02}` 
 const email=`${formValues.Email}`           
-const plano=`${formValues.PLANO}`          
-const fixo=`${formValues.Fixo}`          
-const vencimento=`${formValues.Vencimento}`
-const indicacao=`${formValues.Indicacao}`         
-const data=`${formValues.Data}` 
-const hora=`${formValues.Hora}`
-const obs=`${formValues.OBS}`
-const premium =`${formValues.AppStandard}`
-const standard = `${formValues.AppPremium}`
+const data=`${formValues.data}` 
+const hora=`${formValues.hora}`
+const obs=`${formValues.observacacao}`
 
 //Dados para envio via Email
 const assunto = "Mudança de Endereço";
 const termos = "Declaro que li e concordo com os termos e condições descritos no site."
+const conditions = "CONFIRMO esta etapa de contratação dos serviços da NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09 e tenho total ciência do custo de 49,90 adicionado a proxima fatura em aberto e prazo máximo de até 48 horas para realização do serviço."
 const cabecalho = "Ja recebemos a informações para sua "+ assunto + " ,dentro de alguns instantes entraremos em contato com mais informações. Verifique abaixo se os dados estão corretos: ";
 
 
@@ -93,7 +84,7 @@ const cabecalho = "Ja recebemos a informações para sua "+ assunto + " ,dentro 
           />
           <label className="fw-bold">E-mail:</label>
           <div className="form-text">
-            Nesse email você recebera uma mensagem com as informações da solicitação.{" "}
+          Nesse email você recebera uma mensagem com mais informações sobre o processo em andamento.
           </div>
         </div>
 {/* ################### Etapa 02 ################################### */}
@@ -116,8 +107,8 @@ const cabecalho = "Ja recebemos a informações para sua "+ assunto + " ,dentro 
             className="form-select shadow-sm"
             {...register("Bairro", { required: true })}
           >
-            <option value="" selected>
-              --- Qual o novo bairro? ---
+           <option value="" selected>
+              --- Qual o bairro? ---
             </option>
             <option value="Nova Betânia" >Nova Betânia</option>
             <option value="Buritis 01" >Buritis 01</option>
@@ -131,6 +122,7 @@ const cabecalho = "Ja recebemos a informações para sua "+ assunto + " ,dentro 
             <option value="Salomão Elias" >Salomão Elias</option>
             <option value="São Francisco" >São Francisco</option>
             <option value="Guarapari" >Guarapari</option>
+            <option value="Galileia" >Galileia</option>
             <option value="Zona Rural Aguas Quentes" >Zona Rural Aguas Quentes</option>
           </select>
         </div>
@@ -233,34 +225,27 @@ const cabecalho = "Ja recebemos a informações para sua "+ assunto + " ,dentro 
           </Modal.Title>
         </Modal.Header>
         <Modal.Body> 
-           <TermoPlanos/>
+           {conditions}
         </Modal.Body>
         <Modal.Footer>
-        <SendDadosPlanos
+        <SendDadosService
            text="Aceitar"
            nome={nome} 
            cpf={cpf}        
-           rg={rg} 
-           nascimento= {nascimento}
+         
            cep={cep}           
            bairro={bairro} 
            endereco={endereco}           
            moradia={moradia} 
            whatsapp01={whatsapp01}
-           whatsapp02={whatsapp02} 
            email={email}           
-           plano={plano}          
-           fixo={fixo}          
-           vencimento={vencimento}
-           premium = {premium}
-           standard = {standard}
-           indicacao={indicacao}         
            data={data} 
            hora={hora}
            obs={obs} 
 
           termos = {termos}
           assunto ={assunto}
+          conditions = {conditions}
           cabecalho={cabecalho}
 
            

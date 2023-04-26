@@ -1,7 +1,5 @@
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 import SendDadosPlanos from "../../../../utils/SendDadosPlanos";
@@ -315,14 +313,7 @@ export default function Lite() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body> 
-            CONFIRMO esta etapa de contratação dos serviços da contratada
-            NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ
-            18.156.287/0001-09 e tenho total ciência do contrato de fidelidade
-            de 12 meses deixando a taxa de adesão de R$ 500,00 isenta mediante
-            a fidelidade. Estou ciente que a empresa tem um prazo para
-            instalação de até 48H. Meu CPF poderá passar por uma análise antes
-            da aprovação do contrato. Todos os dados fornecidos estão seguros
-            e são de inteira responsabilidade da Netsim Telecom.
+           <TermoPlanos/>
         </Modal.Body>
         <Modal.Footer>
         <SendDadosPlanos
