@@ -7,7 +7,9 @@ import Cobertura from './pages/Cobertura';
 import Radio from './pages/Radio';
 import Fibra from './pages/Fibra';
 
-import Alert from './pages/AlertSucess'
+import Sucesso from './components/Alerts/Sucesso.js';
+import Error from './components/Alerts/Error.js';
+
 
 
 //import para rota da area do cliente
@@ -42,7 +44,9 @@ function RoutesApp(){
                 <Route path="/fibra" element={ <Fibra/> } />
                 <Route path='/radio' element={ <Radio/>}/>
                 <Route path="/cliente" element={ <AreaCliente/> } />
-                <Route path="/alert" element={ <Alert/> } />
+                <Route path="/sucesso" element={ <Sucesso/> } />
+                <Route path="/error" element={ <Error/> } />
+
 
                 <Route path="/contrate-empresa" element={ <ContrateEmpresa/> } />
                 <Route path="/lite" element={ <Lite/> } />

@@ -59,12 +59,12 @@ emailjs
   ).then(
     (response) => {
      // console.log("DADOS ENVIADO COM SUCCESSO!", response.status, response.text);   
-          navigate("/alert")
+          navigate("/sucesso")
 
     },
     (error) => {
-      console.log("OPS!! NÃO FOI POSSIVEL RECEBER OS DADOS...", error);
-      
+      //console.log("OPS!! NÃO FOI POSSIVEL RECEBER OS DADOS...", error);
+      navigate("/error")
     }
   );
   
