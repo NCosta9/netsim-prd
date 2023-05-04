@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
-import SendDadosPlanos from "../../../utils/SendDadosPlanos";
+import SendDadosService from "../../../utils/SendDadosService";
 
 
 export default function Titulariade() {
@@ -16,50 +16,40 @@ const { register,handleSubmit, getValues} = useForm();
 
 //Dados dar envio via url Whatsapp
 const formValues = getValues();
+const novoNOME = `${formValues.novoNOME}`
+const novoCPF=`${formValues.novoCPF}`
 const nome=`${formValues.NOME}` 
 const cpf=`${formValues.CPF}`        
 const rg=`${formValues.RG}` 
-const cep=`${formValues.CEP}`           
-const bairro=`${formValues.BAIRRO}` 
-const endereco=`${formValues.ENDERECO}`           
-const moradia=`${formValues.MORADIA}` 
 const whatsapp01=`${formValues.WHATASAPP01}` 
 const whatsapp02=`${formValues.WHATASAPP02}` 
 const email=`${formValues.EMAIL}`           
-const plano=`${formValues.PLANOS}`          
-const fixo=`${formValues.FIXO}`          
-const vencimento=`${formValues.VENCIMENTO}`
-const indicacao=`${formValues.INDICACAO}`         
-const data=`${formValues.DATA}` 
-const hora=`${formValues.HORA}`
 const obs=`${formValues.OBS}`
-//const premium =`${formValues.AppStandard}`
-//const standard = `${formValues.AppPremium}`
+
 
 //Dados para envio via Email
-const termos = "(1) Declaro que li e concordo com os termos e condições.(2) Tenho total ciência do custo de R$ 49,90 para ser realizado esta mudança de endereço."
+const termos = "Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09."
 const assunto = "Mudança de Titularidade";
-const cabecalho = "Ja recebemos a sua solicitação de mudança de endereço dos equipamentos de internet, dentro de alguns minutos informaremos sobre sua instalação. No dia da mudança nossos tecnicos entrara em contato para confirmar o horario exato da mudança de endereço.  Verifique abaixo se as informações estão corretas: ";
+const cabecalho = "Ja recebemos a sua solicitação de "+ assunto + ", dentro de alguns minutos um de nossos atendentes entrará em contato com mais informações.  Verifique abaixo se todos os dados estão corretos: ";
 
 
   return (
     <div className="container">
       <div class="bg-light p-5 mt-3 rounded">
-        <h1>Bem Vindo a Página de Mudança de Endereço</h1>
-        <p class="lead">A mudança de endereço tem um <b>CUSTO DE R$ 49,90.</b></p><p  class="lead 
-        "> Para realizarmos sua mudança, preencha com os dados necessarios para solicitar a sua mudança de endereço. No final você recebera um email informando os detalhes da sua solicitação</p>
+        <h1>Bem Vindo a Página de {assunto} </h1>
+        <p class="lead">Esse serviço <b>não tem nenhum custo para ser realizado</b></p>
+        <p  class="lead"> Para efetivar a solicitação desse serviço, preencha com os dados necessários que se pede abaixo.</p>
         <a class="btn btn-lg btn-primary" href="/cliente" role="button">Voltar a página anterior »</a>
       </div>
       <form
         className="row g-3 mt-5"
-        name="formDados"
       >
         {/* ################### Etapa 01 ################################### */}
 
-        <h4>Dados Atuais - 1 Etapa</h4>
+        <h4><b>1° Etapa</b> - Dados Atuais</h4>
         <span className="divider-orange mb-3" />
 
-        <div className="mb-3 form-floating">
+        <div className="col mb-3 form-floating">
           <input type="text" className="form-control shadow-sm" {...register("NOME", { required: true })} />
           <label className="fw-bold">Nome completo:</label>
         </div>
@@ -69,6 +59,52 @@ const cabecalho = "Ja recebemos a sua solicitação de mudança de endereço dos
           <label className="fw-bold">CPF:</label>
         </div>
 
+{/* ################### Etapa 02 ################################### */}
+<h4><b>2° Etapa</b> - Dados para cadastro do novo Titular </h4>
+        <span className="divider-orange mb-3" />
+
+        <div className="mb-3 form-floating">
+          <input type="text" className="form-control shadow-sm" {...register("novoNOME", { required: true })} />
+          <label className="fw-bold">Nome completo:</label>
+        </div>
+        <div className="col-md-4 mb-3 form-floating">
+          <input type="cpf" className="form-control shadow-sm" {...register("novoCPF", { required: true })} />
+          <label className="fw-bold">CPF:</label>
+        </div>
+        <div className="col-md-4 mb-3 form-floating">
+          <input type="RG" className="form-control shadow-sm" {...register("RG", { required: true })} />
+          <label className="fw-bold">RG:</label>
+        </div>
+        <div className="col-md-4 mb-3 form-floating">
+          <input
+            type="date"
+            id="date"
+            className="form-control shadow-sm"
+            {...register("NASCIMENTO", { required: true })}
+          />
+          <label className="fw-bold">Data de Nascimento:</label>
+        </div>
+
+        <div className="col-md-6 mb-3 form-floating">
+          <input
+            type="tel"
+            id="zap02"
+            className="form-control shadow-sm"
+            {...register("Whatsapp01", { required: true })}
+          />
+          <label className="fw-bold">Whatsapp 01:</label>
+        </div>
+        <div className="col-md-6 mb-3 form-floating">
+          <input
+            type="tel"
+            id="zap01"
+            className="form-control shadow-sm"
+            min="11"
+            max="11"
+            {...register("Whatsapp02")}
+          />
+          <label className="fw-bold">Whatsapp 02:</label>
+        </div>
         <div className="col mb-3 form-floating">
           <input
             type="email"
@@ -78,104 +114,8 @@ const cabecalho = "Ja recebemos a sua solicitação de mudança de endereço dos
           />
           <label className="fw-bold">E-mail:</label>
           <div className="form-text">
-            Nesse email você recebera uma mensagem com as informações da solicitação.{" "}
-          </div>
-        </div>
-{/* ################### Etapa 02 ################################### */}
-        <h4>Dados do Novo Endereço - 2 Etapa</h4>
-        <span className="divider-orange mb-3" />
-
-      
-        <div className="col-md-4 mb-3 form-floating">
-          <input
-            type="text"
-            id="date"
-            className="form-control shadow-sm"
-            {...register("CEP", { required: true })}
-          />
-          <label className="fw-bold">Novo CEP:</label>
-        </div>
-
-        <div className="col-md-4 mb-3 form-floating">
-          <select
-            className="form-select shadow-sm"
-            {...register("Bairro", { required: true })}
-          >
-            <option value="" selected>
-              --- Qual o novo bairro? ---
-            </option>
-            <option value="Nova Betânia" >Nova Betânia</option>
-            <option value="Buritis 01" >Buritis 01</option>
-            <option value="Buritis 02" >Buritis 02</option>
-            <option value="Chácara Final Feliz" >Chácara Final Feliz</option>
-            <option value="Chácara Rossio " >Chácara Rossio </option>
-            <option value="Condomínio São José" >Condomínio São José</option>
-            <option value="Dom Francisco" >Dom Francisco</option>
-            <option value="Dom Pedro" >Dom Pedro</option>
-            <option value="Salomão Elias" >Salomão Elias</option>
-            <option value="São Francisco" >São Francisco</option>
-            <option value="Zona Rural Aguas Quentes" >Zona Rural Aguas Quentes</option>
-          </select>
-        </div>
-
-        <div className="col-md-4 mb-3 form-floating">
-          <input
-            type="text"
-            className="form-control shadow-sm"
-            {...register("Endereco", { required: true })}
-          />
-          <label className="fw-bold">Novo Endereço completo:</label>
-        </div>
-
-
-       
-      
-      
-
-        {/* ################### Etapa 03 ################################### */}
-
-        <h4> Informações da Mudança de Endereço - 3 Etapa</h4>
-        <span className="divider-orange mb-3" />
-
-        <div className="col mb-3 form-floating">
-          <input
-            type="date"
-            id="date"
-            className="form-control shadow-sm"
-            {...register("data", { required: true })}
-          />
-          <label className="fw-bold">Data de Nascimento:</label>
-        </div>
-
-        <div className="container">
-          <label className="d-flex fw-bold mb-2">
-          Horário da Mudança:
-          </label>
-
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input p-2"
-              type="radio"
-              id="inlineRadio1"
-              value="Manhã"
-              {...register("hora")}
-            />
-            <label className="form-check-label" htmlFor="inlineRadio1">
-              Manhã
-            </label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input p-2"
-              type="radio"
-              id="inlineRadio2"
-              value="Tarde"
-              {...register("hora")}
-              
-            />
-            <label className="form-check-label" htmlFor="inlineRadio2">
-              Tarde
-            </label>
+            Esse email será utilizado para acessar todos os paineis do cliente e
+            acessar os aplicativos escolhidos.{" "}
           </div>
         </div>
 
@@ -222,23 +162,15 @@ const cabecalho = "Ja recebemos a sua solicitação de mudança de endereço dos
           Todos os dados estão protegidos e são de inteira responsabilidade da Netsim Telecom.
         </Modal.Body>
         <Modal.Footer>
-        <SendDadosPlanos
+        <SendDadosService
+          novoNOME= {novoNOME}
+          novoCPF= {novoCPF}
            nome={nome} 
            cpf={cpf}        
            rg={rg} 
-           cep={cep}           
-           bairro={bairro} 
-           endereco={endereco}           
-           moradia={moradia} 
            whatsapp01={whatsapp01}
            whatsapp02={whatsapp02} 
-           email={email}           
-           plano={plano}          
-           fixo={fixo}          
-           vencimento={vencimento}
-           indicacao={indicacao}         
-           data={data} 
-           hora={hora}
+           email={email}                 
            obs={obs} 
 
           termos = {termos}

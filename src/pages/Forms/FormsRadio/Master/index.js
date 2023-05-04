@@ -54,8 +54,8 @@ export default function Master() {
   const data=`${formValues.Data}` 
   const hora=`${formValues.Hora}`
   const obs=`${formValues.OBS}`
-  const premium =`${formValues.AppStandard}`
-  const standard = `${formValues.AppPremium}`
+  const standard =`${formValues.AppStandard}`
+  const premium = `${formValues.AppPremium}`
   
   //Dados para envio via Email
   const assunto = "Assinatura de Internet";

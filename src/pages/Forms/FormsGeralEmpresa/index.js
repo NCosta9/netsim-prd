@@ -35,8 +35,7 @@ export default function FormsGeralFibra() {
   const data=`${formValues.Data}` 
   const hora=`${formValues.Hora}`
   const obs=`${formValues.OBS}`
-  const premium =`${formValues.AppStandard}`
-  const standard = `${formValues.AppPremium}`
+
   
   //Dados para envio via Email
   const assunto = "Assinatura de Internet";
@@ -305,8 +304,6 @@ export default function FormsGeralFibra() {
            plano={plano}          
            fixo={fixo}          
            vencimento={vencimento}
-           premium = {premium}
-           standard = {standard}
            indicacao={indicacao}         
            data={data} 
            hora={hora}
