@@ -67,22 +67,6 @@ function Planosfibra() {
                                         <li>
                                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" className='mx-2 text-muted'><path d="M4.125 17.5q-.542 0-.927-.385-.386-.386-.386-.927 0-.521.386-.907.385-.385.927-.385t.927.385q.386.386.386.907 0 .541-.386.927-.385.385-.927.385Zm11.208 0q-.375 0-.677-.292-.302-.291-.323-.687-.187-2.104-1.073-3.938-.885-1.833-2.291-3.239-1.407-1.406-3.24-2.282Q5.896 6.188 3.792 6q-.396-.042-.688-.344-.292-.302-.292-.698 0-.416.303-.698.302-.281.677-.239 2.5.167 4.708 1.208 2.208 1.042 3.875 2.709 1.667 1.666 2.708 3.874 1.042 2.209 1.229 4.709.021.396-.27.687-.292.292-.709.292Zm-5.25 0q-.375 0-.666-.281-.292-.281-.396-.698-.313-2.021-1.75-3.469-1.438-1.448-3.479-1.76-.417-.084-.698-.386-.282-.302-.282-.698 0-.396.292-.698.292-.302.688-.218 2.854.312 4.885 2.343 2.031 2.032 2.365 4.886.062.396-.23.687-.291.292-.729.292Z" /></svg>
                                             3 Repetidor de sinal
-                                            {['top'].map((placement) => (
-                                    <OverlayTrigger
-                                        trigger="click"
-                                        key={placement}
-                                        placement={placement}
-                                        overlay={
-                                            <Popover id={`popover-positioned-${placement}`}>
-                                                <Popover.Body>
-                                                    <strong>Repetidor</strong> amplifica o sinal do Wifi gerado pelo roteador para que a rede alcance áreas que o sinal não chega...
-                                                </Popover.Body>
-                                            </Popover>
-                                        }
-                                    >
-                                        <small class="text-primary fw-light"><span className='text-start mb-0 ms-1'>Saiba Mais</span></small>
-                                    </OverlayTrigger>
-                                ))}
                                         </li>
                                         <li>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="mt-1 mx-2 text-muted'" viewBox="0 0 16 16">
@@ -92,22 +76,6 @@ function Planosfibra() {
                                                 <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z" />
                                             </svg>
                                             Clube de Descontos
-                                            {['top'].map((placement) => (
-                                    <OverlayTrigger
-                                        trigger="click"
-                                        key={placement}
-                                        placement={placement}
-                                        overlay={
-                                            <Popover id={`popover-positioned-${placement}`}>
-                                                <Popover.Body>
-                                                    <strong>Aplicativo</strong> que garante descontos em produtos de vários estabelecimentos em sua região e pelo Brasil.
-                                                </Popover.Body>
-                                            </Popover>
-                                        }
-                                    >
-                                        <small class="text-primary fw-light"><span className='text-start mb-0 ms-1'>Saiba Mais</span></small>
-                                    </OverlayTrigger>
-                                ))}
                                         </li>
                                         <li>
                                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" className='mx-2 text-muted'><path d="M15.458 16.521q-2.291-.209-4.396-1.24-2.104-1.031-3.729-2.666-1.625-1.636-2.666-3.73-1.042-2.093-1.229-4.406-.042-.437.25-.76.291-.323.75-.323h2.166q.396 0 .667.219.271.218.375.593l.437 1.771q.042.271-.031.531-.073.261-.281.448L5.854 8.833q1 1.75 2.313 3.063 1.312 1.312 3.041 2.229l1.959-1.917q.229-.229.448-.27.218-.042.468 0l1.667.374q.375.084.594.365.218.281.218.677v2.167q0 .562-.395.791-.396.23-.709.209ZM5.375 7.771l1.563-1.5q.041-.042.052-.094.01-.052-.011-.094l-.354-1.479q-.021-.062-.063-.094-.041-.031-.104-.031H4.667q-.063 0-.094.031-.031.032-.031.073.062.792.281 1.594.219.802.552 1.594Zm6.917 6.854q.75.333 1.562.51.813.177 1.521.24.042 0 .073-.031.031-.032.031-.073v-1.792q0-.062-.031-.104-.031-.042-.094-.063L14 13.021q-.042-.021-.083 0l-.084.041ZM5.375 7.771Zm6.917 6.854Z" /></svg>
@@ -170,22 +138,7 @@ function Planosfibra() {
                                         <li>
                                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" className='mx-2 text-muted'><path d="M4.125 17.5q-.542 0-.927-.385-.386-.386-.386-.927 0-.521.386-.907.385-.385.927-.385t.927.385q.386.386.386.907 0 .541-.386.927-.385.385-.927.385Zm11.208 0q-.375 0-.677-.292-.302-.291-.323-.687-.187-2.104-1.073-3.938-.885-1.833-2.291-3.239-1.407-1.406-3.24-2.282Q5.896 6.188 3.792 6q-.396-.042-.688-.344-.292-.302-.292-.698 0-.416.303-.698.302-.281.677-.239 2.5.167 4.708 1.208 2.208 1.042 3.875 2.709 1.667 1.666 2.708 3.874 1.042 2.209 1.229 4.709.021.396-.27.687-.292.292-.709.292Zm-5.25 0q-.375 0-.666-.281-.292-.281-.396-.698-.313-2.021-1.75-3.469-1.438-1.448-3.479-1.76-.417-.084-.698-.386-.282-.302-.282-.698 0-.396.292-.698.292-.302.688-.218 2.854.312 4.885 2.343 2.031 2.032 2.365 4.886.062.396-.23.687-.291.292-.729.292Z" /></svg>
                                             2 Repetidor de sinal
-                                            {['top'].map((placement) => (
-                                    <OverlayTrigger
-                                        trigger="click"
-                                        key={placement}
-                                        placement={placement}
-                                        overlay={
-                                            <Popover id={`popover-positioned-${placement}`}>
-                                                <Popover.Body>
-                                                    <strong>Repetidor</strong> amplifica o sinal do Wifi gerado pelo roteador para que a rede alcance áreas que o sinal não chega...
-                                                </Popover.Body>
-                                            </Popover>
-                                        }
-                                    >
-                                        <small class="text-primary fw-light"><span className='text-start mb-0 ms-1'>Saiba Mais</span></small>
-                                    </OverlayTrigger>
-                                ))}
+                                            
                                         </li>
                                         <li>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="mt-1 mx-2 text-muted'" viewBox="0 0 16 16">
@@ -195,22 +148,6 @@ function Planosfibra() {
                                                 <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z" />
                                             </svg>
                                             Clube de Descontos
-                                            {['top'].map((placement) => (
-                                    <OverlayTrigger
-                                        trigger="click"
-                                        key={placement}
-                                        placement={placement}
-                                        overlay={
-                                            <Popover id={`popover-positioned-${placement}`}>
-                                                <Popover.Body>
-                                                    <strong>Aplicativo</strong> que garante descontos em produtos de vários estabelecimentos em sua região e pelo Brasil.
-                                                </Popover.Body>
-                                            </Popover>
-                                        }
-                                    >
-                                        <small class="text-primary fw-light"><span className='text-start mb-0 ms-1'>Saiba Mais</span></small>
-                                    </OverlayTrigger>
-                                ))}
                                         </li>
                                         <li>
                                             <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" className='mx-2 text-muted'><path d="M15.458 16.521q-2.291-.209-4.396-1.24-2.104-1.031-3.729-2.666-1.625-1.636-2.666-3.73-1.042-2.093-1.229-4.406-.042-.437.25-.76.291-.323.75-.323h2.166q.396 0 .667.219.271.218.375.593l.437 1.771q.042.271-.031.531-.073.261-.281.448L5.854 8.833q1 1.75 2.313 3.063 1.312 1.312 3.041 2.229l1.959-1.917q.229-.229.448-.27.218-.042.468 0l1.667.374q.375.084.594.365.218.281.218.677v2.167q0 .562-.395.791-.396.23-.709.209ZM5.375 7.771l1.563-1.5q.041-.042.052-.094.01-.052-.011-.094l-.354-1.479q-.021-.062-.063-.094-.041-.031-.104-.031H4.667q-.063 0-.094.031-.031.032-.031.073.062.792.281 1.594.219.802.552 1.594Zm6.917 6.854q.75.333 1.562.51.813.177 1.521.24.042 0 .073-.031.031-.032.031-.073v-1.792q0-.062-.031-.104-.031-.042-.094-.063L14 13.021q-.042-.021-.083 0l-.084.041ZM5.375 7.771Zm6.917 6.854Z" /></svg>
@@ -283,23 +220,6 @@ function Planosfibra() {
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" className='mx-2 text-muted'><path d="M4.125 17.5q-.542 0-.927-.385-.386-.386-.386-.927 0-.521.386-.907.385-.385.927-.385t.927.385q.386.386.386.907 0 .541-.386.927-.385.385-.927.385Zm11.208 0q-.375 0-.677-.292-.302-.291-.323-.687-.187-2.104-1.073-3.938-.885-1.833-2.291-3.239-1.407-1.406-3.24-2.282Q5.896 6.188 3.792 6q-.396-.042-.688-.344-.292-.302-.292-.698 0-.416.303-.698.302-.281.677-.239 2.5.167 4.708 1.208 2.208 1.042 3.875 2.709 1.667 1.666 2.708 3.874 1.042 2.209 1.229 4.709.021.396-.27.687-.292.292-.709.292Zm-5.25 0q-.375 0-.666-.281-.292-.281-.396-.698-.313-2.021-1.75-3.469-1.438-1.448-3.479-1.76-.417-.084-.698-.386-.282-.302-.282-.698 0-.396.292-.698.292-.302.688-.218 2.854.312 4.885 2.343 2.031 2.032 2.365 4.886.062.396-.23.687-.291.292-.729.292Z" /></svg>
                                         1 Repetidor de sinal
-
-                                        {['top'].map((placement) => (
-                                    <OverlayTrigger
-                                        trigger="click"
-                                        key={placement}
-                                        placement={placement}
-                                        overlay={
-                                            <Popover id={`popover-positioned-${placement}`}>
-                                                <Popover.Body>
-                                                    <strong>Repetidor</strong> amplifica o sinal do Wifi gerado pelo roteador para que a rede alcance áreas que o sinal não chega...
-                                                </Popover.Body>
-                                            </Popover>
-                                        }
-                                    >
-                                        <small class="text-primary fw-light"><span className='text-start mb-0 ms-1'>Saiba Mais</span></small>
-                                    </OverlayTrigger>
-                                ))}
                                     </li>
 
                                     <li>
@@ -310,22 +230,6 @@ function Planosfibra() {
                                             <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z" />
                                         </svg>
                                         Clube de Descontos
-                                        {['top'].map((placement) => (
-                                    <OverlayTrigger
-                                        trigger="click"
-                                        key={placement}
-                                        placement={placement}
-                                        overlay={
-                                            <Popover id={`popover-positioned-${placement}`}>
-                                                <Popover.Body>
-                                                    <strong>Aplicativo</strong> que garante descontos em produtos de vários estabelecimentos em sua região e pelo Brasil.
-                                                </Popover.Body>
-                                            </Popover>
-                                        }
-                                    >
-                                        <small class="text-primary fw-light"><span className='text-start mb-0 ms-1'>Saiba Mais</span></small>
-                                    </OverlayTrigger>
-                                ))}
                                     </li>
 
                                     <li className='mt-2'>
@@ -383,27 +287,11 @@ function Planosfibra() {
                                             <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z" />
                                         </svg>
                                         Clube de Descontos
-                                        {['top'].map((placement) => (
-                                    <OverlayTrigger
-                                        trigger="click"
-                                        key={placement}
-                                        placement={placement}
-                                        overlay={
-                                            <Popover id={`popover-positioned-${placement}`}>
-                                                <Popover.Body>
-                                                    <strong>Aplicativo</strong> que garante descontos em produtos de vários estabelecimentos em sua região e pelo Brasil.
-                                                </Popover.Body>
-                                            </Popover>
-                                        }
-                                    >
-                                        <small class="text-primary fw-light"><span className='text-start mb-0 ms-1'>Saiba Mais</span></small>
-                                    </OverlayTrigger>
-                                ))}
                                     </li>
                                     <li className='text-center mt-3' >-</li>
                                     <li className='text-center mt-3' >-</li>
                                     <li className='text-center mt-3'>-</li>
-                                    <li className='text-center'>-</li>
+                                    <li className='text-center mt-3'>-</li>
 
 
                                 </ul>

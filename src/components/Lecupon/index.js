@@ -6,7 +6,7 @@ function Lecupon() {
 
   const LecuponStyle = {
     color: 'blue',
-    width:'300px'
+    width:'400px'
 };
 
 

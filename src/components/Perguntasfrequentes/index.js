@@ -23,7 +23,7 @@ function Perguntasfrequentes(){
     </h2>
     <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlush">
       <div class="accordion-body">
-      Os Técnicos tem um prazo de até 48 horas para realizar a instalação. 
+      Os Técnicos tem um prazo de até 48 horas para realizar a instalação descrito mediante contrato, mas procuramos fazer no melhor horário disponivél para o cliente. 
       </div>
     </div>
   </div>
@@ -57,7 +57,7 @@ function Perguntasfrequentes(){
   <div class="accordion-item bg">
     <h2 class="accordion-header" id="flush-heading5">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
-      POSSO CONTRATAR A INTENET COM RESTRIÇÃO NO CPF?
+      POSSO CONTRATAR A INTERNET COM RESTRIÇÃO NO CPF?
       </button>
     </h2>
     <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlush">

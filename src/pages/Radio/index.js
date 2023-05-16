@@ -11,6 +11,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Planosempresariais from '../../components/Planosempresariais';
 import PlanosRadio from '../../components/PlanosRadio';
+import DuvidasBeneficios from '../../components/Perguntasfrequentes/DuvidasBeneficios';
 
 function Radio() {
   return (
@@ -19,7 +20,7 @@ function Radio() {
       <div className="bgFundo">
         <BannerRadio/>
         <div className="container-fluid">
-          <div id="cardCentral" className="card shadow-lg p-5 ">
+          <div id="cardCentral" className=" p-5 ">
             <Vantagens />
             <div id="Valores-Planos" className="pricing-header p-3 pb-md-4 mx-auto text-center">
                 <h1 className="display-4 fw-normal">Planos Via Rádio</h1>
@@ -35,10 +36,10 @@ function Radio() {
                 {/* <Planosempresariais/> */}
               </Tab>
             </Tabs>
-            
-
-           
           </div>
+
+          <DuvidasBeneficios className="p-5"/>
+          
         </div>
         <Playhub />
         <div className="container my-5">

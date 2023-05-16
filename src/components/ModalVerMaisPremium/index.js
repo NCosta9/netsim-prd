@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import InfoAppsPremium from '../InfoAppsPremium';
+import vermais from '../../img/icones/mais-1.png'
+
 
 export default function ModalVerMais() {
   const values = [true];
@@ -15,7 +17,7 @@ export default function ModalVerMais() {
   return (
     <>
       {values.map((v, idx) => (
-         <a key={idx} className='fs-6 text-muted ms-1'  onClick={() => handleShow(v)}>Ver mais</a>
+         <img className="ms-1" height="20" width="20" src={vermais} onClick={() => handleShow(v)}/>
       ))}
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
         <Modal.Header closeButton>

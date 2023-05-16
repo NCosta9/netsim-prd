@@ -10,8 +10,9 @@ import BannerFibra from '../../components/BannerFibra';
 import Planosfibra from '../../components/Planosfibra';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Planosempresariais from '../../components/Planosempresariais';     
+import Planosempresariais from '../../components/Planosempresariais';
 import ContatoWhatsapp from '../../components/ContatoWhatsapp';
+import DuvidasBeneficios from '../../components/Perguntasfrequentes/DuvidasBeneficios';
 
 
 
@@ -23,26 +24,27 @@ function Fibra() {
       <div className="bgFundo">
         <BannerFibra />
         <div class="container-fluid">
-          <div id="cardCentral" class="card shadow-lg p-5 ">
+          <div id="cardCentral" class=" p-5 mb-5 ">
             <Vantagens />
-            <div id="Valores-Planos" class="pricing-header p-3 pb-md-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Planos Fibra ótica</h1>
-                <p class="fs-5 text-muted">Temos os melhores planos fibra ótica da cidade. </p>
-            </div>
+          </div>
+          <div id="Valores-Planos" class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Planos Fibra ótica</h1>
+            <p class="fs-5 text-muted">Temos os melhores planos fibra ótica da cidade. </p>
 
-              <Tabs defaultActiveKey="residencial" id="justify-tab-example" className="mb-5" justify>
+            <Tabs defaultActiveKey="residencial" id="justify-tab-example" className="mb-5 btn btn-light" justify>
               <Tab eventKey="residencial" title="Planos Residencial">
-                <Planosfibra/>
+                <Planosfibra />
               </Tab>
               <Tab eventKey="empresarial" title="Planos Empresarial">
-                <Planosempresariais/>
+                <Planosempresariais />
               </Tab>
             </Tabs>
-            
-
-           
           </div>
+
+          <DuvidasBeneficios className="p-5" />
+
         </div>
+
         <Playhub />
         <div class="container my-5">
           <Telefonefixo />
@@ -57,7 +59,7 @@ function Fibra() {
         </div>
         <Footer />
       </div>
-      <ContatoWhatsapp/>
+      <ContatoWhatsapp />
 
 
 
