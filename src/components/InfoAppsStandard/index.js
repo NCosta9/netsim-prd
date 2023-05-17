@@ -98,7 +98,7 @@ export default function InfoAppsPremium() {
                     <div class="col">
                             <img src={standard7} class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
-                                    <h5 class="card-title my-2 fw-normal">Sexy Hot</h5>
+                                    <h5 class="card-title my-2 fw-normal">Ubook</h5>
                                     <p class="card-text mb-0 text-muted">
                                     Somos um serviço de assinatura de audiolivros e livros digitais por streaming: você assina e tem acesso ao nosso acervo de modo ilimitado para ouvir e ler milhares de títulos - livros, revistas, podcasts, etc - de várias categorias e idiomas em nossa plataforma. 
                                     </p>
