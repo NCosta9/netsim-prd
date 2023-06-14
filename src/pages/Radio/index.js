@@ -6,19 +6,23 @@ import Telefonefixo from '../../components/Telefonefixo';
 import Playhub from '../../components/Playhub';
 import Lecupon from '../../components/Lecupon';
 import Footer from '../../components/Footer';
-import BannerRadio from '../../components/BannerRadio';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Planosempresariais from '../../components/Planosempresariais';
 import PlanosRadio from '../../components/PlanosRadio';
 import DuvidasBeneficios from '../../components/Perguntasfrequentes/DuvidasBeneficios';
+import CarouselBanner from '../../components/Carousel/CarouselBanner';
+
 
 function Radio() {
   return (
     <>
       <Header />
       <div className="bgFundo">
-        <BannerRadio/>
+         {/*Onde inicia o Banner rotativo */}
+      <div className="mx-0">
+        <CarouselBanner/>
+      </div>{/*fim Banner rotativo */}
+
         <div className="container-fluid">
           <div id="cardCentral" className=" p-5 ">
             <Vantagens />

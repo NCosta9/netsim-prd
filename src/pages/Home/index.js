@@ -17,15 +17,12 @@ import imageTNT from '../../img/image-tnt.png';
 import iconLogoAzul from '../../img/icon-logo-azul.png';
 import mockupAppAssinante from '../../img/image-app-central-assinante.png';
 
-import Banner01 from '../../img/carousel/Banner01.png';
-import Banner02 from '../../img/carousel/Banner02.png';
-import Banner03 from '../../img/carousel/Banner03.png';
 
 
 
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import CarouselHome from '../../components/Carousel/CarouselHome';
+import CarouselBanner from '../../components/Carousel/CarouselBanner';
 
 function Home() {
 
@@ -49,8 +46,8 @@ function Home() {
         <Header />
       </div>
       {/*Onde inicia o Banner rotativo */}
-      <div className="mx-1">
-        <CarouselHome  img01={Banner01} img02={Banner02} img03={Banner03}/>
+      <div className="mx-0">
+        <CarouselBanner/>
       </div>{/*fim Banner rotativo */}
 
       <div className="container px-4 py-5" id="featured-3">

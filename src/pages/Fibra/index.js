@@ -6,13 +6,13 @@ import Telefonefixo from '../../components/Telefonefixo';
 import Playhub from '../../components/Playhub';
 import Lecupon from '../../components/Lecupon';
 import Footer from '../../components/Footer';
-import BannerFibra from '../../components/BannerFibra';
 import Planosfibra from '../../components/Planosfibra';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Planosempresariais from '../../components/Planosempresariais';
 import ContatoWhatsapp from '../../components/ContatoWhatsapp';
 import DuvidasBeneficios from '../../components/Perguntasfrequentes/DuvidasBeneficios';
+import CarouselBanner from '../../components/Carousel/CarouselBanner';
 
 
 
@@ -22,7 +22,11 @@ function Fibra() {
     <>
       <Header />
       <div className="bgFundo">
-        <BannerFibra />
+       {/*Onde inicia o Banner rotativo */}
+       <div className="mx-0">
+        <CarouselBanner/>
+      </div>{/*fim Banner rotativo */}
+
         <div class="container-fluid">
           <div id="cardCentral" class=" p-5 mb-5 ">
             <Vantagens />

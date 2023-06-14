@@ -1,6 +1,6 @@
 {
   "name": "site-netsim",
-  "homepage": "http://netsimtelecom.com.br/",
+  "homepage": "https://netsimtelecom.com.br/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

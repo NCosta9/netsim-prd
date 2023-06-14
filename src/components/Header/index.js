@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './Header.css';
-import Iconlogo from './icon-logo.png';
 
 function OffcanvasExample() {
   return (
@@ -8,7 +7,7 @@ function OffcanvasExample() {
       <div class="">
         <nav class="navbar p-3">
           <span class="align-items-center ms-2">
-           <Link to="/"> <img src={Iconlogo} height="32" whidt="32" /></Link>
+           <Link to="/"> <img className='logo' src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/Logos/Logo%20principal.png?t=2023-06-09T13%3A57%3A18.654Z' /></Link>
           </span>
 
           <ul class="nav me-2">

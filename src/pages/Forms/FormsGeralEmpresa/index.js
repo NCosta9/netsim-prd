@@ -65,7 +65,7 @@ export default function FormsGeralFibra() {
           <label className="fw-bold">Nome completo:</label>
         </div>
         <div className="col-md-4 mb-3 form-floating">
-          <input type="cpf" className="form-control shadow-sm" {...register("CNPJ", { required: true })} />
+          <input type="cpf" className="form-control shadow-sm" {...register("CPF", { required: true })} />
           <label className="fw-bold">CNPJ:</label>
         </div>
         <div className="col-md-4 mb-3 form-floating">
