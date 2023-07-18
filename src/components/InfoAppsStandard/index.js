@@ -1,42 +1,11 @@
-
-import standard1 from '../Playhub/img/standard1.png';
-import standard2 from '../Playhub/img/standard2.png';
-import standard3 from '../Playhub/img/standard3.jpg';
-import standard4 from '../Playhub/img/standard4.png';
-import standard5 from '../Playhub/img/standard5.png';
-import standard6 from '../Playhub/img/standard6.jpg';
-import standard7 from '../Playhub/img/standard7.png';
-import standard8 from '../Playhub/img/standard8.png';
-import standard9 from '../Playhub/img/standard9.png';
-import standard10 from '../Playhub/img/standard10.png';
-import standard11 from '../Playhub/img/standard11.png';
-import standard12 from '../Playhub/img/standard12.png';
-import standard13 from '../Playhub/img/standard13.png';
-import standard14 from '../Playhub/img/standard14.png';
-import standard15 from '../Playhub/img/standard15.png';
-import standard16 from '../Playhub/img/standard16.png';
-
-
-
 export default function InfoAppsPremium() {
     return (
         <>
             <div class="container text-start">
                 <div class="row">
-                    {/* Estádio TNT Sports ️ */}
-                    <div class="col">
-                            <img src={standard1} class="mt-3" alt="..." height="80" width="80"/>
-                                <div class="card-body">
-                                    <h5 class="card-title my-2 fw-normal">Estádio TNT Sports</h5>
-                                    <p class="card-text mb-0 text-muted">
-                                        Com o aplicativo  Estádio TNT Sports você pode acompanhar o melhor futebol do Brasil e do mundo.Você pode escolher assistir aos jogos ao vivo ou quando preferir, pois no Estádio TNT Sports é possível rever jogos completos, melhores momentos ou compilados de gol onde e quando quiser!
-                                    </p>
-                                    <a href="https://playhub.movidesk.com/kb/article/275074/estadio-tnt-sports" class="link-orange">Como ativar</a>
-                                </div>
-                    </div>
                      {/* Hube */}
                     <div class="col">
-                            <img src={standard2} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/hube' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Hube</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -50,7 +19,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/* Fluid */}
                     <div class="col">
-                            <img src={standard3} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/fluid' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Fluid</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -60,7 +29,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Deezer */}
                     <div class="col">
-                            <img src={standard4} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/deezer' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Deezer</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -72,7 +41,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/* Super Comics */}
                     <div class="col">
-                            <img src={standard5} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/supercomics' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Super Comics</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -83,7 +52,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Maia */}
                     <div class="col">
-                            <img src={standard6} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/maia' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Maia</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -96,7 +65,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/* Ubook */}
                     <div class="col">
-                            <img src={standard7} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/ubook' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Ubook</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -107,7 +76,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Looke */}
                     <div class="col">
-                            <img src={standard8} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/looke' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Looke</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -120,7 +89,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/*Pocoyo */}
                     <div class="col">
-                            <img src={standard13} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/pocoyo' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Pocoyo</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -131,7 +100,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Clube de Ciências */}
                     <div class="col">
-                            <img src={standard10} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/clubedeciencias' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Clube de Ciências</h5>
                                     <p class="card-text mb-0 text-muted">No Clube Ciências, você aprende e desenvolve suas habilidades em diferentes áreas do conhecimento de forma interativa e divertida!
@@ -143,7 +112,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/* Fuze Forge */}
                     <div class="col">
-                            <img src={standard11} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/fuzeforge' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Fuze Forge</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -154,7 +123,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Galinha Pintadinha */}
                     <div class="col">
-                            <img src={standard12} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/galinhapintadinha' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Galinha Pintadinha</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -167,7 +136,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                    {/* PlayKids */}
                    <div class="col">
-                            <img src={standard9} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/playkids' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">PlayKids</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -177,7 +146,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Tap Lingo */}
                     <div class="col">
-                            <img src={standard14} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/taplingo' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Tap Lingo</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -190,7 +159,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/* TO AQUI */}
                     <div class="col">
-                            <img src={standard15} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/toaqui' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Tô aqui</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -201,7 +170,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Reforça */}
                     <div class="col">
-                            <img src={standard16} class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/reforca' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Reforça</h5>
                                     <p class="card-text mb-0 text-muted">

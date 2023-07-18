@@ -1,25 +1,4 @@
 import './Playhub.css';
-import premium1 from './img/premium1.png';
-import premium2 from './img/premium2.png';
-import premium3 from './img/premium3.png';
-import premium4 from './img/premium4.png';
-import standard1 from './img/standard1.png';
-import standard2 from './img/standard2.png';
-import standard3 from './img/standard3.jpg';
-import standard4 from './img/standard4.png';
-import standard5 from './img/standard5.png';
-import standard6 from './img/standard6.jpg';
-import standard7 from './img/standard7.png';
-import standard8 from './img/standard8.png';
-import standard9 from './img/standard9.png';
-import standard10 from './img/standard10.png';
-import standard11 from './img/standard11.png';
-import standard12 from './img/standard12.png';
-import standard13 from './img/standard13.png';
-import standard14 from './img/standard14.png';
-import standard15 from './img/standard15.png';
-import standard16 from './img/standard16.png';
-
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import InfoAppsStandard from '../InfoAppsStandard';
@@ -50,10 +29,10 @@ function Playhub() {
                         </p>
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                             <section class="galeria">
-                                <img class="img-icon" src={premium1} />
-                                <img class="img-icon" src={premium2} />
-                                <img class="img-icon" src={premium3} />
-                                <img class="img-icon" src={premium4} />
+                                <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/ritualfit' />
+                                <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/doutorpass' />
+                                <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/sexyhot' />
+                                <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/hbomax' />
                             </section>
                         </div>
                         
@@ -68,22 +47,21 @@ function Playhub() {
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                             <section class="galeria">
                                 <div class="photos">
-                                    <img class="img-icon" src={standard1} />
-                                    <img class="img-icon" src={standard2} />
-                                    <img class="img-icon" src={standard3} />
-                                    <img class="img-icon" src={standard4} />
-                                    <img class="img-icon" src={standard5} />
-                                    <img class="img-icon" src={standard6} />
-                                    <img class="img-icon" src={standard7} />
-                                    <img class="img-icon" src={standard8} />
-                                    <img class="img-icon" src={standard9} />
-                                    <img class="img-icon" src={standard10} />
-                                    <img class="img-icon" src={standard11} />
-                                    <img class="img-icon" src={standard12} />
-                                    <img class="img-icon" src={standard13} />
-                                    <img class="img-icon" src={standard14} />
-                                    <img class="img-icon" src={standard15} />
-                                    <img class="img-icon" src={standard16} />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/hube' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/fluid' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/deezer' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/supercomics' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/maia' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/ubook' />
+                                    <img class="img-icon"src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/looke' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/playkids' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/clubedeciencias' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/fuzeforge' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/galinhapintadinha' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/pocoyo' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/taplingo' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/toaqui' />
+                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/reforca' />
                                 </div>
                             </section>
 
