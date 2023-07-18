@@ -11,7 +11,7 @@ function Footer() {
           <div class="col-6 col-md-2 mb-2 ms-2">
             <img src={iconLogo} width="100" height="32" />
             <ul class="nav flex-column">
-              <li class="nav-item mb-2 text-muted"><p>A NetSim Telecom possui o que há de melhor em planos de Internet, Telefonia, Rádio e Empresarial.</p></li>
+              <li class="nav-item mb-2 text-muted"><p>A NetSim Telecom possui o que há de melhor em planos de Internet Fibra e Via Radio, Telefonia, e aplicativos.</p></li>
 
             </ul>
           </div>
@@ -26,7 +26,6 @@ function Footer() {
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Termo de serviços</a></li>
               <li class="nav-item mb-2"><a href="https://netsim.sharepoint.com/sites/team/" class="nav-link p-0 text-muted">Central do colaborador</a></li>
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pergutas frequentes</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Trabalhe Conosco</a></li>
 
             </ul>
           </div>
@@ -35,6 +34,8 @@ function Footer() {
 
             <h5>Nossa Localização:</h5>
             <p class="text-muted">QS 3 LTS 03, 05, 07 nº 9 sls 601 E 602 CEP: 71953-000</p>
+            <h5>Contato:</h5>
+            <p class="text-muted"> administrativo@netsimtelecom.com.br</p>
             <div class="d-flex row">
               <h5> Nossas Redes Sociais:</h5>
               <ul class="list-unstyled d-flex ">
@@ -51,8 +52,10 @@ function Footer() {
                   <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                 </svg></a></li>
               </ul>
+    
+              
             </div>
-
+           
           </div>
         </div>
         <div class="divider-orange"></div>

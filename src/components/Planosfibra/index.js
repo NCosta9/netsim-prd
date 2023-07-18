@@ -1,12 +1,6 @@
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import './PlanosFibra.css';
-import premium1 from '../Playhub/img/premium1.png';
-import premium2 from '../Playhub/img/premium2.png';
-import premium4 from '../Playhub/img/premium4.png';
-import standard1 from '../Playhub/img/standard1.png';
-import standard4 from '../Playhub/img/standard4.png';
-import standard8 from '../Playhub/img/standard8.png';
 import ModalVerMaisPremium from '../ModalVerMaisPremium';
 import ModalVerMaisStandard from '../ModalVerMaisStandard';
 import { useNavigate } from 'react-router-dom';
