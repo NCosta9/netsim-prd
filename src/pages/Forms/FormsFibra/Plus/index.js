@@ -510,34 +510,6 @@ export default function Plus() {
           <div className="container shadow p-3">
             <label className="form-label fw-bold ">Aplicativos Standard</label>
             <div className="row  row-cols-1 row-cols-sm-3 row-cols-md-4">
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Estadio TNT"
-                    role="switch"
-                    id="CheckEstadioTnt"
-                    {...register("AppStandard")}
-                    name="AppStandard" 
-                    onChange={verificaStandard}                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckEstadioTnt"
-                  >
-                    <img
-                      src={standard1}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Estádio TNT
-                  </label>
-                </div>
-              </div>
 
               <div className="col my-1">
                 <div className="form-check form-switch">
