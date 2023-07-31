@@ -29,10 +29,10 @@ function Playhub() {
                         </p>
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                             <section class="galeria">
-                                <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/ritualfit' />
-                                <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/doutorpass' />
-                                <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/sexyhot' />
-                                <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/hbomax' />
+                                <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/ritualfit' />
+                                <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/doutorpass' />
+                                <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/sexyhot' />
+                                <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/hbomax' />
                             </section>
                         </div>
                         
@@ -47,21 +47,22 @@ function Playhub() {
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                             <section class="galeria">
                                 <div class="photos">
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/hube' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/fluid' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/deezer' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/supercomics' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/maia' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/ubook' />
-                                    <img class="img-icon"src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/looke' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/playkids' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/clubedeciencias' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/fuzeforge' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/galinhapintadinha' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/pocoyo' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/taplingo' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/toaqui' />
-                                    <img class="img-icon" src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/reforca' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/lionsgate+' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/hube' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/fluid' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/deezer' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/supercomics' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/maia' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/ubook' />
+                                    <img class="img-icon"src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/looke' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/playkids' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/clubedeciencias' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/fuzeforge' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/galinhapintadinha' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/pocoyo' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/taplingo' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/toaqui' />
+                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/reforca' />
                                 </div>
                             </section>
 

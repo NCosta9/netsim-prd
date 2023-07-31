@@ -5,9 +5,9 @@ function OffcanvasExample() {
   return (
     <>
       <div class="">
-        <nav class="navbar p-3">
+        <nav class="navbar p-1 b-shadow-lg">
           <span class="align-items-center ms-2">
-           <Link to="/"> <img className='logo' src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/Logos/Logo%20principal.png?t=2023-06-09T13%3A57%3A18.654Z' /></Link>
+           <Link to="/"> <img className='logo' src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/logos/logoCompletaAzul' /></Link>
           </span>
 
           <ul class="nav me-2">

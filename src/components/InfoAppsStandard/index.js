@@ -3,9 +3,20 @@ export default function InfoAppsPremium() {
         <>
             <div class="container text-start">
                 <div class="row">
+                      {/*lionsgate+ */}
+                <div class="col">
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/lionsgate+' class="mt-3" alt="..." height="80" width="80"/>
+                                <div class="card-body">
+                                    <h5 class="card-title my-2 fw-normal">Lionsgate+</h5>
+                                    <p class="card-text mb-0 text-muted">
+                                    A LIONSGATE+ é um abrigo para histórias ousadas e selecionadas contadas por perspectivas originais desafiando os seus limites e expectativas. Um Aplicativo Sem Limites. Séries originais cativantes. Filmes imperdíveis.
+                                    </p>
+                                    <a href="https://playhub.movidesk.com/kb/article/275094/lionsgate+" class="link-orange">Como ativar</a>
+                                </div>
+                    </div>
                      {/* Hube */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/hube' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/hube' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Hube</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -19,7 +30,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/* Fluid */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/fluid' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/fluid' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Fluid</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -29,7 +40,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Deezer */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/deezer' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/deezer' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Deezer</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -41,7 +52,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/* Super Comics */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/supercomics' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/supercomics' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Super Comics</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -52,7 +63,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Maia */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/maia' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/maia' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Maia</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -65,7 +76,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/* Ubook */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/ubook' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/ubook' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Ubook</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -76,7 +87,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Looke */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/looke' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/looke' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Looke</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -89,7 +100,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/*Pocoyo */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/pocoyo' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/pocoyo' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Pocoyo</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -100,7 +111,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Clube de Ciências */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/clubedeciencias' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/clubedeciencias' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Clube de Ciências</h5>
                                     <p class="card-text mb-0 text-muted">No Clube Ciências, você aprende e desenvolve suas habilidades em diferentes áreas do conhecimento de forma interativa e divertida!
@@ -112,7 +123,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/* Fuze Forge */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/fuzeforge' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/fuzeforge' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Fuze Forge</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -123,7 +134,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Galinha Pintadinha */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/galinhapintadinha' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/galinhapintadinha' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Galinha Pintadinha</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -136,7 +147,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                    {/* PlayKids */}
                    <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/playkids' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/playkids' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">PlayKids</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -146,7 +157,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Tap Lingo */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/taplingo' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/taplingo' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Tap Lingo</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -159,7 +170,7 @@ export default function InfoAppsPremium() {
                 <div class="row">
                     {/* TO AQUI */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/toaqui' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/toaqui' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Tô aqui</h5>
                                     <p class="card-text mb-0 text-muted">
@@ -170,7 +181,7 @@ export default function InfoAppsPremium() {
                     </div>
                      {/* Reforça */}
                     <div class="col">
-                            <img src='https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/apps/reforca' class="mt-3" alt="..." height="80" width="80"/>
+                            <img src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/reforca' class="mt-3" alt="..." height="80" width="80"/>
                                 <div class="card-body">
                                     <h5 class="card-title my-2 fw-normal">Reforça</h5>
                                     <p class="card-text mb-0 text-muted">
