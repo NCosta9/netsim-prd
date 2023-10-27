@@ -1,0 +1,33 @@
+.styleUm{
+    background-color: #f2f2f2;
+    margin: 0px;
+    padding: 0px 12px 0px 12px;
+}
+.styleDois{
+    background-color: #faf9f8; width: 600px; margin-left: auto; margin-right: auto;
+}
+
+.styleTres{
+    text-align: center; border: 3px; background-color: #fff; color: #fff; padding:0px; margin-bottom:0px;
+}
+
+.styleQuatro{
+    text-align: center; border: 3px; background-color: #fff; color: #fff; padding:0px; margin-top:0px;}
+
+    .styleCinco{
+        padding-right:10px; padding-left: 10px;
+    }
+    .titulo{
+        font-weight: 600; color: #192c4b; margin-left: 5px; font-size: 28px; 
+    }
+    .font-mail{
+        font-size: 18px; color: #3b3f44; margin-left: 8px; 
+
+    }
+    .button-mail{
+        padding: 10px; background-color: #FF6700; color: #fff; borde-color: #FF6700; border: none; border-radius: 10px; font-size: 20px; margin-top: 10px;
+    }
+
+    .img-radius{
+        border-radius: 10px;
+    }

@@ -6,11 +6,11 @@ export default function CarouselBanner() {
         <>
             <Carousel className='d-none d-lg-block' fade>
                 {[
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/banners/banner-01.png',
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/banners/banner-02.png',
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/banners/banner-03.png',
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/banners/banner-04.png',
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/banners/banner-05.png',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/banner-01.png',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/banner-02.png',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/banner-03.png',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/banner-04.png',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/banner-05.png',
 
                 ].map((descktop) => (
                     <Carousel.Item interval={3000}>
@@ -25,9 +25,9 @@ export default function CarouselBanner() {
             </Carousel>
             <Carousel className='d-lg-none'>
                 {[
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-01',
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-02',
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-03',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-01',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-02',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-03',
 
 
                 ].map((mobile) => (

@@ -5,9 +5,9 @@ export default function BgColorExample() {
     return (
         <>
                 {[
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/parceiros/parceiro-01.png',
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/parceiros/parceiro-02.png',
-                    'https://rgdwsabzajcksicdqvja.supabase.co/storage/v1/object/public/imagens/parceiros/parceiro-03.png',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/parceiros/parceiro-01.png',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/parceiros/parceiro-02.png',
+                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/parceiros/parceiro-03.png',
                     
                 ].map((variant) => (
                     <Card styled={'border:10 30 10 30'}>

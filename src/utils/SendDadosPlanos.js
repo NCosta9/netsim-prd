@@ -29,9 +29,6 @@ function SendDadosPlanos (props){
     AppsPremium: ${props.premium}
     AppsStandard: ${props.standard}
     Indicação: ${props.indicacao}
-    Data: ${props.data}
-    Horario: ${props.hora}
-    Observação: ${props.obs}
 `;
 
 console.log(userData);
@@ -79,7 +76,23 @@ emailjs
 
     let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
     let end_url =`
-    ${url}Eu ${props.nome} de CPF ${props.cpf} solicitei pelo site uma ${props.assunto} ${props.plano}. ${props.termos}
+    ${url}Eu ${props.nome} de CPF ${props.cpf} solicitei pelo site uma ${props.assunto} ${props.plano}. ${props.termos}%0A%0A
+Dados para Assinatura:%0A
+Nome: ${props.nome}%0A
+CPF/CNPJ: ${props.cpf}%0A
+RG: ${props.rg}%0A
+Data Nascimento: ${props.nascimento}%0A
+Cep: ${props.cep}%0A
+Bairro: ${props.bairro}%0A
+Endereço: ${props.endereco}%0A
+Moradia: ${props.moradia}%0A
+Whatsapp01: ${props.whatsapp01}%0A
+Whatsapp02: ${props.whatsapp02}%0A
+Email: ${props.email}%0A
+Plano Contratado: ${props.plano}%0A
+Fixo: ${props.fixo}%0A
+Vencimento: ${props.vencimento}%0A
+Indicação: ${props.indicacao}%0A
     `; 
   window.open(end_url)
   }

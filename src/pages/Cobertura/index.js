@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import "./Cobertura.css";
 
-import coberturaImage from "../../img/cobertura-image.png"
 
 export default function Cobertura() {
   const { register, getValues } = useForm();
@@ -14,13 +13,14 @@ export default function Cobertura() {
 
 
       <div className="container my-5">
-        <div className="row flex-lg-row-reverse align-items-center g-5 py-4 my-5 shadow-lg">
-          <h1 className="display-4 fw-bold lh-1 mb-0">Bem Vindo a nossa área de cobertura Netsim</h1>
+      <h1 className="display-4 fw-bold lh-1 mb-0">Bem Vindo a nossa área de cobertura Netsim</h1>
           <p className="lead mt-0 mb-0">
             Precisamos identificar qual o bairro que você mora para conseguirmos te atender com a melhor tecnologia disponível de acordo com sua localidade.
           </p>
+        <div className="row g-4 py-5 row-cols-1 row-cols-lg-5 align-items-center">
+         
 
-          <div className="col-10 col-sm-8 col-lg-6 mt-1">
+          <div className="col-10 col-sm-8 col-lg-6 ">
             <select className="form-select form-select-lg mb-3 " size="15" aria-label=".form-select-lg example" {...register("cidade")} autofocus>
               <option value="0" selected disabled>Escolha seu bairro:</option>
               <option value="1" >Nova Betânia</option>
@@ -61,8 +61,8 @@ export default function Cobertura() {
             </div>
           </div>
 
-          <div className="col-10 col-sm-8 col-lg-6 mt-0">
-            <img src={coberturaImage} class="d-block mx-lg-auto img-fluid" width="1080" height="1080" loading="lazy" />
+          <div className="col col-sm-8 col-lg-6 ">
+            <img src="https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/posts/mobile-03.png" class="img-fluid p-5 d-none d-sm-block" width="750" height="750"/>
           </div>
         </div>
       </div>

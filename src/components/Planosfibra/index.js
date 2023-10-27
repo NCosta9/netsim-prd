@@ -84,7 +84,7 @@ function Planosfibra() {
                                             +2 app's Standard
                                         </li>
                                         <div class="d-inline gap-2 d-sm-flex justify-content-sm-center ms-3">
-                                            <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/lionsgate+' />
+                                            <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/playkids' />
                                             <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/deezer' />
                                             <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/looke' />
                                             <ModalVerMaisStandard />
@@ -156,7 +156,7 @@ function Planosfibra() {
                                             +2 app's Standard
                                         </li>
                                         <div class="d-inline gap-2 d-sm-flex justify-content-sm-center ms-3">
-                                            <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/lionsgate+' />
+                                            <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/playkids' />
                                             <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/deezer' />
                                             <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/looke' />
                                             <ModalVerMaisStandard />
@@ -227,7 +227,7 @@ function Planosfibra() {
                                             +2 app's Standard
                                         </li>
                                         <div class="d-inline gap-2 d-sm-flex justify-content-sm-center ms-3">
-                                            <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/lionsgate+' />
+                                            <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/playkids' />
                                             <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/deezer' />
                                             <img className="ms-1" height="20" width="20" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/looke' />
                                             <ModalVerMaisStandard />

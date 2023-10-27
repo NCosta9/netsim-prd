@@ -47,7 +47,6 @@ function Playhub() {
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                             <section class="galeria">
                                 <div class="photos">
-                                    <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/lionsgate+' />
                                     <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/hube' />
                                     <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/fluid' />
                                     <img class="img-icon" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/deezer' />

@@ -30,6 +30,11 @@ import Inter from './pages/Forms/FormsRadio/Inter';
 import Mudanca from './pages/Forms/FormMudanca';
 import Ponto from './pages/Forms/FormPonto';
 import Titularidade from './pages/Forms/Titularidade';
+import OfertaExClientes from './pages/Ofertas/OfertaExClientes';
+import OfertaLite from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaLite';
+import OfertaBasic from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaBasic';
+import OfertaPlus from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaPlus';
+import OfertaUltra from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaUltra';
 
 
 
@@ -59,6 +64,13 @@ function RoutesApp(){
                 <Route path="/mudanca" element={ <Mudanca/> } />
                 <Route path="/ponto" element={ <Ponto/> } />
                 <Route path="/titularidade" element={ <Titularidade/> } />
+                <Route path='/aceite' element={ <OfertaExClientes/>} />
+
+
+                <Route path='/oferta-lite' element={<OfertaLite/>} />
+                <Route path='/oferta-basic' element={<OfertaBasic/>} />
+                <Route path='/oferta-plus' element={<OfertaPlus/>} />
+                <Route path='/oferta-ultra' element={<OfertaUltra/>} />
 
 
 
