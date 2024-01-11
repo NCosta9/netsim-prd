@@ -1,11 +1,11 @@
 import Vantagens from '../../components/Vantagens';
-import Header from '../../components/Header'
+import Header from '../../components/Header/Header'
 import './Fibra.css';
 import Perguntasfrequentes from '../../components/Perguntasfrequentes';
 import Lecupon from '../../components/Lecupon';
-import Footer from '../../components/Footer';
 import PlanosRadio from '../../components/PlanosRadio';
 import CarouselBanner from '../../components/Carousel/CarouselBanner';
+import FooterCliente from '../../components/Footer/FooterCliente';
 
 
 function Radio() {
@@ -38,7 +38,7 @@ function Radio() {
 
           <Perguntasfrequentes />
         </div>
-        <Footer />
+       <FooterCliente/>
       </div>
 
 

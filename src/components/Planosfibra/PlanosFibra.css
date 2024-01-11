@@ -13,3 +13,24 @@
     letter-spacing: -0.06em;
     font-weight: 700;
 }
+
+.card-footer ul {
+    padding: 0;
+    list-style: none;
+    color: #444444;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  
+ 
+  
+  .card-footer ul i {
+    color: #0880e8;
+    font-size: 18px;
+    padding-right: 4px;
+  }
+  
+  .card-footer ul .no {
+    color: #ccc;
+    text-decoration: line-through;
+  }

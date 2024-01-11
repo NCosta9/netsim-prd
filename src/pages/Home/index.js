@@ -1,7 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Lecupon from './Img/Lecupon-1.png';
 import Perguntasfrequentes from '../../components/Perguntasfrequentes';
 import ContatoWhatsapp from '../../components/ContatoWhatsapp';
@@ -23,8 +21,22 @@ import mockupAppAssinante from '../../img/image-app-central-assinante.png';
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import CarouselBanner from '../../components/Carousel/CarouselBanner';
+import TopBar from '../../components/Clients/TopBar';
+import FooterCliente from '../../components/Footer/FooterCliente';
+import Header from '../../components/Header/Header';
 
 function Home() {
+
+  window.dataLayer.push({
+    event: 'pageview',
+
+    page: {
+      url: "https://netsimtelecom.com.br/home",
+      title: 'PaginaHome'
+    }
+
+
+  });
 
   const navigate = useNavigate();
 
@@ -42,9 +54,8 @@ function Home() {
 
   return (
     <>
-      <div className='display-flex'>
-        <Header />
-      </div>
+        <TopBar/>
+        <Header/>
       {/*Onde inicia o Banner rotativo */}
       <div className="mx-0">
         <CarouselBanner/>
@@ -291,8 +302,8 @@ function Home() {
           </div>
         </div>
       </div>
+          <FooterCliente/>      
 
-      <Footer />
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
 
         <Modal.Header closeButton className='me-3'>
