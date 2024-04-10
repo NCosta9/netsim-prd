@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+#precisa h2{
+  text-align: start;
+  font-size: 40px;
+  font-weight: 700;
+  color: #001a4c;
+  margin-bottom: 40px;
+}
+#precisa .icon-box{
+  padding: 5px;
+  color: #fff;
+  border-radius: 15px;
+  background-color: #001a4c;
+}
+#precisa .icon-box h5 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 5px 0 10px 60px;
+
+  }
+
+  #precisa .icon-box i{
+    font-size: 40px;
+    float: left;
+    color: #ff6100;
+    background-color: #002976;
+    border: 1px solid #001a4c;
+   box-shadow: #001a4c 2px 5px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius:15px ;
+  }
+ 
+  
+  #precisa .icon-box p {
+    font-size: 15px;
+    color: #fff;
+    margin-left: 60px;
+    height: 80px;
+    padding-left: 25px;
+  }
+  
+  #precisa .image-precisa {
+    background-image: url("https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/imagen-precisa-fibra.jpg?t=2024-04-03T21%3A35%3A22.461Z");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 400px;
+  
+  }
+  

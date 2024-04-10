@@ -1,0 +1,374 @@
+#filmes{
+  background-color: #00234b;
+}
+#filmes .titulo{
+  color: #ff6100;
+} 
+#filmes .swiper-filme .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#filmes .swiper-filme .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#filmes .swiper-filme .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+#filmes .swiper-filme .swiper {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+#filmes .swiper-filme .swiper-button-prev,
+#filmes .swiper-filme .swiper-button-next{
+  color: #f3761c;
+}
+#filmes .swiper-filme .swiper-pagination-bullet-active{
+ background-color: #f3761c;
+
+}
+#filmes .swiper-filme .swiper-pagination-bullet{
+  width: 15px;
+  height: 15px;
+  color: #fff;
+}
+
+#filmes .swiper-slide .logo-filme {
+  height: 3rem;
+  margin-left: 10px;
+}
+#filmes .categorias{
+  width: 400px;
+  margin: 0 auto;
+}
+/* ##############################################
+
+  filme 1
+
+############################################# */
+
+.item-filme-1 {
+  width: 400px;
+  height: 200px; 
+  background: url("https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/netsimplay/filmes-bg/peppa-bg.jpg") center center;
+ background-size: cover;
+  position: relative;
+  z-index: 99;
+}
+
+.item-filme-1:before {
+  content: "";
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(31,30,30,0) 0%, rgba(0,0,0,0.9108018207282913) 100%);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+ 
+}
+
+.item-filme-1 .container {
+  position: relative;
+  text-align: center;
+}
+  
+  @media (min-width: 1024px) {
+    .item-filme-1 {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .item-filme-1 h1 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  
+    .item-filme-1 h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  
+  }
+
+/* ##############################################
+
+  filme 2
+
+############################################# */
+  
+  .item-filme-2 {
+    width: 400px;
+    height: 200px;
+    background: url("https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/netsimplay/filmes-bg/matrix-bg.jpg") center center;
+    background-size: cover;
+    position: relative;
+    z-index: 99;
+  }
+  
+  .item-filme-2:before {
+    content: "";
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(31,30,30,0) 0%, rgba(0,0,0,0.9108018207282913) 100%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+   
+  }
+  
+  .item-filme-2 .container {
+    position: relative;
+    text-align: center;
+  }
+    
+    @media (min-width: 1024px) {
+      .item-filme-2 {
+        background-attachment: fixed;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .item-filme-2 h1 {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    
+      .item-filme-2 h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+    
+    }
+
+
+    /* ##############################################
+
+  filme 3
+
+############################################# */
+  
+  .item-filme-3 {
+    width: 400px;
+    height: 200px;
+    background: url("https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/netsimplay/filmes-bg/tnt-bg.jpg") center center;
+   background-size: cover;
+    position: relative;
+    z-index: 99;
+  }
+  
+  .item-filme-3:before {
+    content: "";
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(31,30,30,0) 0%, rgba(0,0,0,0.9108018207282913) 100%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+   
+  }
+  
+  .item-filme-3 .container {
+    position: relative;
+    text-align: center;
+  }
+    
+    @media (min-width: 1024px) {
+      .item-filme-3 {
+        background-attachment: fixed;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .item-filme-3 h1 {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    
+      .item-filme-3 h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+    
+    }
+
+    
+    /* ##############################################
+
+  filme 4
+
+############################################# */
+  
+  .item-filme-4 {
+    width: 400px;
+    height: 200px;
+    background: url("https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/netsimplay/filmes-bg/cinemax-bg.jpg") center center;
+   background-size: cover;
+    position: relative;
+    z-index: 99;
+  }
+  
+  .item-filme-4:before {
+    content: "";
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(31,30,30,0) 0%, rgba(0,0,0,0.9108018207282913) 100%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+   
+  }
+  
+  .item-filme-4 .container {
+    position: relative;
+    text-align: center;
+  }
+    
+    @media (min-width: 1024px) {
+      .item-filme-4 {
+        background-attachment: fixed;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .item-filme-4 h1 {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    
+      .item-filme-4 h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+    
+    }
+
+
+    
+    /* ##############################################
+
+  filme 5
+
+############################################# */
+  
+  .item-filme-5 {
+    width: 400px;
+    height: 200px;
+    background: url("https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/netsimplay/filmes-bg/espn-bg.jpg") center center;
+   background-size: cover;
+    position: relative;
+    z-index: 99;
+  }
+  
+  .item-filme-5:before {
+    content: "";
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(31,30,30,0) 0%, rgba(0,0,0,0.9108018207282913) 100%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+   
+  }
+  
+  .item-filme-5 .container {
+    position: relative;
+    text-align: center;
+  }
+    
+    @media (min-width: 1024px) {
+      .item-filme-5 {
+        background-attachment: fixed;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .item-filme-5 h1 {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    
+      .item-filme-5 h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+    
+    }
+
+
+
+      
+    /* ##############################################
+
+  filme 6
+
+############################################# */
+  
+  .item-filme-6 {
+    width: 400px;
+    height: 200px;
+    background: url("https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/netsimplay/filmes-bg/discovery-bg.jpg") center center;
+   background-size: cover;
+    position: relative;
+    z-index: 99;
+  }
+  
+  .item-filme-6:before {
+    content: "";
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(31,30,30,0) 0%, rgba(0,0,0,0.9108018207282913) 100%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+   
+  }
+  
+  .item-filme-6 .container {
+    position: relative;
+    text-align: center;
+  }
+    
+    @media (min-width: 1024px) {
+      .item-filme-6 {
+        background-attachment: fixed;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .item-filme-6 h1 {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    
+      .item-filme-6 h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+    
+    }

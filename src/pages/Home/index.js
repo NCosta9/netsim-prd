@@ -27,16 +27,7 @@ import Header from '../../components/Header/Header';
 
 function Home() {
 
-  window.dataLayer.push({
-    event: 'pageview',
 
-    page: {
-      url: "https://netsimtelecom.com.br/home",
-      title: 'PaginaHome'
-    }
-
-
-  });
 
   const navigate = useNavigate();
 

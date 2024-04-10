@@ -1,0 +1,84 @@
+#play {
+    background: rgb(0, 35, 75);
+    background: radial-gradient(circle, rgba(0, 35, 75, 1) 0%, rgba(32, 74, 121, 1) 48%, rgb(0, 0, 0) 82%);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#play .logo {
+    text-align: center;
+    border: 3px;
+    background-color: #fff;
+    color: #fff;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+#play img {
+    height: 100px;
+    margin: 0px;
+}
+
+#play h1 {
+    color: #f60;
+    font-weight: 800;
+    font-size: 3.5em;
+}
+
+#play h2 {
+    color: #fff;
+    font-weight: 00;
+    font-size: 50px;
+}
+
+#play .title-img {
+    background-image: url("https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/img-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    margin: auto;
+}
+
+#play .border-dashed {
+    border: #fff solid 5px;
+    border-style: dotted;
+}
+
+.pageform {
+    background: rgb(0, 35, 75);
+    background: radial-gradient(circle, rgba(0, 35, 75, 1) 0%, rgb(0, 0, 0) 82%);
+    width:100%;
+    height: 100vh;
+}
+#play .image{
+   
+}
+
+#tvform{
+    background: rgb(63,135,217);
+    background: linear-gradient(35deg, rgba(32,74,121,1) 48%, rgba(47,119,201,1) 82%);
+    width: 700px;
+    border-radius: 30px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: rgb(63,135,217) 10px;
+}
+
+@media (max-width: 600px) {
+    #tvform {
+        
+   width: 100%;
+
+    }
+  }
+
+#tvform p{
+ color: #fff;
+ font-weight: 800;
+ font-size: 25px;
+}
+#tvform img{
+   height: 100px;
+   }
+

@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+.features{
+  background-color: #00234b;
+  background: linear-gradient(180deg, rgba(0, 35, 75, 0)20%, rgb(0, 35, 75) 50%);
+
+
+}
+.features .icon-box h4 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 5px 0 10px 60px;
+    color: #50c7f0;
+  }
+  
+  .features .icon-box i {
+    font-size: 48px;
+    float: left;
+    color: #fa6d06;
+  }
+  
+  .features .icon-box p {
+    font-size: 18px;
+    color: #fff;
+    margin-left: 60px;
+  }
+  
+  .features .image {
+    background-image: url("https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/Post-TV.png?t=2024-02-19T14%3A39%3A59.182Z");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+  }
+  

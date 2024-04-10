@@ -1,0 +1,25 @@
+#telefone{
+    border: solid 2px #001a4c;
+}
+#telefone .card-title{
+    color: #ff6100;
+}
+#telefone h3{
+    color:#01153b;
+}
+
+#telefone .card-body button {
+    color: #fff;
+    font-weight: 500;
+    background-color: #002976;
+    border: 1px solid #001a4c;
+   box-shadow: #001a4c 2px 5px;
+}
+
+#telefone .card-body button:hover {
+    color: #fff;
+    font-weight: 500;
+    background-color: #033796;
+    border: 1px solid #001a4c;
+   box-shadow: #001a4c 5px 8px;
+}

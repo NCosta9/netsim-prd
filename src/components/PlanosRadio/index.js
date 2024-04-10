@@ -1,4 +1,4 @@
-import './PlanosFibra.css';
+import './Radio.css';
 import { useNavigate } from 'react-router-dom';
 
 function PlanosRadio() {

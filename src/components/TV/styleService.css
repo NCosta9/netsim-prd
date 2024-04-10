@@ -1,0 +1,71 @@
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+#tv{
+  background: rgb(0, 35, 75);
+  background: linear-gradient(45deg, rgba(0, 35, 75, 1) 0%, rgba(32, 74, 121, 1) 48%, rgba(1, 73, 154, 1) 82%);
+  }
+  #tv b{
+   color: #fa6d06;
+    }
+  .tv .icon-box {
+    transition: all ease-in-out 0.3s;
+    background: rgb(63,135,217);
+    background: linear-gradient(35deg, rgba(32,74,121,1) 48%, rgba(47,119,201,1) 82%);
+    border-radius: 18px;
+    margin-bottom: 20px;
+    padding: 50px 40px;
+    border-radius: 6px;
+  }
+  
+  .tv .icon-box .icon i {
+    float: left;
+    color:#E4641C;
+    font-size: 40px;
+    line-height: 0;
+  }
+  
+  .tv .icon-box h4 {
+    margin-left: 70px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .tv .icon-box h4 a {
+    color: #fff;
+    transition: ease-in-out 0.3s;
+    text-decoration: none;
+  }
+  
+  .tv .icon-box p {
+    margin-left: 70px;
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  
+  .tv .icon-box:hover h4 a {
+    color: #fff;
+  }
+
+  .tv .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .tv .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #fa6d06;
+    bottom: 0;
+    left: 0;
+  }
+ 

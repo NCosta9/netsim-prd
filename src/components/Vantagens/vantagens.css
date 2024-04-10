@@ -1,0 +1,20 @@
+#vantagens {
+    width: 100%;
+    background: rgb(0,26,76);
+    background: linear-gradient(343deg, rgba(0,26,76,1) 30%, rgba(0,35,74,1) 73%);
+    padding-left: 40px;
+    padding-right: 40px;
+}
+#vantagens .title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+#vantagens .item{
+    border-top: #ff6100 solid 2px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+#vantagens svg{
+    color: #ff6100;
+}

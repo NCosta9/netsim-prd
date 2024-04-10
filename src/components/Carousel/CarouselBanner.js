@@ -1,45 +1,99 @@
 import Carousel from 'react-bootstrap/Carousel';
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+
+import './styles.css';
+
+// import required modules
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+
 
 export default function CarouselBanner() {
 
     return (
         <>
-            <Carousel className='d-none d-lg-block' fade>
-                {[
-                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/banner-01.png',
-                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/banner-02.png',
-                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/banner-03.png',
-                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/banner-04.png',
-                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/banner-05.png',
-
-                ].map((descktop) => (
-                    <Carousel.Item interval={3000}>
+            <Swiper
+                navigation={true}
+                pagination={true}
+                loop={true}
+                autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                }}
+                modules={[Pagination, Navigation, Autoplay]}
+                className='d-none d-lg-block' fade>
+                    <SwiperSlide >
                         <img
                             className="w-100"
-                            src={descktop.toLowerCase()}
+                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/desk/850MegaFull'
                         />
 
-                    </Carousel.Item>
-                ))}
-
-            </Carousel>
-            <Carousel className='d-lg-none'>
-                {[
-                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-01',
-                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-02',
-                    'https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-03',
-
-
-                ].map((mobile) => (
-                    <Carousel.Item interval={3000}>
+                    </SwiperSlide>
+                    <SwiperSlide >
                         <img
                             className="w-100"
-                            src={mobile.toLowerCase()}
+                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/desk/ClubeNetsimFull.jpeg'
                         />
 
-                    </Carousel.Item>
-                ))}
-            </Carousel>
+                    </SwiperSlide>
+                    <SwiperSlide >
+                        <img
+                            className="w-100"
+                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/desk/MaxFull.jpeg'
+                        />
+
+                    </SwiperSlide>
+                    <SwiperSlide >
+                        <img
+                            className="w-100"
+                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/desk/NetsimPlay.jpeg'
+                        />
+
+                    </SwiperSlide>
+            </Swiper>
+            <Swiper
+                navigation={true}
+                pagination={true}
+                loop={true}
+                autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                }}
+                modules={[Pagination, Navigation, Autoplay]}
+                className='d-lg-none'>
+               
+                    <SwiperSlide interval={3000}>
+                        <img
+                            className="w-100"
+                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/850%20Mega-Mobile.jpg'
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide interval={3000}>
+                        <img
+                            className="w-100"
+                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/ClubeNetsimMobile.jpg'
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide interval={3000}>
+                        <img
+                            className="w-100"
+                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/HBOMaxMobile.jpg'
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide interval={3000}>
+                        <img
+                            className="w-100"
+                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-04'
+                        />
+                    </SwiperSlide>
+            </Swiper>
 
         </>
 

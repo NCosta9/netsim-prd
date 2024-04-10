@@ -17,7 +17,7 @@ export default function ModalVerMais() {
   return (
     <>
       {values.map((v, idx) => (
-         <img className="ms-1" height="20" width="20" src={vermais} onClick={() => handleShow(v)}/>
+        <i class="bi bi-plus-circle-fill"  onClick={() => handleShow(v)}></i>
       ))}
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
         <Modal.Header closeButton>

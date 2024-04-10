@@ -9,10 +9,13 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Planosempresariais from '../../components/Planosempresariais';
 import ContatoWhatsapp from '../../components/ContatoWhatsapp';
-import DuvidasBeneficios from '../../components/Perguntasfrequentes/DuvidasBeneficios';
 import CarouselBanner from '../../components/Carousel/CarouselBanner';
 import Planosfibra from '../../components/Planosfibra/PlanoFibra';
 import FooterCliente from '../../components/Footer/FooterCliente';
+import PlanoFibraTV from '../../components/Planosfibra/PlanoFibraTV';
+import CarouselFilmes from '../../components/Carousel/NetsimPlay/Filmes/CarouselFilmes';
+import CarouselFibra from '../../components/Carousel/CarouselFibra';
+import PorquePrecisa from '../../components/Features/PorquePrecisa';
 
 
 
@@ -24,19 +27,16 @@ function Fibra() {
       <div className="bgFundo">
         {/*Onde inicia o Banner rotativo */}
         <div className="mx-0">
-          <CarouselBanner />
+         <CarouselFibra/>
         </div>{/*fim Banner rotativo */}
 
-        <div class="container-fluid">
-          <div id="cardCentral" class=" p-5 mb-5 ">
-            <Vantagens />
-          </div>
+        <Vantagens />
           <div id="Valores-Planos" class="pricing-header p-3 pb-md-4 mx-auto text-center  ">
             <h1 class="display-4 fw-normal">Planos Fibra ótica</h1>
             <p class="fs-5 text-muted">Temos os melhores planos fibra ótica da cidade. </p>
               <Tabs defaultActiveKey="residencial" id="justify-tab-example" className='mb-5' justify>
                 <Tab eventKey="residencial" title="Planos Residencial">
-                  <Planosfibra />
+                  <PlanoFibraTV/>
                 </Tab>
 
                 <Tab eventKey="empresarial" title="Planos Empresarial">
@@ -46,11 +46,9 @@ function Fibra() {
 
 
           </div>
+<PorquePrecisa/>
 
-          <DuvidasBeneficios className="p-5" />
-
-        </div>
-
+        <CarouselFilmes/>
         <Playhub />
         <div class="container my-5">
           <Telefonefixo />

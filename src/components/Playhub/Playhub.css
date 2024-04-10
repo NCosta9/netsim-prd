@@ -1,15 +1,47 @@
-.img-icon{
-	display:inline-block;
-    height: 60px;
+.img-icon {
+	display: inline-block;
+	height: 60px;
 	margin: 20px 5px 20px auto;
-	transition: .3s;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	filter: gray;
-    border-radius: 15px;
+	border-radius: 15px;
 }
 
 .img-icon:hover {
-	-webkit-filter: none;	
-	filter: none;	
+	-webkit-filter: none;
+	filter: none;
+}
+
+#playhub {
+	background: rgb(0, 26, 76);
+	background: linear-gradient(343deg, rgba(0, 26, 76, 1) 30%, rgba(0, 35, 74, 1) 73%);
+}
+#playhub .swiper{
+ width: 100%;
+ padding:10px ;
+}
+
+#playhub .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.swiper-pagination-bullet {
+	height: 15px;
+	width: 15px;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #ff6100;
+}
+
+.swiper-button-prev {
+	color: rgb(255, 97, 0, 0.5);
+}
+
+.swiper-button-next {
+	color: rgba(255, 98, 0, 0.5);
 }

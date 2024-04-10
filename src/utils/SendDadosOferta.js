@@ -10,16 +10,12 @@ function SendDadosOferta (props){
     e.preventDefault();
 
     const userData = `
-    Eu ${props.nome} de CPF/CNPJ ${props.cpf},CONFIRMO esta etapa de reativação dos serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09, e tenho total ciência:
-
-    (1)Está contratando um plano internet de ${props.oferta} apenas nas ${props.periodo}. Suporte gratuito, equipamentos gratuito e instalação gratuita.
-    (2)Esta assinando um contrato de fidelidade de 12 meses.
+    Eu ${props.nome} de CPF/CNPJ ${props.cpf} confirmei pelo site uma ${props.assunto} ${props.plano} ${props.oferta} de ${props.periodo}. ${props.termos}. 
+    Telefone para Contato: ${props.telefone}
+    Tenho Ciência:
     (3)Ter feito todas as confirmações e envio dos dados necessários para realização do cadastro por meio eletrônico, ligação, whatsapp e outros.
     (4)A empresa tem um prazo máximo para instalação de até 48 horas.
-    (5)E Que todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom e serão usados apenas para assinatura do plano internet.
-
-    Plano constratado: ${props.plano} 
-    Oferta de: ${props.oferta} por ${props.periodo}
+    (5)E Que todos os dados fornecidos estão seguros e são de inteira responsabilidade da Netsim Telecom e serão usados apenas para assinatura do ${props.assunto} .
 
 `;
 
@@ -68,7 +64,7 @@ emailjs
 
     let url = "https://api.whatsapp.com/send?phone=556120993434&text=";
     let end_url =`
-    ${url}Eu ${props.nome} de CPF/CNPJ ${props.cpf} confirmei pelo site uma ${props.assunto} do ${props.plano} de ${props.oferta} por ${props.periodo} ${props.termos}%0A%0A
+    ${url}Eu ${props.nome} de CPF/CNPJ ${props.cpf}, confirmei pelo site uma ${props.assunto} ${props.plano} ${props.oferta} de ${props.periodo}. ${props.termos}%0A%0A
 
     `; 
   window.open(end_url)

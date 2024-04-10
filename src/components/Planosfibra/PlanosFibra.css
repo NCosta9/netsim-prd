@@ -1,28 +1,72 @@
-.card-footer{
-    background-color: #808080;
+#card-fibra .card{
+  border: none;
 }
-.header-title{
-    background-color: #808080;
+
+#card-fibra .card-planos{
+  padding: 20px;
+  border: solid 3px #ff5e00;
+  background: #fff;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
 }
-.offer_title {
+
+#card-fibra .advanced {
+  width: 200px;
+  position: absolute;
+  top: 18px;
+  right: -68px;
+  transform: rotate(45deg);
+  z-index: 1;
+  font-size: 0.7em;
+  padding: 1px 0 3px 0;
+  background: #E4641C;
+  color: #fff;
+}
+
+
+
+#card-fibra .offer_title {
     padding-top: 11px;
-    color: #303030;
-    font-size:1.9rem;
+    color: #00234b;
+    font-size:2.9rem;
+    font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     line-height:20px;
     letter-spacing: -0.06em;
-    font-weight: 700;
+    font-weight: 800;
+}
+#card-fibra .title{
+  color: #ff5e00;
+  font-weight: 700;
+  font-size: 2em;
+}
+#card-fibra .valor{
+  color: #00234b;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+#card-fibra .card-footer{
+  height: 360px;
+  border-radius: 20px;
+  border: solid 1px #001a4c;
 }
 
 .card-footer ul {
     padding: 0;
     list-style: none;
-    color: #444444;
     line-height: 20px;
     font-size: 14px;
   }
   
- 
+  .card-footer li{
+    font-size: 1.0rem;
+    color: #001a4c;
+    font-weight: 500;
+  }
   
   .card-footer ul i {
     color: #0880e8;
@@ -33,4 +77,12 @@
   .card-footer ul .no {
     color: #ccc;
     text-decoration: line-through;
+  }
+
+  #card-fibra .card-body button{
+    color: #fff;
+    font-weight: 500;
+    background-color: #002976;
+    border: 1px solid #001a4c;
+   box-shadow: #001a4c 2px 5px;
   }

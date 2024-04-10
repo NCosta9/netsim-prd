@@ -22,6 +22,12 @@ import Basic from './pages/Forms/FormsFibra/Basic';
 import Plus from './pages/Forms/FormsFibra/Plus';
 import Ultra from './pages/Forms/FormsFibra/Ultra';
 import Lite from './pages/Forms/FormsFibra/Lite';
+
+import BasicTV from './pages/Forms/FormsFibraTV/BasicTV';
+import PlusTV from './pages/Forms/FormsFibraTV/PlusTV';
+import UltraTV from './pages/Forms/FormsFibraTV/UltraTV';
+import LiteTV from './pages/Forms/FormsFibraTV/LiteTV';
+
 import Master from './pages/Forms/FormsRadio/Master';
 import Digital from './pages/Forms/FormsRadio/Digital';
 import Inter from './pages/Forms/FormsRadio/Inter';
@@ -35,6 +41,8 @@ import OfertaLite from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaLite'
 import OfertaBasic from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaBasic';
 import OfertaPlus from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaPlus';
 import OfertaUltra from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaUltra';
+import NetsimPlay from './pages/LpNetsimPlay';
+import FormLpTV from './pages/LpNetsimPlay/FormLpTV';
 
 
 
@@ -58,6 +66,12 @@ function RoutesApp(){
                 <Route path="/basic" element={ <Basic/> } />
                 <Route path="/plus" element={ <Plus/> } />
                 <Route path="/ultra" element={ <Ultra/> } />
+
+                <Route path="/lite-tv" element={ <LiteTV/> } />
+                <Route path="/basic-tv" element={ <BasicTV/> } />
+                <Route path="/plus-tv" element={ <PlusTV/> } />
+                <Route path="/ultra-tv" element={ <UltraTV/> } />
+
                 <Route path="/master" element={ <Master/> } />
                 <Route path="/digital" element={ <Digital/> } />
                 <Route path="/inter" element={ <Inter/> } />
@@ -65,13 +79,15 @@ function RoutesApp(){
                 <Route path="/ponto" element={ <Ponto/> } />
                 <Route path="/titularidade" element={ <Titularidade/> } />
                 <Route path='/aceite' element={ <OfertaExClientes/>} />
+                <Route path='/play_tv' element={ <NetsimPlay/>} />
+
 
 
                 <Route path='/oferta-lite' element={<OfertaLite/>} />
                 <Route path='/oferta-basic' element={<OfertaBasic/>} />
                 <Route path='/oferta-plus' element={<OfertaPlus/>} />
                 <Route path='/oferta-ultra' element={<OfertaUltra/>} />
-
+                <Route path='/form-tv' element={<FormLpTV/>}/>
 
 
             </Routes>

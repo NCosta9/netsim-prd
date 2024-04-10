@@ -1,8 +1,30 @@
+#lecupon{
+    background-color: #001b4c;
+    margin-top: 200px;
+}
+
 .fundo-lecupon{
     width: 100%;
 }
 .imglecupon{
-    height:400px;
-    width:auto;
-    margin-bottom: 15px;
+    width:480px;
+    height: auto;
+}
+#lecupon h2{
+    color: #fff;
+    font-weight: 700;
+}
+#lecupon h5{
+    color: #fff;
+}
+#lecupon p{
+    color: #fff;
+}
+
+.btn-lecupon{
+    border-radius: 10px;
+    padding: 6px;
+    color: #001b4c;
+    background-color: #ff6100;
+    font-weight: 500;
 }

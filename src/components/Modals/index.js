@@ -16,7 +16,7 @@ export default function Modals(props){
 
     return(
         <>
-          <a href="#" className={props.buttonClass} onClick={() => setModalShow(true, handleModalShow)}>{props.buttonName}</a>
+          <button id="button-modal" type="button" className={props.buttonClass} onClick={() => setModalShow(true, handleModalShow)}>{props.buttonName}</button>
 
 
         <Modal
