@@ -35,13 +35,13 @@ export default function Header() {
         {
             label: "Central do Cliente",
             description: "App para companhamento e pagamento de fatura via pix e codigo de barras. Consulte seu login!",
-            link: "https://qrco.de/9ja3sb",
-            config: <a className="btn btn-outline-primary" href='https://qrco.de/9ja3sb'>Configurar</a>
+            link: "https://ixc.netsimtelecom.com.br/central_assinante_web/login",
+            config: <a className="btn btn-outline-primary" href='https://qrco.de/bcWAGR'>Baixar</a>
         },
         {
             label: "Netsim Play- TV",
             description: "App com canais de tv, filmes e séries. Consulte seu login!",
-            link: "  https://play.netsimtelecom.com.br/",
+            link: "/netsim-play",
         }
 
     ]

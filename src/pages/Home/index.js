@@ -10,7 +10,6 @@ import SaibaLecupon from '../../components/SaibaMaisLecupon';
 import imageDeezer from '../../img/image-deezer.png';
 import imageHBO from '../../img/image-hbomax.png';
 import imageLooke from '../../img/image-looke.png';
-import imagePlaykids from '../../img/image-playkids.png';
 import imageTNT from '../../img/image-tnt.png';
 import iconLogoAzul from '../../img/icon-logo-azul.png';
 import mockupAppAssinante from '../../img/image-app-central-assinante.png';
@@ -65,7 +64,7 @@ function Home() {
               </svg>
             </div>
             <h3 className="fs-2">Planos de Internet</h3>
-            <p>Planos apartir de R$ 99,90 + ultima tecnologia wi-fi do mercado </p>
+            <p>Planos de velocidade a partir de 450 megas e ultra velocidade com WIFI6</p>
             <a className="icon-link d-inline-flex align-items-center link-orange" onClick={() => navigate("/cobertura")} >
               Saiba Mais
             </a>
@@ -113,35 +112,26 @@ function Home() {
                   <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" className="" ></button>
                   <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" className=""></button>
                   <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" className=""></button>
-                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5" className=""></button>
                 </div>
                 <div className="carousel-inner">
                   <div className="carousel-item">
                     <div className="container">
-                      <img src={imageHBO}></img>
-                    </div>
-                  </div>
-                  <div className="carousel-item active">
-                    <div className="container">
-                      <img src={imagePlaykids} />
+                      <img src={imageHBO}/>
                     </div>
                   </div>
                   <div className="carousel-item">
                     <div className="container">
-                      <img src={imageDeezer
-                      } />
+                      <img src={imageDeezer} />
                     </div>
                   </div>
                   <div className="carousel-item">
                     <div className="container">
-                      <img src={imageLooke
-                      } />
+                      <img src={imageLooke} />
                     </div>
                   </div>
                   <div className="carousel-item">
                     <div className="container">
-                      <img src={imageTNT
-                      } />
+                      <img src={imageTNT} />
                     </div>
                   </div>
                 </div>

@@ -26,8 +26,6 @@ function SendDadosPlanos (props){
     Plano constratado: ${props.plano}
     Fixo: ${props.fixo}
     Vencimento: ${props.vencimento}
-    AppsPremium: ${props.premium}
-    AppsStandard: ${props.standard}
     Indicação: ${props.indicacao}
 `;
 
@@ -81,7 +79,7 @@ Dados para Assinatura:%0A
 Nome: ${props.nome}%0A
 CPF/CNPJ: ${props.cpf}%0A
 RG: ${props.rg}%0A
-Data Nascimento: ${props.dia}/${props.mes}/${props.ano}%0A
+Data Nascimento: ${props.nascimento}%0A
 Cep: ${props.cep}%0A
 Bairro: ${props.bairro}%0A
 Endereço: ${props.endereco}%0A

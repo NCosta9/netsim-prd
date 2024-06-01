@@ -1,0 +1,29 @@
+#netsimplay {
+    background-color: #00234b;
+}
+
+#netsimplay .button-lojas{
+    display: flex;
+    margin: 0 auto;
+    margin-top:0px;
+}
+
+#netsimplay .image-response{
+    width: 100%;
+    max-width: 740px;
+    display: flex;
+    margin: 0 auto;
+}
+#netsimplay .list-group{
+    width: 80%;
+    max-width: 740px;
+}
+#netsimplay .list-group h2{
+    color: #cb6503;
+    font-weight: 700;
+}
+#netsimplay .list-group p{
+    color: #fff;
+    font-weight: 300;
+    font-size: 24px;
+}

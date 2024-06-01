@@ -32,7 +32,7 @@ export default function CarouselBanner() {
                     <SwiperSlide >
                         <img
                             className="w-100"
-                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/desk/850MegaFull'
+                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/desk/desk-banner-netsim-home.jpg?t=2024-04-26T12%3A00%3A39.892Z'
                         />
 
                     </SwiperSlide>
@@ -72,7 +72,7 @@ export default function CarouselBanner() {
                     <SwiperSlide interval={3000}>
                         <img
                             className="w-100"
-                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/850%20Mega-Mobile.jpg'
+                            src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/banners/mobile/mobile-banner-netsim-home-450.jpg?t=2024-04-26T12%3A03%3A25.566Z'
                         />
                     </SwiperSlide>
                     <SwiperSlide interval={3000}>

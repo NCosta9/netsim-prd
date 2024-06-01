@@ -1,27 +1,16 @@
-import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
-import './Planosempresariais.css';
-import React, { useState } from 'react';
-import Collapse from 'react-bootstrap/Collapse';
+import './PlanosFibra.css';
 import { useNavigate } from 'react-router-dom'
 import VelocidadePlanos from '../DadosPlanos/VelocidadePlanos';
-import ValorPlanos from '../DadosPlanos/ValorPlanos';
 
-function Planosfibra() {
-    const [silver, setOpenSilver] = useState(false);
-    const [gold, setOpenGold] = useState(false);
+export default function PlanoEmpresa() {
 
     // velocidade dos planos
     const silverDown = 450;
     const silverUp = 250;
     const goldDown = 750;
     const goldUp = 250;
-
-    // valor dos planos
-
-    const valorSilver = 'R$ 250,00';
-    const valorGold = 'R$ 450,00';
 
     const navigate = useNavigate();
 
@@ -34,7 +23,7 @@ function Planosfibra() {
                 {[
                     {
                         titulo: "Silver",
-                        mega: "450",
+                        download: "450",
                         upload:"250",
                         valor: "R$250,00",
                         link: "/silver",
@@ -50,7 +39,7 @@ function Planosfibra() {
                     {
                         status: <span className="advanced">Recomendado</span>,
                         titulo: "Gold",
-                        mega: "550",
+                        download: "750",
                         upload:"250",
                         valor: "R$450,00",
                         link: "/gold",
@@ -67,32 +56,26 @@ function Planosfibra() {
 
                 ].map((plano) => (
                     <div className="col-md-3">
-
-                        <div className="card mb-4 ">
+ <div className="card mb-4 ">
                             <div className='card-planos'>
                                 {plano.status}
-                                <div className="card-header py-3">
                                     <h4 className="title my-0 "> {plano.titulo} </h4>
-                                </div>
                                 <div className="card-body ">
-                                    <small className="text-muted fw-light"><p className='text-start mb-0'>Velocidade</p></small>
-                                    <h3 className="my-0 mb-3 fw-normal offer_title text-start"> {plano.mega} MEGA</h3>
-                                    <small className="text-muted fw-light"><p className='text-start mb-0'>Upload</p></small>
-                                    <h3 className="my-0 mb-3 fw-normal offer_title text-start"> {plano.upload} MEGA</h3>
-                                    <div className="footer-business pb-5">
-                                        <small className="text-muted fw-light"><p className='text-start mb-0'>Benefícios do plano:</p></small>
+                                <small className="text-muted fw-light"><p className='text-center mb-0'>Download</p></small>
+                                    <h3 className="my-0 mb-3 offer_title text-center"> {plano.download} MEGA</h3>
+                                    <small className="text-muted fw-light"><p className='text-center mb-0'>Upload</p></small>
+                                    <h3 className="my-0 mb-3 fw-normal offer_title text-center"> {plano.upload} MEGA</h3>
+                                    <div className="card-footer-empresa pb-5">
                                         <div id="ultra-collapse-text">
                                             <ul className="list-unstyled mt-3 mb-4 text-start text-light">
-                                                {plano.roteador}
+                                            {plano.roteador}
                                                 <li>{plano.clube} Clube de Descontos</li>
                                                 <li>{plano.repetidor} Repetidor de sinal</li>
                                                 <li>{plano.telefone} Telefone fixo ilimitado</li>
-
                                             </ul>
                                         </div>
                                     </div>
-                                    <small className="text-muted fw-light"><p className='text-start mb-0'>Apenas</p></small>
-                                    <h2 className="valor pricing-card-title fw-light text-start">{plano.valor}<small className="text-muted fw-light">/mês</small></h2>
+                                    <h2 className="valor pricing-card-title text-center">{plano.valor}<small className="text-muted fw-light">/mês</small></h2>
 
                                     <button type="button" className="w-100 btn btn-lg btn-primary mt-3" onClick={() => navigate(`${plano.link}`)}>Assinar</button>
                                 </div>
@@ -102,9 +85,9 @@ function Planosfibra() {
 
                 ))};
             </div>
-            <h2 class="display-6 text-center mb-4">Compare os planos</h2>
-            <div class="table-responsive">
-                <table class="table text-center">
+            <h2 className="display-6 text-center mb-4">Compare os planos</h2>
+            <div className="table-responsive">
+                <table className="table text-center">
                     <thead>
                         <tr>
                             <th></th>
@@ -114,7 +97,7 @@ function Planosfibra() {
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row" class="text-start">WI-FI 6
+                            <th scope="row" className="text-start">WI-FI 6
 
                                 {['top'].map((placement) => (
                                     <OverlayTrigger
@@ -129,24 +112,24 @@ function Planosfibra() {
                                             </Popover>
                                         }
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                                         </svg>
                                     </OverlayTrigger>
                                 ))}
                             </th>
                             <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" className="bi bi-check-lg" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
                             </td>
                             <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" className="bi bi-check-lg" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
                             </td>
                         </tr>
 
                         <tr>
-                            <th scope="row" class="text-start">Clube de Descontos
+                            <th scope="row" className="text-start">Clube de Descontos
                                 {['top'].map((placement) => (
                                     <OverlayTrigger
                                         trigger="click"
@@ -160,7 +143,7 @@ function Planosfibra() {
                                             </Popover>
                                         }
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                                         </svg>
                                     </OverlayTrigger>
@@ -169,11 +152,11 @@ function Planosfibra() {
 
 
                             <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" className="bi bi-check-lg" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
                             </td>
                             <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" className="bi bi-check-lg" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
                             </td>
                         </tr>
@@ -181,7 +164,7 @@ function Planosfibra() {
 
                     <tbody>
                         <tr>
-                            <th scope="row" class="text-start">Suporte SLA de 24 horas
+                            <th scope="row" className="text-start">Suporte SLA de 24 horas
                                 {['top'].map((placement) => (
                                     <OverlayTrigger
                                         trigger="click"
@@ -195,23 +178,23 @@ function Planosfibra() {
                                             </Popover>
                                         }
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                                         </svg>
                                     </OverlayTrigger>
                                 ))}
                             </th>
                             <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" className="bi bi-check-lg" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
                             </td>
-                            <td><svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <td><svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" className="bi bi-check-lg" viewBox="0 0 16 16">
                                 <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg></td>
 
                         </tr>
 
                         <tr>
-                            <th scope="row" class="text-start">Telefone fixo
+                            <th scope="row" className="text-start">Telefone fixo
                                 {['top'].map((placement) => (
                                     <OverlayTrigger trigger="click" key={placement} placement={placement}
                                         overlay={
@@ -222,25 +205,25 @@ function Planosfibra() {
                                             </Popover>
                                         }
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                                         </svg>
                                     </OverlayTrigger>
                                 ))}
                             </th>
                             <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" className="bi bi-check-lg" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
                             </td>
                             <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" className="bi bi-check-lg" viewBox="0 0 16 16">
                                     <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" /></svg>
                             </td>
 
                         </tr>
 
                         <tr>
-                            <th scope="row" class="text-start">Velocidade de Download
+                            <th scope="row" className="text-start">Velocidade de Download
                                 {['top'].map((placement) => (
                                     <OverlayTrigger trigger="click" key={placement} placement={placement}
                                         overlay={
@@ -251,7 +234,7 @@ function Planosfibra() {
                                             </Popover>
                                         }
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                                         </svg>
                                     </OverlayTrigger>
@@ -267,7 +250,7 @@ function Planosfibra() {
                         </tr>
 
                         <tr>
-                            <th scope="row" class="text-start">Velocidade de Upload
+                            <th scope="row" className="text-start">Velocidade de Upload
                                 {['top'].map((placement) => (
                                     <OverlayTrigger trigger="click" key={placement} placement={placement}
                                         overlay={
@@ -278,7 +261,7 @@ function Planosfibra() {
                                             </Popover>
                                         }
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-exclamation-circle-fill ms-2" viewBox="0 0 16 16">
                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                                         </svg>
                                     </OverlayTrigger>
@@ -299,4 +282,3 @@ function Planosfibra() {
         </>
     );
 }
-export default Planosfibra;

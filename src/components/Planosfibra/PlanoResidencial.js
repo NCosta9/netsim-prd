@@ -8,7 +8,7 @@ import VelocidadePlanos from '../DadosPlanos/VelocidadePlanos';
 import ValorPlanos from '../DadosPlanos/ValorPlanos';
 import Repetidores from '../DadosPlanos/Repetidores';
 
-function Planosfibra() {
+function PlanosResidencial() {
 
 
     const navigate = useNavigate()

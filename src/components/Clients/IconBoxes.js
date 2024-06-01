@@ -61,7 +61,7 @@ export default function IconBoxes() {
                                 <div className="buttons d-flex flex-column">
 
                                     <a className="btn btn-primary my-1" href='https://ixc.netsimtelecom.com.br/central_assinante_web/login'>Acessar</a>
-                                    <a className="btn btn-outline-primary my-2 mx-0" href='https://qrco.de/bcWAGR'>Acessar</a>
+                                    <a className="btn btn-outline-primary my-2 mx-0" href='https://qrco.de/bcWAGR'>Baixar</a>
                                   
 
                                 </div>
@@ -74,10 +74,9 @@ export default function IconBoxes() {
                                 <h4 className="title"><a href="">Netsim Play- TV </a></h4>
                                 <p className="description">Aplicativo de canais de televisão para clientes da Netsim baixar e configurar em TVs e Celulares</p>
                                 <div className="d-flex flex-column">
-
-                                    <a className="btn btn-primary my-1" href='https://play.netsimtelecom.com.br/'>Acessar</a>
-                                    <a className="btn btn-outline-primary my-2 mx-0" href='https://play.netsimtelecom.com.br/'>Acessar</a>
-                                   
+                                
+                                    <a className="btn btn-primary my-1" href='netsim-play'>Acessar</a>
+                                    <a className="btn btn-outline-primary my-2 mx-0" href='/netsim-play'>Configurar</a>
 
                                 </div>
                             </div>

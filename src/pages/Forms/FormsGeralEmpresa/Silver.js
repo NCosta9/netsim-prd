@@ -1,63 +1,59 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
-import SendDadosPlanos from "../../../../utils/SendDadosPlanos";
-import TermoPlanos from "../../../../components/Termos/TermoPlanos";
+import SendDadosPlanos from "../../../utils/SendDadosPlanos";
+import TermoPlanos from "../../../components/Termos/TermoPlanos";
 
 
-export default function Basic() {
+export default function FormsGeralFibra() {
 
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const { register, handleSubmit, getValues } = useForm();
 
-  const valueplano= "Plano Basic R$114,90";
+  const { register,handleSubmit, getValues} = useForm();
+
 
   const formValues = getValues();
-  const nome = `${formValues.NOME}`
-  const cpf = `${formValues.CPF}`
-  const rg = `${formValues.RG}`
+  const nome=`${formValues.NOME}` 
+  const cpf=`${formValues.CPF}`        
+  const rg=`${formValues.RG}` 
   const nascimento = `${formValues.DIA}-${formValues.MES}-${formValues.ANO}`
-  const cep = `${formValues.CEP}`
-  const bairro = `${formValues.Bairro}`
-  const endereco = `${formValues.Endereco}`
-  const moradia = `${formValues.Moradia}`
-  const whatsapp01 = `${formValues.Whatsapp01}`
-  const whatsapp02 = `${formValues.Whatsapp02}`
-  const email = `${formValues.Email}`
-  const plano = `${formValues.PLANO}`
-  const fixo = `${formValues.Fixo}`
-  const vencimento = `${formValues.Vencimento}`
-  const indicacao = `${formValues.Indicacao}`
-  const data = `${formValues.Data}`
-  const hora = `${formValues.Hora}`
-  const obs = `${formValues.OBS}`
-  
+  const cep=`${formValues.CEP}`           
+  const bairro=`${formValues.Bairro}` 
+  const endereco=`${formValues.Endereco}`           
+  const moradia=`${formValues.Moradia}` 
+  const whatsapp01=`${formValues.Whatsapp01}` 
+  const whatsapp02=`${formValues.Whatsapp02}` 
+  const email=`${formValues.Email}`           
+  const plano=`${formValues.PLANO}`          
+  const fixo=`${formValues.Fixo}`          
+  const vencimento=`${formValues.Vencimento}`
+  const indicacao=`${formValues.Indicacao}`         
+  const data=`${formValues.Data}` 
+  const hora=`${formValues.Hora}`
+  const obs=`${formValues.OBS}`
 
+  
   //Dados para envio via Email
   const assunto = "Assinatura de Internet";
   const termos = "Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09."
-  const cabecalho = "Ja recebemos a informações para sua " + assunto + " ,dentro de alguns instantes entraremos em contato com mais informações. Verifique abaixo se os dados estão corretos: ";
-
-
-
-
-
+  const cabecalho = "Ja recebemos a informações para sua "+ assunto + " ,dentro de alguns instantes entraremos em contato com mais informações. Verifique abaixo se os dados estão corretos: ";
+  
+const valueplano="Silver R$ 250,00"
 
   return (
     <div className="container">
       <div class="bg-light p-5 mt-3 rounded">
-        <h1>Bem Vindo a Página de Cadastro</h1>
+        <h1>Bem Vindo a Página de Cadastro-Plano SILVER</h1>
         <p class="lead">Preencha com os dados necessarios para finalização da sua assinatura de internet</p>
         <a class="btn btn-lg btn-primary" href="/fibra" role="button">Voltar a página anterior »</a>
       </div>
       <form
         className="row g-3 mt-5"
         id="formDados"
-
       >
         {/* ################### Etapa 01 ################################### */}
 
@@ -68,20 +64,14 @@ export default function Basic() {
           <input type="text" className="form-control shadow-sm" {...register("NOME", { required: true })} />
           <label className="fw-bold">Nome completo:</label>
         </div>
-
-
-        <div className="col-md-6 mb-3 form-floating">
+        <div className="col-md-4 mb-3 form-floating">
           <input type="cpf" className="form-control shadow-sm" {...register("CPF", { required: true })} />
-          <label className="fw-bold">CPF:</label>
+          <label className="fw-bold">CNPJ:</label>
         </div>
-
-
-        <div className="col-md-6 mb-3 form-floating">
+        <div className="col-md-4 mb-3 form-floating">
           <input type="RG" className="form-control shadow-sm" {...register("RG", { required: true })} />
           <label className="fw-bold">RG:</label>
         </div>
-
-
         <div className="container my-3">
         <div class="col-md-4">
           <label class="form-label"> <b>Data de Nascimento:</b></label>
@@ -242,10 +232,6 @@ export default function Basic() {
           </select>
         </div>
         </div>
-        
-
-
-
         <div className="col-md-4 mb-3 form-floating">
           <input
             type="text"
@@ -255,8 +241,7 @@ export default function Basic() {
           />
           <label className="fw-bold">CEP:</label>
         </div>
-
-        <div className="col-md-4 mb-3 form-floating">
+        <div className="col-md-4 mb-3">
           <select
             className="form-select"
             {...register("Bairro", { required: true })}
@@ -289,34 +274,6 @@ export default function Basic() {
           <label className="fw-bold">Endereço completo:</label>
         </div>
 
-        <div className="container my-3">
-          <label className="d-flex fw-bold mb-2">Moradia:</label>
-
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input p-2"
-              type="radio"
-              id="inlineRadio1"
-              value="Casa Própria"
-              {...register("Moradia")}
-            />
-            <label className="form-check-label" htmlFor="inlineRadio1">
-              Casa Própria
-            </label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input
-              className="form-check-input p-2"
-              type="radio"
-              id="inlineRadio2"
-              value="Casa Alugada"
-              {...register("Moradia", { required: true })}
-            />
-            <label className="form-check-label" htmlFor="inlineRadio2">
-              Casa Alugada
-            </label>
-          </div>
-        </div>
 
         <div className="col-md-6 mb-3 form-floating">
           <input
@@ -455,6 +412,8 @@ export default function Basic() {
           </div>
         </div>
 
+     
+
         <button type="button" className="btn btn-lg btn-success mb-4" onClick={handleSubmit(handleShow)}>
           Finalizar
           <svg
@@ -470,47 +429,48 @@ export default function Basic() {
         </button>
 
         <Modal show={show} onHide={handleClose} animation={false}>
-          <Modal.Header>
-            <Modal.Title>
-              <h4 className="mt-2 fw-bold">Termos e condições</h4>
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <TermoPlanos />
-          </Modal.Body>
-          <Modal.Footer>
-            <SendDadosPlanos
-              text="Aceitar"
-              nome={nome}
-              cpf={cpf}
-              rg={rg}
-              nascimento={nascimento}
-              cep={cep}
-              bairro={bairro}
-              endereco={endereco}
-              moradia={moradia}
-              whatsapp01={whatsapp01}
-              whatsapp02={whatsapp02}
-              email={email}
-              plano={plano}
-              fixo={fixo}
-              vencimento={vencimento}
-              indicacao={indicacao}
-              data={data}
-              hora={hora}
-              obs={obs}
-              termos={termos}
-              assunto={assunto}
-              cabecalho={cabecalho}
+        <Modal.Header>
+          <Modal.Title> 
+            <h4 className="mt-2 fw-bold">Termos e condições</h4>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body> 
+           <TermoPlanos/>
+        </Modal.Body>
+        <Modal.Footer>
+        <SendDadosPlanos
+           text="Aceitar"
+           nome={nome} 
+           cpf={cpf}        
+           rg={rg} 
+           nascimento= {nascimento}
+           cep={cep}           
+           bairro={bairro} 
+           endereco={endereco}           
+           moradia={moradia} 
+           whatsapp01={whatsapp01}
+           whatsapp02={whatsapp02} 
+           email={email}           
+           plano={plano}          
+           fixo={fixo}          
+           vencimento={vencimento}
+           indicacao={indicacao}         
+           data={data} 
+           hora={hora}
+           obs={obs} 
 
-            />
-          </Modal.Footer>
-        </Modal>
+          termos = {termos}
+          assunto ={assunto}
+          cabecalho={cabecalho}
+
+           
+    />
+        </Modal.Footer>
+      </Modal>
       </form>
 
 
-
+      
     </div>
   );
 }
-

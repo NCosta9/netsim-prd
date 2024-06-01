@@ -17,7 +17,8 @@ import AreaCliente from './pages/AreaCliente';
 
 
 //imports para rotas de formularios
-import ContrateEmpresa from './pages/Forms/FormsGeralEmpresa';
+import Gold from './pages/Forms/FormsGeralEmpresa/Gold.js';
+import Silver from './pages/Forms/FormsGeralEmpresa/Silver.js';
 import Basic from './pages/Forms/FormsFibra/Basic';
 import Plus from './pages/Forms/FormsFibra/Plus';
 import Ultra from './pages/Forms/FormsFibra/Ultra';
@@ -41,8 +42,9 @@ import OfertaLite from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaLite'
 import OfertaBasic from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaBasic';
 import OfertaPlus from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaPlus';
 import OfertaUltra from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaUltra';
-import NetsimPlay from './pages/LpNetsimPlay';
+import LpNetsimPlay from './pages/LpNetsimPlay';
 import FormLpTV from './pages/LpNetsimPlay/FormLpTV';
+import NetsimPlay from './pages/NetsimPlay/index.js';
 
 
 
@@ -61,7 +63,8 @@ function RoutesApp(){
                 <Route path="/error" element={ <Error/> } />
 
 
-                <Route path="/contrate-empresa" element={ <ContrateEmpresa/> } />
+                <Route path="/gold" element={ <Gold/> } />
+                <Route path="/silver" element={ <Silver/> } />
                 <Route path="/lite" element={ <Lite/> } />
                 <Route path="/basic" element={ <Basic/> } />
                 <Route path="/plus" element={ <Plus/> } />
@@ -79,7 +82,7 @@ function RoutesApp(){
                 <Route path="/ponto" element={ <Ponto/> } />
                 <Route path="/titularidade" element={ <Titularidade/> } />
                 <Route path='/aceite' element={ <OfertaExClientes/>} />
-                <Route path='/play_tv' element={ <NetsimPlay/>} />
+                <Route path='/play_tv' element={ <LpNetsimPlay/>} />
 
 
 
@@ -88,6 +91,7 @@ function RoutesApp(){
                 <Route path='/oferta-plus' element={<OfertaPlus/>} />
                 <Route path='/oferta-ultra' element={<OfertaUltra/>} />
                 <Route path='/form-tv' element={<FormLpTV/>}/>
+                <Route path='/netsim-play' element={<NetsimPlay/>}/>
 
 
             </Routes>

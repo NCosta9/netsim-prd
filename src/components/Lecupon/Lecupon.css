@@ -7,7 +7,7 @@
     width: 100%;
 }
 .imglecupon{
-    width:480px;
+    width:580px;
     height: auto;
 }
 #lecupon h2{
@@ -20,7 +20,13 @@
 #lecupon p{
     color: #fff;
 }
-
+#lecupon .img-lecupon{
+    background-image: url('https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/mockups/img-lecupon-note-cell.png?t=2024-04-12T16%3A09%3A18.917Z');
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
 .btn-lecupon{
     border-radius: 10px;
     padding: 6px;

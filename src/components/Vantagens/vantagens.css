@@ -10,10 +10,10 @@
     font-size: 40px;
     font-weight: 700;
 }
-#vantagens .item{
-    border-top: #ff6100 solid 2px;
-    height: 150px;
-    margin-bottom: 10px;
+#vantagens .shadow{
+    background: rgb(54, 88, 150);
+    background: linear-gradient(360deg, rgba(60, 95, 161, 0.26) 30%, rgb(14, 75, 146) 73%);
+    border-radius: 30px;
 }
 #vantagens svg{
     color: #ff6100;

@@ -3,7 +3,7 @@ import CarouselFilmes from '../../components/Carousel/NetsimPlay/Filmes/Carousel
 import Tvprecing from '../../components/TV/Features/Tvprecing'
 import VantagensTV from '../../components/TV/VantagensTV'
 import './Lancamento.css'
-export default function NetsimPlay() {
+export default function LpNetsimPlay() {
     return (
         <>
             <section id='play'>

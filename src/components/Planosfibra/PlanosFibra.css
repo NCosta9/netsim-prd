@@ -54,6 +54,11 @@
   border-radius: 20px;
   border: solid 1px #001a4c;
 }
+#card-fibra .card-footer-empresa{
+  height: 140px;
+  border-radius: 20px;
+  border: solid 1px #001a4c;
+}
 
 .card-footer ul {
     padding: 0;
@@ -63,6 +68,11 @@
   }
   
   .card-footer li{
+    font-size: 1.0rem;
+    color: #001a4c;
+    font-weight: 500;
+  }
+  .card-footer-empresa li{
     font-size: 1.0rem;
     color: #001a4c;
     font-weight: 500;
@@ -84,5 +94,12 @@
     font-weight: 500;
     background-color: #002976;
     border: 1px solid #001a4c;
-   box-shadow: #001a4c 2px 5px;
+   box-shadow: #001a4c 0px 2px;
+  }
+  #card-fibra .card-body button:hover{
+    color: #fff;
+    font-weight: 500;
+    background-color: #033796;
+    border: 1px solid #001a4c;
+   box-shadow: #001a4c 0px 5px;
   }

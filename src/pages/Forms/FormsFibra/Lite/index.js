@@ -15,12 +15,13 @@ export default function Lite() {
 
   const { register, handleSubmit, getValues } = useForm();
 
+  const valueplano= "Plano Lite R$99,90";
 
   const formValues = getValues();
   const nome = `${formValues.NOME}`
   const cpf = `${formValues.CPF}`
   const rg = `${formValues.RG}`
-  const nascimento = `${formValues.DIA}/${formValues.MES}/${formValues.ANO}`
+  const nascimento = `${formValues.DIA}-${formValues.MES}-${formValues.ANO}`
   const cep = `${formValues.CEP}`
   const bairro = `${formValues.Bairro}`
   const endereco = `${formValues.Endereco}`
@@ -35,11 +36,7 @@ export default function Lite() {
   const data = `${formValues.Data}`
   const hora = `${formValues.Hora}`
   const obs = `${formValues.OBS}`
-  const standard = `${formValues.AppStandard}`
-  const premium = `${formValues.AppPremium}`
-  const dia = `${formValues.DIA}`
-  const mes = `${formValues.MES}`
-  const ano = `${formValues.ANO}`
+  
 
   //Dados para envio via Email
   const assunto = "Assinatura de Internet";
@@ -72,19 +69,25 @@ export default function Lite() {
           <input type="text" className="form-control shadow-sm" {...register("NOME", { required: true })} />
           <label className="fw-bold">Nome completo:</label>
         </div>
+
+
         <div className="col-md-6 mb-3 form-floating">
           <input type="cpf" className="form-control shadow-sm" {...register("CPF", { required: true })} />
           <label className="fw-bold">CPF:</label>
         </div>
+
+
         <div className="col-md-6 mb-3 form-floating">
           <input type="RG" className="form-control shadow-sm" {...register("RG", { required: true })} />
           <label className="fw-bold">RG:</label>
         </div>
+
+
         <div className="container my-3">
         <div class="col-md-4">
           <label class="form-label"> <b>Data de Nascimento:</b></label>
           <br />
-          <select class="form-select-sm me-3" {...register("DIA", { required: true })} >
+          <select class="form-select-lg shadow-sm border me-3" {...register("DIA", { required: true })} >
             <option value="Dia" selected disabled>Dia</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -105,7 +108,7 @@ export default function Lite() {
             <option value="17">17</option>
             <option value="18">18</option>
             <option value="19">19</option>
-            <option value="20">2</option>
+            <option value="20">20</option>
             <option value="21">21</option>
             <option value="22">22</option>
             <option value="23">23</option>
@@ -118,7 +121,7 @@ export default function Lite() {
             <option value="30">30</option>
             <option value="31">31</option>
           </select>
-          <select class="form-select-sm me-3 " {...register("MES", { required: true })} >
+          <select class="form-select-lg shadow-sm border me-3 " {...register("MES", { required: true })} >
             <option value="Mês" selected disabled>Mês</option>
             <option value="Janeiro">Janeiro</option>
             <option value="Fevereiro">Fevereiro</option>
@@ -133,7 +136,7 @@ export default function Lite() {
             <option value="Novembro">Novembro</option>
             <option value="Dezembro">Dezembro</option>
           </select>
-          <select class="form-select-sm" {...register("ANO", { required: true })} >
+          <select class="form-select-lg shadow-sm border " {...register("ANO", { required: true })} >
             <option value="Ano" selected disabled>Ano</option>
             <option value="	2024	">	2024	</option>
             <option value="	2023	">	2023	</option>
@@ -360,7 +363,7 @@ export default function Lite() {
           <input
             type="text"
             className="form-control shadow-sm"
-            value="Plano Lite R$ 99,90"
+            value={valueplano}
             {...register("PLANO")}
             readOnly
           />
@@ -493,20 +496,13 @@ export default function Lite() {
               plano={plano}
               fixo={fixo}
               vencimento={vencimento}
-              premium={premium}
-              standard={standard}
               indicacao={indicacao}
               data={data}
               hora={hora}
               obs={obs}
-
               termos={termos}
               assunto={assunto}
               cabecalho={cabecalho}
-              dia={dia}
-              mes={mes}
-              ano={ano}
-
 
             />
           </Modal.Footer>

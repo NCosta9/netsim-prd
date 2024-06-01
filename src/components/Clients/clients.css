@@ -155,7 +155,6 @@
     background-size: cover;
     position: relative;
     margin-bottom: -90px;
-    z-index: 99;
     transition: 0.3s;
   }
   

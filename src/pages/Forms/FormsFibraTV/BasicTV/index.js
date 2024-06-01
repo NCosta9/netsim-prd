@@ -2,150 +2,53 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
 
-import premium1 from "../../../../img/iconApps/premium1.png";
-import premium2 from "../../../../img/iconApps/premium2.png";
-import premium3 from "../../../../img/iconApps/premium3.png";
-import premium4 from "../../../../img/iconApps/premium4.png";
-import standard1 from "../../../../img/iconApps/standard1.png";
-import standard2 from "../../../../img/iconApps/standard2.png";
-import standard3 from "../../../../img/iconApps/standard3.jpg";
-import standard4 from "../../../../img/iconApps/standard4.png";
-import standard5 from "../../../../img/iconApps/standard5.png";
-import standard6 from "../../../../img/iconApps/standard6.jpg";
-import standard7 from "../../../../img/iconApps/standard7.png";
-import standard8 from "../../../../img/iconApps/standard8.png";
-import standard9 from "../../../../img/iconApps/standard9.png";
-import standard10 from "../../../../img/iconApps/standard10.png";
-import standard11 from "../../../../img/iconApps/standard11.png";
-import standard12 from "../../../../img/iconApps/standard12.png";
-import standard13 from "../../../../img/iconApps/standard13.png";
-import standard14 from "../../../../img/iconApps/standard14.png";
-import standard15 from "../../../../img/iconApps/standard15.png";
-import standard16 from "../../../../img/iconApps/standard16.png";
-
 import SendDadosPlanos from "../../../../utils/SendDadosPlanos";
 import TermoPlanos from "../../../../components/Termos/TermoPlanos";
 
 
-export default function Basic(props) {
+export default function BasicTV() {
 
   const [show, setShow] = useState(false);
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-// esta sentado as propriedade do MODAL  que esta no fim desse codigo
 
-  const { register,handleSubmit, getValues} = useForm();
+  const { register, handleSubmit, getValues } = useForm();
+
+  const valueplano= "Plano Basic+TV  R$129,90";
 
   const formValues = getValues();
-  const nome=`${formValues.NOME}` 
-  const cpf=`${formValues.CPF}`        
-  const rg=`${formValues.RG}` 
-  const nascimento =`${formValues.NASCIMENTO}`
-  const cep=`${formValues.CEP}`           
-  const bairro=`${formValues.Bairro}` 
-  const endereco=`${formValues.Endereco}`           
-  const moradia=`${formValues.Moradia}` 
-  const whatsapp01=`${formValues.Whatsapp01}` 
-  const whatsapp02=`${formValues.Whatsapp02}` 
-  const email=`${formValues.Email}`           
-  const plano=`${formValues.PLANO}`          
-  const fixo=`${formValues.Fixo}`          
-  const vencimento=`${formValues.Vencimento}`
-  const indicacao=`${formValues.Indicacao}`         
-  const data=`${formValues.Data}` 
-  const hora=`${formValues.Hora}`
-  const obs=`${formValues.OBS}`
-  const standard =`${formValues.AppStandard}`
-  const premium = `${formValues.AppPremium}`
+  const nome = `${formValues.NOME}`
+  const cpf = `${formValues.CPF}`
+  const rg = `${formValues.RG}`
+  const nascimento = `${formValues.DIA}-${formValues.MES}-${formValues.ANO}`
+  const cep = `${formValues.CEP}`
+  const bairro = `${formValues.Bairro}`
+  const endereco = `${formValues.Endereco}`
+  const moradia = `${formValues.Moradia}`
+  const whatsapp01 = `${formValues.Whatsapp01}`
+  const whatsapp02 = `${formValues.Whatsapp02}`
+  const email = `${formValues.Email}`
+  const plano = `${formValues.PLANO}`
+  const fixo = `${formValues.Fixo}`
+  const vencimento = `${formValues.Vencimento}`
+  const indicacao = `${formValues.Indicacao}`
+  const data = `${formValues.Data}`
+  const hora = `${formValues.Hora}`
+  const obs = `${formValues.OBS}`
   
+
   //Dados para envio via Email
   const assunto = "Assinatura de Internet";
   const termos = "Declaro que li e concordo com os termos e condições de serviços da contratada NETSIM PROVEDOR DE SISTEMA DE INTEGRAÇÃO A MIDIA - LTDA de CNPJ 18.156.287/0001-09."
-  const cabecalho = "Ja recebemos a informações para sua "+ assunto + " ,dentro de alguns instantes entraremos em contato com mais informações. Verifique abaixo se os dados estão corretos: ";
-  
-
-// A partir daqui verifica os aplicativos que estão marcados
-
-    let CheckMaximoStandard = 2;
-    let CheckMaximoPremium = 0;
-    
-  
-  
-  function verificaStandard(){
-  
-  let Marcados = 1;
-  let objCheck = document.forms['formDados'].elements['AppStandard'];
-  
-  
-  //Percorrendo os checks para ver quantos foram selecionados:
-    for (let iLoop=0; iLoop < objCheck.length; iLoop++) {
-  //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
-    if (objCheck[iLoop].checked) {  
-  
-        Marcados++;
-    }
-    
-    if (Marcados <= CheckMaximoStandard) {
-    //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
-      for (let i=0; i < objCheck.length; i++) {
-        objCheck[i].disabled = false;
-      }   
-      
-      //Caso contrário, desabilitar o checkbox;
-      //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
-      
-    } else {
-      for (let i=0; i<objCheck.length; i++) {
-        if(objCheck[i].checked === false) {
-          objCheck[i].disabled = true;
-        }       
-        }
-      }
-  }
-  
-  
-  };
-  
-  
-  function verificaPremium(){
-  
-    let Marcados = 1;
-    let objCheck = document.forms['formDados'].elements['AppPremium'];
-    
-    
-    //Percorrendo os checks para ver quantos foram selecionados:
-      for (let iLoop=0; iLoop < objCheck.length; iLoop++) {
-    //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
-      if (objCheck[iLoop].checked) {  
-    
-        Marcados++;
-      }
-      
-      if (Marcados <= CheckMaximoPremium) {
-      //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
-      for (let i=0; i < objCheck.length; i++) {
-        objCheck[i].disabled = false;
-      }   
-        
-      //Caso contrário, desabilitar o checkbox;
-      //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
-      
-      } else {
-        for (let i=0; i<objCheck.length; i++) {
-          if(objCheck[i].checked === false) {
-            objCheck[i].disabled = true;
-          }       
-        }
-      }
-    }
-  
-    };
-  
+  const cabecalho = "Ja recebemos a informações para sua " + assunto + " ,dentro de alguns instantes entraremos em contato com mais informações. Verifique abaixo se os dados estão corretos: ";
 
 
- 
-  
+
+
+
+
   return (
     <div className="container">
       <div class="bg-light p-5 mt-3 rounded">
@@ -155,7 +58,8 @@ export default function Basic(props) {
       </div>
       <form
         className="row g-3 mt-5"
-        name="formDados"
+        id="formDados"
+
       >
         {/* ################### Etapa 01 ################################### */}
 
@@ -166,23 +70,184 @@ export default function Basic(props) {
           <input type="text" className="form-control shadow-sm" {...register("NOME", { required: true })} />
           <label className="fw-bold">Nome completo:</label>
         </div>
-        <div className="col-md-4 mb-3 form-floating">
+
+
+        <div className="col-md-6 mb-3 form-floating">
           <input type="cpf" className="form-control shadow-sm" {...register("CPF", { required: true })} />
           <label className="fw-bold">CPF:</label>
         </div>
-        <div className="col-md-4 mb-3 form-floating">
+
+
+        <div className="col-md-6 mb-3 form-floating">
           <input type="RG" className="form-control shadow-sm" {...register("RG", { required: true })} />
           <label className="fw-bold">RG:</label>
         </div>
-        <div className="col-md-4 mb-3 form-floating">
-          <input
-            type="date"
-            id="date"
-            className="form-control shadow-sm"
-            {...register("NASCIMENTO", { required: true })}
-          />
-          <label className="fw-bold">Data de Nascimento:</label>
+
+
+        <div className="container my-3">
+        <div class="col-md-4">
+          <label class="form-label"> <b>Data de Nascimento:</b></label>
+          <br />
+          <select class="form-select-lg shadow-sm border me-3" {...register("DIA", { required: true })} >
+            <option value="Dia" selected disabled>Dia</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">14</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <select class="form-select-lg shadow-sm border me-3 " {...register("MES", { required: true })} >
+            <option value="Mês" selected disabled>Mês</option>
+            <option value="Janeiro">Janeiro</option>
+            <option value="Fevereiro">Fevereiro</option>
+            <option value="Março">Março</option>
+            <option value="Abril">Abril</option>
+            <option value="Maio">Maio</option>
+            <option value="Junho">Junho</option>
+            <option value="Julho">Julho</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Setembro">Setembro</option>
+            <option value="Outubro">Outubro</option>
+            <option value="Novembro">Novembro</option>
+            <option value="Dezembro">Dezembro</option>
+          </select>
+          <select class="form-select-lg shadow-sm border " {...register("ANO", { required: true })} >
+            <option value="Ano" selected disabled>Ano</option>
+            <option value="	2024	">	2024	</option>
+            <option value="	2023	">	2023	</option>
+            <option value="	2022	">	2022	</option>
+            <option value="	2021	">	2021	</option>
+            <option value="	2020	">	2020	</option>
+            <option value="	2019	">	2019	</option>
+            <option value="	2018	">	2018	</option>
+            <option value="	2017	">	2017	</option>
+            <option value="	2016	">	2016	</option>
+            <option value="	2015	">	2015	</option>
+            <option value="	2014	">	2014	</option>
+            <option value="	2013	">	2013	</option>
+            <option value="	2012	">	2012	</option>
+            <option value="	2011	">	2011	</option>
+            <option value="	2010	">	2010	</option>
+            <option value="	2009	">	2009	</option>
+            <option value="	2008	">	2008	</option>
+            <option value="	2007	">	2007	</option>
+            <option value="	2006	">	2006	</option>
+            <option value="	2005	">	2005	</option>
+            <option value="	2004	">	2004	</option>
+            <option value="	2003	">	2003	</option>
+            <option value="	2002	">	2002	</option>
+            <option value="	2001	">	2001	</option>
+            <option value="	2000	">	2000	</option>
+            <option value="	1999	">	1999	</option>
+            <option value="	1998	">	1998	</option>
+            <option value="	1997	">	1997	</option>
+            <option value="	1996	">	1996	</option>
+            <option value="	1995	">	1995	</option>
+            <option value="	1994	">	1994	</option>
+            <option value="	1993	">	1993	</option>
+            <option value="	1992	">	1992	</option>
+            <option value="	1991	">	1991	</option>
+            <option value="	1990	">	1990	</option>
+            <option value="	1989	">	1989	</option>
+            <option value="	1988	">	1988	</option>
+            <option value="	1987	">	1987	</option>
+            <option value="	1986	">	1986	</option>
+            <option value="	1985	">	1985	</option>
+            <option value="	1984	">	1984	</option>
+            <option value="	1983	">	1983	</option>
+            <option value="	1982	">	1982	</option>
+            <option value="	1981	">	1981	</option>
+            <option value="	1980	">	1980	</option>
+            <option value="	1979	">	1979	</option>
+            <option value="	1978	">	1978	</option>
+            <option value="	1977	">	1977	</option>
+            <option value="	1976	">	1976	</option>
+            <option value="	1975	">	1975	</option>
+            <option value="	1974	">	1974	</option>
+            <option value="	1973	">	1973	</option>
+            <option value="	1972	">	1972	</option>
+            <option value="	1971	">	1971	</option>
+            <option value="	1970	">	1970	</option>
+            <option value="	1969	">	1969	</option>
+            <option value="	1968	">	1968	</option>
+            <option value="	1967	">	1967	</option>
+            <option value="	1966	">	1966	</option>
+            <option value="	1965	">	1965	</option>
+            <option value="	1964	">	1964	</option>
+            <option value="	1963	">	1963	</option>
+            <option value="	1962	">	1962	</option>
+            <option value="	1961	">	1961	</option>
+            <option value="	1960	">	1960	</option>
+            <option value="	1959	">	1959	</option>
+            <option value="	1958	">	1958	</option>
+            <option value="	1957	">	1957	</option>
+            <option value="	1956	">	1956	</option>
+            <option value="	1955	">	1955	</option>
+            <option value="	1954	">	1954	</option>
+            <option value="	1953	">	1953	</option>
+            <option value="	1952	">	1952	</option>
+            <option value="	1951	">	1951	</option>
+            <option value="	1950	">	1950	</option>
+            <option value="	1949	">	1949	</option>
+            <option value="	1948	">	1948	</option>
+            <option value="	1947	">	1947	</option>
+            <option value="	1946	">	1946	</option>
+            <option value="	1945	">	1945	</option>
+            <option value="	1944	">	1944	</option>
+            <option value="	1943	">	1943	</option>
+            <option value="	1942	">	1942	</option>
+            <option value="	1941	">	1941	</option>
+            <option value="	1940	">	1940	</option>
+            <option value="	1939	">	1939	</option>
+            <option value="	1938	">	1938	</option>
+            <option value="	1937	">	1937	</option>
+            <option value="	1936	">	1936	</option>
+            <option value="	1935	">	1935	</option>
+            <option value="	1934	">	1934	</option>
+            <option value="	1933	">	1933	</option>
+            <option value="	1932	">	1932	</option>
+            <option value="	1931	">	1931	</option>
+            <option value="	1930	">	1930	</option>
+            <option value="	1929	">	1929	</option>
+            <option value="	1928	">	1928	</option>
+            <option value="	1927	">	1927	</option>
+            <option value="	1926	">	1926	</option>
+            <option value="	1925	">	1925	</option>
+
+
+          </select>
         </div>
+        </div>
+        
+
+
+
         <div className="col-md-4 mb-3 form-floating">
           <input
             type="text"
@@ -192,7 +257,8 @@ export default function Basic(props) {
           />
           <label className="fw-bold">CEP:</label>
         </div>
-        <div className="col-md-4 mb-3">
+
+        <div className="col-md-4 mb-3 form-floating">
           <select
             className="form-select"
             {...register("Bairro", { required: true })}
@@ -298,7 +364,7 @@ export default function Basic(props) {
           <input
             type="text"
             className="form-control shadow-sm"
-            value="Plano Basic+TV 129,90"
+            value={valueplano}
             {...register("PLANO")}
             readOnly
           />
@@ -391,577 +457,7 @@ export default function Basic(props) {
           </div>
         </div>
 
-        <div className="form-group mb-3">
-          <h5 className="mb-0">Monte seu pacote de aplicativos:</h5>
-          <div className="row">
-            <labe>Escolha:</labe>
-            <div className="col-sm-1 form-text">Standard: 2</div>
-            <div className="col-sm-1 form-text mb-3">Premium: 0</div>
-          </div>
-
-          {/* ################### Aplicativos Premium ################################### */}
-          <div className="container shadow p-3">
-            <label className="form-label fw-bold ">Aplicativos Premium</label>
-            <div className="row row-cols-1 row-cols-sm-3 row-cols-md-4">
-              <div className="col my-1">
-                <div className="form-check form-switch">
-                  <input
-                    className="form-check-input "
-                    type="checkbox"
-                    value="Ritual fit"
-                    role="switch"
-                    id="CheckRitualfit"
-                    {...register("AppPremium")}
-                    name="AppPremium" 
-                    onChange={verificaPremium}
-                    disabled
-                  />
-                  <label className="form-check-label" htmlFor="CheckRitualfit">
-                    <img
-                      src={premium1}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt="/"
-                    />{" "}
-                    Ritual Fit
-                  </label>
-                </div>
-              </div>
-              <div className="col my-1">
-                <div className="form-check form-switch">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Doutor pass"
-                    role="switch"
-                    id="CheckDoutorPass"
-                    {...register("AppPremium")}
-                    name="AppPremium" 
-                    onChange={verificaPremium}
-                    disabled
-                  />
-                  <label className="form-check-label" htmlFor="CheckDoutorPass">
-                    <img
-                      src={premium2}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt="/"
-                    />{" "}
-                    Doutor pass
-                  </label>
-                </div>
-              </div>
-              <div className="col my-1">
-                <div className=" form-check form-switch">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Sex Hot"
-                    role="switch"
-                    id="CheckSexHot"
-                    {...register("AppPremium")}
-                    name="AppPremium" 
-                    onChange={verificaPremium}
-                    disabled
-                  />
-                  <label className="form-check-label" htmlFor="CheckSexHot">
-                    <img
-                      src={premium3}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />{" "}
-                    Sex Hot
-                  </label>
-                </div>
-              </div>
-              <div className="col my-1">
-                <div className="form-check form-switch">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="HBO Max"
-                    role="switch"
-                    id="CheckHboMax"
-                    {...register("AppPremium")}
-                    name="AppPremium" 
-                    onChange={verificaPremium}
-                    disabled
-                  />
-                  <label className="form-check-label" htmlFor="CheckHboMax">
-                    <img
-                      src={premium4}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />{" "}
-                    HBO Max
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* ################### Aplicativos Standarda ################################### */}
-
-          <div className="container shadow p-3">
-            <label className="form-label fw-bold ">Aplicativos Standard</label>
-            <div className="row  row-cols-1 row-cols-sm-3 row-cols-md-4">
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Hube"
-                    role="switch"
-                    id="CheckHube"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard}                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckHube"
-                  >
-                    <img
-                      src={standard2}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Hube
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className=" form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="fluid"
-                    role="switch"
-                    id="CheckFluid"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard}                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckFluid"
-                  >
-                    <img
-                      src={standard3}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    fluid
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Deezer"
-                    role="switch"
-                    id="CheckDeezer"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard}                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckDeezer"
-                  >
-                    <img
-                      src={standard4}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Deezer
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Super Comics"
-                    role="switch"
-                    id="CheckSuperComics"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard}                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckSuperComics"
-                  >
-                    <img
-                      src={standard5}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Super Comics
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Maia"
-                    role="switch"
-                    id="CheckMaia"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard}                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckMaia"
-                  >
-                    <img
-                      src={standard6}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Maia
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Ubook"
-                    role="switch"
-                    id="CheckUbook"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard}                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckUbook"
-                  >
-                    <img
-                      src={standard7}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Ubook
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Looke"
-                    role="switch"
-                    id="CheckLooke"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard}                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckLooke"
-                  >
-                    <img
-                      src={standard8}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Looke
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Playkids"
-                    role="switch"
-                    id="CheckPlaykids"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard}                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckPlaykids"
-                  >
-                    <img
-                      src={standard9}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Playkids
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Clube de Ciências"
-                    role="switch"
-                    id="CheckCluberDeCiencias"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard}                  />
-
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckCluberDeCiencias"
-                  >
-                    <img
-                      src={standard10}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    Clube de Ciências
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Fuze Forge"
-                    role="switch"
-                    id="CheckFuzeForge"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard} 
-                     />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckFuzeForge"
-                  >
-                    <img
-                      src={standard11}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Fuze Forge
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Galinha Pintadinha"
-                    role="switch"
-                    id="CheckGalinhaPintadinha"
-                    {...register("AppStandard")}
-
-                    name="AppStandard" 
-                    onChange={verificaStandard}
-                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckGalinhaPintadinha"
-                  >
-                    <img
-                      src={standard12}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Galinha Pintadinha
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Pocoyo"
-                    role="switch"
-                    id="CheckPocoyo"
-                    {...register("AppStandard")}
-                    name="AppStandard" 
-                    onChange={verificaStandard}
-                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckPocoyo"
-                  >
-                    <img
-                      src={standard13}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Pocoyo
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Tap Lingo"
-                    role="switch"
-                    id="CheckTapLingo"
-                    {...register("AppStandard")}
-                    name="AppStandard" 
-                    onChange={verificaStandard}
-                  />
-                  <label className="form-check-label" htmlFor="CheckTapLingo">
-                    <img
-                      src={standard14}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />{" "}
-                    Tap Lingo
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Tô aqui"
-                    role="switch"
-                    id="CheckToAqui"
-                    {...register("AppStandard")}
-                    name="AppStandard" 
-                    onChange={verificaStandard}
-                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckToAqui"
-                  >
-                    <img
-                      src={standard15}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt=""
-                    />
-                    {" "}
-                    Tô aqui
-                  </label>
-                </div>
-              </div>
-
-              <div className="col my-1">
-                <div className="form-check form-switch">
-
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    value="Reforça"
-                    role="switch"
-                    id="CheckRefoca"
-                    {...register("AppStandard")}
-                    name="AppStandard" 
-                    onChange={verificaStandard}
-                  />
-                  <label
-                    className="form-check-label text-wrap"
-                    htmlFor="CheckRefoca"
-                  >
-                    <img
-                      src={standard16}
-                      height={36}
-                      width={36}
-                      className="ms-2"
-                      alt="/"
-                    />
-                    {" "}
-                    Reforça
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-          <button type="button" className="btn btn-lg btn-success mb-4" onClick={handleSubmit(handleShow)}>
+        <button type="button" className="btn btn-lg btn-success mb-4" onClick={handleSubmit(handleShow)}>
           Finalizar
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -976,48 +472,47 @@ export default function Basic(props) {
         </button>
 
         <Modal show={show} onHide={handleClose} animation={false}>
-        <Modal.Header>
-          <Modal.Title> 
-            <h4 className="mt-2 fw-bold">Termos e condições</h4>
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body> 
-           <TermoPlanos/>
-        </Modal.Body>
-        <Modal.Footer>
-        <SendDadosPlanos
-           text="Aceitar"
-           nome={nome} 
-           cpf={cpf}        
-           rg={rg} 
-           nascimento= {nascimento}
-           cep={cep}           
-           bairro={bairro} 
-           endereco={endereco}           
-           moradia={moradia} 
-           whatsapp01={whatsapp01}
-           whatsapp02={whatsapp02} 
-           email={email}           
-           plano={plano}          
-           fixo={fixo}          
-           vencimento={vencimento}
-           premium = {premium}
-           standard = {standard}
-           indicacao={indicacao}         
-           data={data} 
-           hora={hora}
-           obs={obs} 
+          <Modal.Header>
+            <Modal.Title>
+              <h4 className="mt-2 fw-bold">Termos e condições</h4>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <TermoPlanos />
+          </Modal.Body>
+          <Modal.Footer>
+            <SendDadosPlanos
+              text="Aceitar"
+              nome={nome}
+              cpf={cpf}
+              rg={rg}
+              nascimento={nascimento}
+              cep={cep}
+              bairro={bairro}
+              endereco={endereco}
+              moradia={moradia}
+              whatsapp01={whatsapp01}
+              whatsapp02={whatsapp02}
+              email={email}
+              plano={plano}
+              fixo={fixo}
+              vencimento={vencimento}
+              indicacao={indicacao}
+              data={data}
+              hora={hora}
+              obs={obs}
+              termos={termos}
+              assunto={assunto}
+              cabecalho={cabecalho}
 
-          termos = {termos}
-          assunto ={assunto}
-          cabecalho={cabecalho}
-
-           
-    />
-        </Modal.Footer>
-      </Modal>
+            />
+          </Modal.Footer>
+        </Modal>
       </form>
+
+
 
     </div>
   );
 }
+

@@ -5,7 +5,7 @@ function Vantagens() {
 
             <section id="vantagens">
                 <div id="icon-grid" className="text-light">
-                    <h2 className="title">6 Vantagens Exclusivas Netsim</h2>
+                    <h2 className="title">Porque a Netsim?</h2>
 
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4 py-5 ">
 
@@ -37,14 +37,14 @@ function Vantagens() {
                             </div>
 
                         </div>
-                        <div className="col ">
-                            <div className="item d-flex align-items-start shadow p-3">
+                        <div className="col shadow ">
+                            <div className="item d-flex align-items-start  p-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-tools  flex-shrink-0 me-3" viewBox="0 0 16 16">
                                     <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z" />
                                 </svg>
                                 <div>
                                     <h3 className="fw-bold mb-0 fs-4">SUPORTE 100% PELA EMPRESA</h3>
-                                    <p>Qualquer problema com sua conexão estamos acessíveis para imediatamente fazer uma visita técnica, ou resolver seu problema online através dos nossos canais de atendimento.</p>
+                                    <p>Qualquer problema com sua conexão estamos acessíveis para realizar uma visita técnica caso necessário</p>
                                 </div>
                             </div>
 
@@ -63,8 +63,8 @@ function Vantagens() {
                             </div>
 
                         </div>
-                        <div className="col ">
-                            <div className="item d-flex align-items-start shadow p-3">
+                        <div className="col shadow">
+                            <div className="item d-flex align-items-start  p-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-calendar3 flex-shrink-0 me-3" viewBox="0 0 16 16">
                                     <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
                                     <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />

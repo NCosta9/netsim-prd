@@ -1,0 +1,9 @@
+#tvbox h1{
+    color: #001a4c;
+}
+#tvbox h1 span{
+    color:#f3761c;
+}
+#tvbox .lead{
+    font-weight: 600;
+}

@@ -4,7 +4,7 @@ import Collapse from 'react-bootstrap/Collapse';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import {useNavigate } from 'react-router-dom';
 
-import ImgTelefone from './img-telefone-laranja.png';
+import ImgTelefone from './img-telefone.jpg';
 import "./telefone.css"
 
 
