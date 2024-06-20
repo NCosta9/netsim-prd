@@ -4,7 +4,6 @@ import Home from './pages/Home';
 
 //imports para rotas dos planos de internet 
 import Cobertura from './pages/Cobertura';
-import Radio from './pages/Radio';
 import Fibra from './pages/Fibra';
 
 import Sucesso from './components/Alerts/Sucesso.js';
@@ -45,6 +44,7 @@ import OfertaUltra from './pages/Ofertas/OfertaExClientes/dadosOferta/OfertaUltr
 import LpNetsimPlay from './pages/LpNetsimPlay';
 import FormLpTV from './pages/LpNetsimPlay/FormLpTV';
 import NetsimPlay from './pages/NetsimPlay/index.js';
+import Prospera from './pages/NetsimProspera/Prospera.js';
 
 
 
@@ -57,7 +57,6 @@ function RoutesApp(){
                 <Route path="/" element={ <Home/> } />
                 <Route path="/cobertura" element={ <Cobertura/> } />
                 <Route path="/fibra" element={ <Fibra/> } />
-                <Route path='/radio' element={ <Radio/>}/>
                 <Route path="/cliente" element={ <AreaCliente/> } />
                 <Route path="/sucesso" element={ <Sucesso/> } />
                 <Route path="/error" element={ <Error/> } />
@@ -92,6 +91,7 @@ function RoutesApp(){
                 <Route path='/oferta-ultra' element={<OfertaUltra/>} />
                 <Route path='/form-tv' element={<FormLpTV/>}/>
                 <Route path='/netsim-play' element={<NetsimPlay/>}/>
+                <Route path='/netsim-prospera' element={<Prospera/>}/>
 
 
             </Routes>

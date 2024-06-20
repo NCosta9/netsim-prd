@@ -1,5 +1,15 @@
 import { useNavigate } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// import required modules
+import { Autoplay } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+
 import './Home.css';
+
 import Lecupon from './Img/Lecupon-1.png';
 import Perguntasfrequentes from '../../components/Perguntasfrequentes';
 import ContatoWhatsapp from '../../components/ContatoWhatsapp';
@@ -7,11 +17,6 @@ import ContatoWhatsapp from '../../components/ContatoWhatsapp';
 
 import SaibaLecupon from '../../components/SaibaMaisLecupon';
 
-import imageDeezer from '../../img/image-deezer.png';
-import imageHBO from '../../img/image-hbomax.png';
-import imageLooke from '../../img/image-looke.png';
-import imageTNT from '../../img/image-tnt.png';
-import iconLogoAzul from '../../img/icon-logo-azul.png';
 import mockupAppAssinante from '../../img/image-app-central-assinante.png';
 
 
@@ -23,6 +28,7 @@ import CarouselBanner from '../../components/Carousel/CarouselBanner';
 import TopBar from '../../components/Clients/TopBar';
 import FooterCliente from '../../components/Footer/FooterCliente';
 import Header from '../../components/Header/Header';
+
 
 function Home() {
 
@@ -44,11 +50,11 @@ function Home() {
 
   return (
     <>
-        <TopBar/>
-        <Header/>
+      <TopBar />
+      <Header />
       {/*Onde inicia o Banner rotativo */}
       <div className="mx-0">
-        <CarouselBanner/>
+        <CarouselBanner />
       </div>{/*fim Banner rotativo */}
 
       <div className="container px-4 py-5" id="featured-3">
@@ -83,7 +89,7 @@ function Home() {
           <div className="feature col">
             <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" className="bi bi-building m-2" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z" />
+                <path fillRule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z" />
                 <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
               </svg>        </div>
             <h3 className="fs-2">Planos Empresariais</h3>
@@ -94,58 +100,47 @@ function Home() {
           </div>
         </div>
       </div>
+      <div class="container">
 
+        <div id="apps" class="row d-flex mx-auto border-orange">
+          <div class="col-lg-6 order-1 order-lg-1 text-center">
+            <img width="200px" src='https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/logos/logoAzul?t=2023-12-30T14%3A29%3A22.560Z'/>
+            <h2 className="fw-normal lh-1">Aplicativos de entretenimento <br/><span className="text-muted">Para toda a familia.</span></h2>
+            <p className="lead">Escolha um plano e tenha acesso aos nossos aplicativos standard e premium e garanta diversão para toda a familia.</p>
+            <button className="btn btn-outline-orange m-3" onClick={() => navigate("/cobertura")}>Saiba mais</button>
+          </div>
+          <div class="col-lg-6 order-2 order-lg-2 align-items-center">
 
-      <div className="container">
-        <div className=" card align-items-center text-center inline p-auto border-orange">
-          <img className="mt-5" src={iconLogoAzul} width="200" height="60" />
-          <div className="row featurette">
-            <div className="col-md-7 mt-5">
-              <h2 className="featurette-heading fw-normal lh-1">Aplicativos de entretenimento <span className="text-muted">Para toda a familia.</span></h2>
-              <p className="lead">Escolha um plano e tenha acesso aos nossos aplicativos standard e premium e garanta diversão para toda a familia.</p>
-              <button className="btn btn-outline-orange m-3" onClick={() => navigate("/cobertura")}>Saiba mais</button>
-            </div>
-            <div className="col-md-5">
-              <div id="myCarousel" className="carousel slide mb-5" data-bs-ride="carousel">
-                <div className="carousel-indicators">
-                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-label="Slide 1" aria-current="true"></button>
-                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" className="" ></button>
-                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" className=""></button>
-                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" className=""></button>
-                </div>
-                <div className="carousel-inner">
-                  <div className="carousel-item">
-                    <div className="container">
-                      <img src={imageHBO}/>
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="container">
-                      <img src={imageDeezer} />
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="container">
-                      <img src={imageLooke} />
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="container">
-                      <img src={imageTNT} />
-                    </div>
-                  </div>
-                </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span className="visually-hidden">Next</span>
-                </button>
-              </div>
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+              className="mySwiper"
+            >
 
-            </div>
+              
+                <SwiperSlide>
+                  <img className='img d-flex mx-auto'
+                    src="https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/Banners/bannerApp1.png?t=2024-06-19T16%3A17%3A14.715Z" />
+                </SwiperSlide>
+                <SwiperSlide>
+                 <img className='img d-flex mx-auto'
+                     src="https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/Banners/image-hbomax.png?t=2024-06-19T16%3A18%3A47.645Z" />
+                </SwiperSlide>
+                <SwiperSlide>
+                 <img className='img d-flex mx-auto'
+                   src="https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/Banners/image-looke.png?t=2024-06-19T16%3A19%3A19.166Z" />
+                </SwiperSlide>
+                <SwiperSlide>
+                 <img className='img d-flex mx-auto'
+                    src="https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/apps/Banners/image-tnt.png?t=2024-06-19T16%3A19%3A33.240Z" />
+                </SwiperSlide>
+            </Swiper>
           </div>
         </div>
 
@@ -270,7 +265,7 @@ function Home() {
               <div id="bg-laranja" className="col card ms-2 align-items-center text-light">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" className="bi bi-speedometer2 mt-3" viewBox="0 0 16 16">
                   <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z" />
-                  <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z" />
+                  <path fillRule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z" />
                 </svg>            <div className="card-body">
                   <a className='link-reset' href='https://fast.com/pt/'>
                     <h5 className="card-text fs-6">
@@ -283,7 +278,7 @@ function Home() {
           </div>
         </div>
       </div>
-          <FooterCliente/>      
+      <FooterCliente />
 
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
 

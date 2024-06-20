@@ -89,3 +89,10 @@ a{
 #progress-bar-100{
     width: 99%;
 }
+#apps{
+    width: auto;
+}
+#apps .img{
+   width: 400px;
+   border-radius:10px ;
+}

@@ -14,7 +14,7 @@ export default function Header() {
             link: "https://qrco.de/bcW6T9",
             config: <Modals
                 title="Clube de desconto"
-                buttonClass="btn btn-outline-primary"
+                buttonclass="btn btn-outline-primary"
                 buttonName="Configurar"
                 conteudo={<SaibaMaisLecupon />}
 
@@ -26,7 +26,7 @@ export default function Header() {
             link: "https://qrco.de/bcW6T9",
             config: <Modals
                 title="Clube de desconto"
-                buttonClass="btn btn-outline-primary"
+                buttonclass="btn btn-outline-primary"
                 buttonName="Configurar"
                 conteudo={<iframe src="https://comologar.com.br/" name="comologarapps" width="100%" height="100%"></iframe>}
 
@@ -51,7 +51,7 @@ export default function Header() {
             <Navbar expand="lg" className="sticky-top z-3 shadow-lg" id="menu" >
                 <Container >
                     <Navbar.Brand href="#home">
-                        <a href="/" class="logo"><img src="https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/logos/logoAzul?t=2023-12-30T14%3A29%3A22.560Z" height="50px" alt="" class="" /></a>
+                        <a href="/" className="logo"><img src="https://hdflgabrcqndyvcnyjtn.supabase.co/storage/v1/object/public/imagens/logos/logoAzul?t=2023-12-30T14%3A29%3A22.560Z" height="50px" alt="" className="" /></a>
 
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -64,16 +64,16 @@ export default function Header() {
 
 
                             <NavDropdown title="Aplicativos" id="basic-nav-dropdown" className='p-0 style'>
-                                <ul class="list-group list-group-flush">
+                                <ul className="list-group list-group-flush">
 
                                     {Applist.map(({ label, description, link, config },key) => {
                                         return (
-                                            <li key={Applist.toString() } class="list-group-item">
+                                            <li key={Applist.toString() } className="list-group-item">
                                             <span>{label}</span>
                                             <br />
                                             <small className='text-muted '>{description}</small>
                                             <br />
-                                            <a href={link} class=" btn btn-outline-secondary " >Acessar</a>
+                                            <a href={link} className=" btn btn-outline-secondary " >Acessar</a>
                                             <span  > {config} </span>
     
                                         </li>
@@ -85,11 +85,11 @@ export default function Header() {
                             </NavDropdown>
 
                             <NavDropdown title="Serviços" id="basic-nav-dropdown" className='dropdown p-0'>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><a href="https://netsimtelecom.com.br/mudanca">Mudança de endereço</a>   </li>
-                                    <li class="list-group-item"><a href="https://netsimtelecom.com.br/ponto">Mudança de Ponto</a></li>
-                                    <li class="list-group-item"><a href="https://netsimtelecom.com.br/titularidade">Mudança de Titularidade</a></li>
-                                    <li class="list-group-item"><a href="https://netsimtelecom.com.br/cobertura">Mudança de Plano</a></li>
+                                <ul className="list-group list-group-flush">
+                                    <li className="list-group-item"><a href="https://netsimtelecom.com.br/mudanca">Mudança de endereço</a>   </li>
+                                    <li className="list-group-item"><a href="https://netsimtelecom.com.br/ponto">Mudança de Ponto</a></li>
+                                    <li className="list-group-item"><a href="https://netsimtelecom.com.br/titularidade">Mudança de Titularidade</a></li>
+                                    <li className="list-group-item"><a href="https://netsimtelecom.com.br/cobertura">Mudança de Plano</a></li>
                                 </ul>
 
                             </NavDropdown>

@@ -27,18 +27,18 @@ export default function Cobertura() {
                 <select className="form-select form-select-lg " aria-label=".form-select-lg example" {...register("cidade")} autofocus>
                   <option value="0" selected disabled> Escolha seu bairro aqui:</option>
                   <option value="1" >Nova Betânia</option>
-                  <option value="2" >Buritis 01</option>
+                  <option value="1" >Buritis 01</option>
                   <option value="1" >Buritis 02</option>
                   <option value="1" >Chácara Final Feliz</option>
                   <option value="1" >Chácara São José</option>
                   <option value="1" >Chácara Rossio </option>
                   <option value="1" >Condomínio São José</option>
-                  <option value="2" >Dom Francisco</option>
-                  <option value="2" >Dom Pedro</option>
+                  <option value="1" >Dom Francisco</option>
+                  <option value="1" >Dom Pedro</option>
                   <option value="1" >Salomão Elias</option>
                   <option value="1" >São Francisco</option>
                   <option value="1" >Guarapari</option>
-                  <option value="2" >Galiléia</option>
+                  <option value="1" >Galiléia</option>
                   <option value="2" >Zona Rural de Aguas Quentes</option>
                 </select>
 
@@ -57,7 +57,7 @@ export default function Cobertura() {
                       }
                       else
                         if (values.cidade === "2") {
-                          navigate("/radio")
+                          window.open('https://api.whatsapp.com/send/?phone=556120993434&text=Ol%C3%A1+%2ANetsim%2A%21+Gostaria+de+saber+se+tem+possibilidade+de+instalação+na+minha+localização+%3F(site+área+de+cobertura)&type=phone_number&app_absent=0', '_blank');
                         }
                     }}> Ver Planos </button>
                   <button type="button" className="btn btn-outline-secondary btn-lg px-4 mb-0" onClick={() => navigate("/")}>Voltar para Home</button>
